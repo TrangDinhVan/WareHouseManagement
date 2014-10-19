@@ -1,0 +1,9 @@
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\ISD_ASS_DB.accdb
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\WarehouseDatabaseHelper.dll.config
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\WarehouseDatabaseHelper.dll
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\WarehouseDatabaseHelper.pdb
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\obj\Debug\WarehouseDatabaseHelper.csprojResolveAssemblyReference.cache
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\obj\Debug\WarehouseDatabaseHelper.dll
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\obj\Debug\WarehouseDatabaseHelper.pdb
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\WarehouseEntity.dll
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\bin\Debug\WarehouseEntity.pdb
