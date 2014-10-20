@@ -8,107 +8,40 @@ using WarehouseEntity;
 
 namespace WarehouseDatabaseHelper
 {
+    /// <summary>
+    /// All Operations manipulating sectors data
+    /// </summary>
     public class SectorDAL
     {
         OleDbCommand cmd;
-        public static string queryAllSector = "select * from [v_section]";
         public DataTable getAllSector()
         {
-            DataTable data = new DataTable();
-            new Connection().openConnection();
-            try
-            {
-                cmd = new OleDbCommand(queryAllSector, Connection.Cnn);
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-                da.Fill(data);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error get Sector: " + ex.Message);
-            }
-            finally
-            {
-                Connection.Cnn.Close();
-                Connection.Cnn.Dispose();
-            }
-            return data;
-        }
-        public int insertSector(Sector sec)
-        {
-            string strinsert = string.Format("insert into [section] (section_name,section_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
-            new Connection().openConnection();
-            try
-            {
-                cmd = new OleDbCommand(strinsert, Connection.Cnn);
-                return cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error Insert section: " + ex.Message);
-            }
-            finally
-            {
-                Connection.Cnn.Close();
-            }
-        }
-        public int deleteSector(int SectorID)
-        {
-            string query = string.Format("delete from [section] where section_id = {0}", SectorID);
-            new Connection().openConnection();
-            try
-            {
-                cmd = new OleDbCommand(query, Connection.Cnn);
-                return cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error delete section: " + ex.Message);
-            }
-            finally
-            {
-                Connection.Cnn.Close();
-            }
-        }
-        public int updateSector(Sector sec)
-        {
-            string queryupdate = string.Format("update [section] set section_name = '{0}', section_desc='{1}' where section_id={2}", sec.Name, sec.Desc, sec.Id);
-            new Connection().openConnection();
-            try
-            {
-                cmd = new OleDbCommand(queryupdate, Connection.Cnn);
-                return cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error update section: " + ex.Message);
-            }
-            finally
-            {
-                Connection.Cnn.Close();
-            }
+            string queryAll = "select * from [v_sector]";
+            return new Connection().getListRecord(queryAll);
         }
         public Sector getOneSection(int SectorID)
         {
-            string queryOneSection = string.Format("select * from [section] where section_id = {0}", SectorID);
-            new Connection().openConnection();
-            try
-            {
-                DataTable data = new DataTable();
-                cmd = new OleDbCommand(queryOneSection, Connection.Cnn);
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-                da.Fill(data);
-                DataRow r = data.Rows[0];
-                return new Sector(SectorID, r["section_name"].ToString(), r["section_desc"].ToString());
-                
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error get one section: " + ex.Message);
-            }
-            finally
-            {
-                Connection.Cnn.Close();
-            }
+            string queryOneSection = string.Format("select * from [sector] where sector_id = {0}", SectorID);
+            DataRow r = new Connection().getOneRecord(queryOneSection);
+            return new Sector(SectorID, r["sector_name"].ToString(), r["sector_desc"].ToString());
         }
+        public int deleteSector(int SectorID)
+        {
+            string queryDelete = string.Format("delete from [sector] where sector_id = {0}", SectorID);
+            return new Connection().exeNonQuery(queryDelete);
+        }
+        public int insertSector(Sector sec)
+        {
+
+            string queryInsert = string.Format("insert into [sector] (sector_name,sector_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
+            return new Connection().exeNonQuery(queryInsert);
+        }
+        
+        public int updateSector(Sector sec)
+        {
+            string queryUpdate = string.Format("update [sector] set sector_name = '{0}', sector_desc='{1}' where sector_id={2}", sec.Name, sec.Desc, sec.Id);
+            return new Connection().exeNonQuery(queryUpdate);
+        }
+        
     }
 }

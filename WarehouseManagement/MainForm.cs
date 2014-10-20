@@ -29,16 +29,17 @@ namespace WarehouseManagement
         private void buttonX1_Click(object sender, EventArgs e)
         {
             SectorForm sectorForm = new SectorForm();
-            
+            sectorForm.f = this;
             sectorForm.Show();
         }
 
         private void dataGridView_Sectors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //MessageBox.Show(e.ColumnIndex.ToString());
-            int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+            
             if (e.ColumnIndex != 0 && e.RowIndex > -1)
             {
+                int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
                 SectorForm sectorForm = new SectorForm();
                 sectorForm.f = this;
                 sectorForm.SectorID = SectorID;
@@ -49,9 +50,10 @@ namespace WarehouseManagement
 
         private void dataGridView_Sectors_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+            
             if (e.ColumnIndex == 0 && e.RowIndex > -1)
             {
+                int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
                 DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Section " + SectorID, MessageBoxButtons.YesNo);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {

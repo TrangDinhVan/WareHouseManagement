@@ -51,10 +51,7 @@ namespace WarehouseManagement
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
-
-        private void buttonX1_Click(object sender, EventArgs e)
+        private void button_updateSector_Click(object sender, EventArgs e)
         {
             try
             {

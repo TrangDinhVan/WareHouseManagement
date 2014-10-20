@@ -29,8 +29,9 @@ namespace WarehouseEntity
         {
             if (string.IsNullOrEmpty(name))
                 throw new Exception("Name must not be empty");
-            this.Name = name;
-            this.Desc = desc;
+            lstRepo = new DataTable();
+            Name = name;
+            Desc = desc;
         }
     }
 }

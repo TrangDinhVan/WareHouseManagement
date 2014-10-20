@@ -97,7 +97,7 @@
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.TabIndex = 5;
             this.buttonX1.Text = "Save";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            this.buttonX1.Click += new System.EventHandler(this.button_updateSector_Click);
             // 
             // SectorForm
             // 
