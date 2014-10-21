@@ -14,5 +14,12 @@
       <FileName>Repository.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="WarehouseEntity.Customer">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

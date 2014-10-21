@@ -14,9 +14,11 @@ namespace WarehouseEntity
         private double _Price;
         private string _Volume;
         private Sector _Sector;
+        private DataTable _lstMaintain;
         public Repository()
         {
             _Sector = new Sector();
+            _lstMaintain = new DataTable();
         }
         public int Id
         {
@@ -52,6 +54,20 @@ namespace WarehouseEntity
         {
             get { return _Sector; }
             set { _Sector = value; }
+        }
+        public DataTable lstMaintain
+        {
+            get { return _lstMaintain; }
+            set { _lstMaintain = value; }
+        }
+        public double getTotalMaintainValue()
+        {
+            double total = 0;
+            foreach (DataRow r in _lstMaintain.Rows)
+            {
+                total += double.Parse(r["maintain_price"].ToString());
+            }
+            return total;
         }
     }
 }

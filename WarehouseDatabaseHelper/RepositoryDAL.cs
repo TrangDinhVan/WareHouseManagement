@@ -18,6 +18,10 @@ namespace WarehouseDatabaseHelper
             string queryAll = "select * from [v_repository_sector]";
             return new Connection().getListRecord(queryAll);
         }
+        public DataTable getSomeRepo(string query)
+        {
+            return new Connection().getListRecord(query);
+        }
         public Repository getOneRepo(int ID)
         {
             string queryOne = string.Format("select * from [repository] where repo_id = {0}", ID);

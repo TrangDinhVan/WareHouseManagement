@@ -18,6 +18,10 @@ namespace WarehouseDatabaseHelper
             string queryAll = "select * from [v_sector]";
             return new Connection().getListRecord(queryAll);
         }
+        public DataTable getSomeSector(string query)
+        {
+            return new Connection().getListRecord(query);
+        }
         public Sector getOneSection(int ID)
         {
             string queryOne = string.Format("select * from [sector] where sector_id = {0}", ID);
