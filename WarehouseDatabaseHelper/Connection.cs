@@ -13,10 +13,8 @@ namespace WarehouseDatabaseHelper
     {
 
         public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\ISD_ASS_DB.accdb";
-
         public OleDbConnection Cnn;
-        OleDbCommand cmd;
-        const string EX_CONNECT = "Error connect to DB: ";
+        public OleDbCommand cmd;
         public Connection()
         {
             Cnn = new OleDbConnection();
@@ -30,7 +28,7 @@ namespace WarehouseDatabaseHelper
             }
             catch (Exception ex)
             {
-                throw new Exception(EX_CONNECT + ex.Message);
+                throw new Exception("Error connect to DB: " + ex.Message);
             }
             finally
             {

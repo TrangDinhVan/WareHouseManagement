@@ -41,8 +41,10 @@ namespace WarehouseManagement
         {
             try
             {
-                Sector sec = new Sector(textBox1.Text, richTextBox1.Text);
-                new SectorDAL().insertSector(sec);
+                Sector sector = new Sector();
+                sector.Name = textBox1.Text;
+                sector.Desc = richTextBox1.Text;
+                new SectorDAL().addSector(sector);
                 f.reload();
                 this.Close();
             }
@@ -55,7 +57,10 @@ namespace WarehouseManagement
         {
             try
             {
-                Sector sector = new Sector(this.SectorID, textBox1.Text, richTextBox1.Text);
+                Sector sector = new Sector();
+                sector.Id = this.SectorID;
+                sector.Name = textBox1.Text;
+                sector.Desc = richTextBox1.Text;
                 new SectorDAL().updateSector(sector);
                 f.reload();
                 this.Close();

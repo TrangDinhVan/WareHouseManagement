@@ -50,6 +50,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepositoryForm.Designer.cs">
+      <DependentUpon>RepositoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RepositoryForm.resx">
+      <DependentUpon>RepositoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SectorForm.resx">
       <DependentUpon>SectorForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,28 +13,31 @@ namespace WarehouseDatabaseHelper
     /// </summary>
     public class SectorDAL
     {
-        OleDbCommand cmd;
         public DataTable getAllSector()
         {
             string queryAll = "select * from [v_sector]";
             return new Connection().getListRecord(queryAll);
         }
-        public Sector getOneSection(int SectorID)
+        public Sector getOneSection(int ID)
         {
-            string queryOneSection = string.Format("select * from [sector] where sector_id = {0}", SectorID);
-            DataRow r = new Connection().getOneRecord(queryOneSection);
-            return new Sector(SectorID, r["sector_name"].ToString(), r["sector_desc"].ToString());
+            string queryOne = string.Format("select * from [sector] where sector_id = {0}", ID);
+            DataRow r = new Connection().getOneRecord(queryOne);
+            Sector sector = new Sector();
+            sector.Id = ID;
+            sector.Name = r["sector_name"].ToString();
+            sector.Desc = r["sector_desc"].ToString();
+            return sector;
         }
-        public int deleteSector(int SectorID)
+        public int deleteSector(int ID)
         {
-            string queryDelete = string.Format("delete from [sector] where sector_id = {0}", SectorID);
+            string queryDelete = string.Format("delete from [sector] where sector_id = {0}", ID);
             return new Connection().exeNonQuery(queryDelete);
         }
-        public int insertSector(Sector sec)
+        public int addSector(Sector sec)
         {
 
-            string queryInsert = string.Format("insert into [sector] (sector_name,sector_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
-            return new Connection().exeNonQuery(queryInsert);
+            string queryAdd = string.Format("insert into [sector] (sector_name,sector_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
+            return new Connection().exeNonQuery(queryAdd);
         }
         
         public int updateSector(Sector sec)

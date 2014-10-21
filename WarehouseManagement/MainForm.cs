@@ -25,6 +25,7 @@ namespace WarehouseManagement
         public void reload()
         {
             dataGridView_Sectors.DataSource = new SectorDAL().getAllSector();
+            dataGridView_Repo.DataSource = new RepositoryDAL().getAllRepo();
         }
         private void buttonX1_Click(object sender, EventArgs e)
         {
@@ -60,6 +61,29 @@ namespace WarehouseManagement
                     new SectorDAL().deleteSector(SectorID);
                     this.reload();
                 }
+            }
+        }
+
+        private void button_add_Repo_Click(object sender, EventArgs e)
+        {
+            RepositoryForm repo = new RepositoryForm();
+            repo.Show();
+        }
+
+        private void dataGridView_Repo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView_Repo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 0 && e.RowIndex > -1)
+            {
+                int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
+                RepositoryForm repo = new RepositoryForm();
+                repo.f = this;
+                repo.RepoID = RepoID;
+                repo.Show();
             }
         }
     }

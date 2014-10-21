@@ -8,30 +8,38 @@ namespace WarehouseEntity
 {
     public class Sector
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Desc { get; set; }
-        public DataTable lstRepo { get; set; }
+        private int _Id;
+        private string _Name;
+        private string _Desc;
+        private DataTable _lstRepo;
         public Sector()
         {
-            lstRepo = new DataTable();
+            _lstRepo = new DataTable();
         }
-        public Sector(int id, string name, string desc)
+        public int Id
         {
-            if (string.IsNullOrEmpty(name))
-                throw new Exception("Name must not be empty");
-            lstRepo = new DataTable();
-            Id = id;
-            Name = name;
-            Desc = desc;
+            get { return _Id; }
+            set { _Id = value; }
         }
-        public Sector(string name, string desc)
+        public string Name
         {
-            if (string.IsNullOrEmpty(name))
-                throw new Exception("Name must not be empty");
-            lstRepo = new DataTable();
-            Name = name;
-            Desc = desc;
+            get { return _Name; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Name must not be empty.");
+                _Name = value;
+            }
+        }
+        public string Desc
+        {
+            get { return _Desc; }
+            set { _Desc = value; }
+        }
+        public DataTable lstRepo
+        {
+            get { return _lstRepo; }
+            set { _lstRepo = value; }
         }
     }
 }
