@@ -20,6 +20,7 @@ namespace WarehouseDatabaseHelper
             Cnn = new OleDbConnection();
             Cnn.ConnectionString = StrCnn;
         }
+    
         private void checkConnection()
         {
             try

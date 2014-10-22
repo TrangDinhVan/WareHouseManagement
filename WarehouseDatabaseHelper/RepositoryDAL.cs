@@ -13,6 +13,7 @@ namespace WarehouseDatabaseHelper
     /// </summary>
     public class RepositoryDAL
     {
+    
         public DataTable getAllRepo()
         {
             string queryAll = "select * from [v_repository_sector]";

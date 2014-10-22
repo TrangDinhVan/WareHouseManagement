@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4c4004e2-4245-42d8-ae47-71872bfb9e44"
+  name="Controls"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="be45e977-7efe-4cab-b50d-50b1deafaac1"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDevComponents.DotNetBar.Controls"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="7d1b2a70-6ec9-4e68-97a7-0927dc8b8281"
+        name="ComboBoxEx"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="82943741-416c-40f6-b96d-ef7350ae6fa5"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DComboBoxEx"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="233f9d3d-e0c4-482f-92ab-f20b43f56d57"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55cc0e00-b527-40a2-b024-e803920335a2">
+                <propertyInstance
+                  Id="9eddc300-c89e-4c90-a2f7-0cc7a8a86e39"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ea792b3-d2a1-415f-9528-21bc23f4e945">
+                <propertyInstance
+                  Id="81332fec-b1f0-4526-98b4-7f2334cf4cd3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0c7b6db-1d32-4141-a1dc-47c09de7426f">
+                <propertyInstance
+                  Id="3d26556e-457c-4c13-807c-ec2e0504cd83"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1a90af7-7c70-423a-8b2f-4ad56cf96859">
+                <propertyInstance
+                  Id="aebf587a-a710-443e-8c47-82f5ae25e677"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec9b1932-27ba-481d-ad21-3b145619c69a">
+                <propertyInstance
+                  Id="cdebd5ea-970f-4db2-bb40-06e9a324640f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e65297f4-21c2-42ec-a2e6-695facedb364"
+        name="TextBoxX"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3ee07724-584e-4b75-a2f3-26f406783003"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DTextBoxX"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="921f9d8f-e86f-4705-baa6-968487ac1e84"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8f0fbde0-9db1-4068-85d9-dcbbead8e18d">
+                <propertyInstance
+                  Id="0acb93b5-6b25-451d-bce3-d9cee8203e97"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9793c126-9dc5-4156-8f9e-20aba11fb3c5">
+                <propertyInstance
+                  Id="2ae88891-63cc-42a6-88ce-b49b13e36b27"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d80053c3-d37c-4ec3-87d9-935032625484">
+                <propertyInstance
+                  Id="3b84dbf2-30cc-4daa-8426-f99876b2e0d0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="264ced31-4313-4235-9b58-ed1c2b54b5fb">
+                <propertyInstance
+                  Id="958c68e5-8c09-4b49-a091-dface2ad1fa5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0658c19a-2e36-4933-9b9f-687054e5817a">
+                <propertyInstance
+                  Id="5d26fb9e-4ee4-4ddf-b8bf-d182ba13b91e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="35b2c391-6261-4545-9285-81c91743720e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="172373fa-1919-4dd4-9bb0-f05e9fbd54e3"
+              LastKnownName="TextBox"
+              LastKnownLocation="Package7_0143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

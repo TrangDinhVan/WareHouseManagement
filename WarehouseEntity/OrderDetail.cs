@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 //
 using System.Data;
-using System.DateTime;
 
 namespace WarehouseEntity
 {
@@ -43,6 +42,14 @@ namespace WarehouseEntity
         {
             get { return _Repo; }
             set { _Repo = value; }
+        }
+        public double getPaidMoney()
+        {
+            double total = 0;
+            TimeSpan difference = _EndDate - _StartDate;
+            int days = difference.Days;
+            total = _Repo.Price * days;
+            return total;
         }
     }
 }

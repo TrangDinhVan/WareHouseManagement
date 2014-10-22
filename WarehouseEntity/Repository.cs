@@ -60,6 +60,7 @@ namespace WarehouseEntity
             get { return _lstMaintain; }
             set { _lstMaintain = value; }
         }
+    
         public double getTotalMaintainValue()
         {
             double total = 0;

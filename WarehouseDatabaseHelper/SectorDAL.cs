@@ -13,6 +13,7 @@ namespace WarehouseDatabaseHelper
     /// </summary>
     public class SectorDAL
     {
+    
         public DataTable getAllSector()
         {
             string queryAll = "select * from [v_sector]";

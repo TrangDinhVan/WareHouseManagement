@@ -1,0 +1,2758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="f1021c01-8363-40e3-a750-df4a1709015b"
+  name="WarehouseDatabaseHelper"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3fa90cb0-2070-4d62-be45-39f85fe9481a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DWarehouseDatabaseHelper"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c9a70b29-ed54-43e4-9b4e-9a05e6859935"
+        name="Connection"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="53dc82ca-ad14-4cfe-9769-82b19ce2ab60"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d9b6a0b8-1d39-410a-866b-198689e2f04f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d4067cb6-a95d-40e9-8343-4b4553741b24">
+                <propertyInstance
+                  Id="9b4d887a-20d8-4212-8f7e-b376bdef17dd"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7116af86-0cf7-49b7-8ef7-81048f6139e1">
+                <propertyInstance
+                  Id="f5cbf7ca-f541-4173-828d-7b70744d62b3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c611e9d2-a249-4fd0-8258-ab5512fe0cd4">
+                <propertyInstance
+                  Id="d570a20f-b40c-44e6-b4cc-0221005b042a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b31cbdb7-8a83-4d1b-85ec-764401057549">
+                <propertyInstance
+                  Id="80ae29b3-723a-427e-8672-ad57392fb496"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ab236b24-2cde-4e1d-9e49-978cc2c6b34c">
+                <propertyInstance
+                  Id="a0022abd-f44e-459b-9c68-3c0ff427d6bd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="9b6487db-bd5e-4bff-8415-c8c2787ed384"
+            name="Cnn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3be34b8a-9d4b-4c64-adc8-1af8215402fe"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3DCnn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1d79f4b2-a154-4075-a7e9-fa2d60b78d0e"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fcb1989b-22ca-416a-b4e1-101ed35b10c9">
+                    <propertyInstance
+                      Id="3eb15019-0d96-4487-8aba-b4d4034ac1ea"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31530835-4a5e-40f0-9d37-92ef577e0c32">
+                    <propertyInstance
+                      Id="f5085ff7-9800-454e-b34c-2dfc36207b72"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bb4b3200-6b4e-4d25-8eab-a17e5e44d5bc">
+                    <propertyInstance
+                      Id="4878f79a-efe0-430a-8f36-d5a9487f2fe7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b951093-9b4d-4f7a-8000-b987bc248a30">
+                    <propertyInstance
+                      Id="6d8324fd-c5b3-420f-ad2b-946b762bdb5c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1a8fa61-e491-4a64-aa42-da4b748b00cb">
+                    <propertyInstance
+                      Id="fd4e6298-7c00-4c73-9eda-4285a4797d41"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d4156854-9d90-4b96-a4a8-518eeb447cd0"
+                LastKnownName="OleDbConnection"
+                LastKnownLocation="Package3_0143.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="fcda65da-5208-4875-8b11-db5ac6e5edac"
+            name="StrCnn"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c7273289-89b2-45dc-b530-57e612b8c266"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3DStrCnn"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="142f054c-90f0-4d38-a1ac-aebad246ae46"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="06ea3c25-c74d-482d-adf3-7971fc1e2bac">
+                    <propertyInstance
+                      Id="2ff78666-8574-4e6e-85d0-bef2dac5aa7e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7843c8ea-a049-4fef-a0a6-1a551e947496">
+                    <propertyInstance
+                      Id="a6cb2f2a-d285-431a-8926-0e792e242a27"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37419c0e-4065-4a98-9a07-47b7196ebc66">
+                    <propertyInstance
+                      Id="da521021-1b0e-4727-98d6-8e687178095e"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d0c3f88-ee70-4d58-851d-54f541bdc873">
+                    <propertyInstance
+                      Id="01f02e69-2019-4575-a96e-12f3e0347f25"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a0b94b5-e0cb-4f1a-9a2c-2d89e6fc4b9d">
+                    <propertyInstance
+                      Id="e8c7d09b-e855-48b0-a4a6-a1a1d4eb6521"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df9484c1-0979-46fd-9f1a-5377fdfe3c21"
+            name="cmd"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ac8c5400-e2b8-411f-ad90-ddc94a4ad686"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3Dcmd"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8811255c-361a-4391-916f-01992c88ba19"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc021fe9-7f8d-4d0c-b0fb-ed6318426818">
+                    <propertyInstance
+                      Id="ef662d25-4ef6-4a93-8ce7-5a25eb9fb7ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89001385-9758-4d47-a263-453998e567f7">
+                    <propertyInstance
+                      Id="05c68f2c-9054-44c7-9979-a72533309423"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7878b22-58da-4281-be56-a8a53ddc1f3a">
+                    <propertyInstance
+                      Id="5678b6fd-b657-4bb2-9702-3ac0dd74c264"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="348b84bd-99b5-4e43-88d1-08c6742fe357">
+                    <propertyInstance
+                      Id="b84bfe4e-913e-4d31-89ec-9c6dd662a080"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93a0e2e6-ca83-49fd-93ab-c5a606a3a3d0">
+                    <propertyInstance
+                      Id="b9f66b4f-5f15-4ac5-8dd1-d69945eabcff"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="b23959e7-4dcf-4b0b-903c-aedbf917293d"
+                LastKnownName="OleDbCommand"
+                LastKnownLocation="Package3_0143.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="82d7c2fe-5b0b-46b6-b1d4-4f0bce8bff08"
+            name="exeNonQuery"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e2a0e6b6-b795-4053-8979-a728dd20c5f6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DexeNonQuery OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="3d02dea6-c6ee-4f37-860c-7511174c6e54"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a201556b-9eec-4b48-89c2-f3ade4aef7cb">
+                    <propertyInstance
+                      Id="14d3cab9-7c0b-48d6-a225-70a5b639e1a2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8108df66-b533-4578-bba2-013db41ca176">
+                    <propertyInstance
+                      Id="cf905f0b-4b29-490c-8ade-230b9e633087"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="032c8955-a5d3-4b96-a7d9-738d45be9485">
+                    <propertyInstance
+                      Id="05c90d75-50ff-4f54-a35f-c1e95acd0a26"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03eb64b6-0ef2-4658-95c8-463064964a2a">
+                    <propertyInstance
+                      Id="18baa6af-77bb-4a02-b53e-bef8cf31aa1b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5dba1843-8b4e-4fe7-b33b-151b3756eb84">
+                    <propertyInstance
+                      Id="0ae7831b-c74e-4b88-b06a-e72fc5c849ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1780099-926d-4838-a715-9cdcf341660e">
+                    <propertyInstance
+                      Id="00c8b732-fff2-466c-9cf3-5768d9760ba6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6afed86-379a-4e74-90e1-c0bc67bc9493"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="abf37646-4283-4e6d-911d-7733cef5babc"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a2e17ff5-401d-425d-8a8a-980ef53738a5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DexeNonQuery OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4e447440-4feb-4329-a1c5-85dbb2e66647"
+            name="getListRecord"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d9884c53-6f7b-4589-b9d1-042d87da277c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DgetListRecord OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ae52484e-d6c8-4b10-8d72-ee2fd803b4ff"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23594348-d5ec-4742-b2da-815ec810b538">
+                    <propertyInstance
+                      Id="f8034ec9-6fb1-4a64-b940-b9a0e86f4404"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1d3d8943-4a88-4554-8d8e-57a1e08f90bd">
+                    <propertyInstance
+                      Id="e66ff8df-cd5a-40c2-8457-7fabfddfb5b1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47de1039-e72b-4c46-acb6-167fca7379ab">
+                    <propertyInstance
+                      Id="484a0153-d4b3-4d30-b4f6-4c4193e0a6b4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2789b99-6bb7-45bb-a3b9-27c7b5f2c04c">
+                    <propertyInstance
+                      Id="9c36ba05-e6c1-4a35-8c20-b6cb37017b95"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36f53153-dd42-4dbc-82ba-3753d515bab6">
+                    <propertyInstance
+                      Id="204355b1-979a-4700-8b8f-95d30b10d209"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d40a9ec-e4dc-4a6f-b52d-5731c00be14c">
+                    <propertyInstance
+                      Id="1d3f25ed-21d5-42db-a545-5be318eede0d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fcbb5228-4e9b-40c7-b3d5-d28ef53323ff"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d39db85c-53e1-4059-a56d-703d01e69e9c"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="eb865053-e9ce-48cf-a5a1-89f3da0f0d37"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DgetListRecord OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d0ed18d7-efcb-4128-a511-ff1b96657e35"
+            name="getOneRecord"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="38959fe6-a753-4d31-8003-bcbf7775da8e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DgetOneRecord OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2593001b-954f-4899-9073-687181df37f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c256a3d-faf4-4cea-b701-5897b198db1c">
+                    <propertyInstance
+                      Id="b95cad52-df94-4fda-8d4a-f1deea288d2f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a97585fc-8310-43e6-b9ea-ddd173df2e44">
+                    <propertyInstance
+                      Id="1947224c-9b5c-4511-9445-92bd363a632d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73c705f0-399d-47a8-b40b-6ce649b973f1">
+                    <propertyInstance
+                      Id="5d51d9f7-9cb9-414c-b13d-e4fb13beb35a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f0d36ee-cd73-417a-9357-54c3046cd237">
+                    <propertyInstance
+                      Id="e70a5ea0-f3b3-4f93-8a12-8920863ab0e2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5eddc9c-a375-418f-a78e-540d58e2d6dc">
+                    <propertyInstance
+                      Id="99517741-faf5-4a07-9990-b366f86c1a8a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bcc168d6-dedf-456d-bb43-3f16cfa57a25">
+                    <propertyInstance
+                      Id="be4b8410-9d30-449e-a192-e7730fd75938"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="41a7b7dd-f9c6-47e5-a134-78ada74d4054"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="476a4bb8-cc2f-4fb5-b3fa-ffbe334494df"
+                      LastKnownName="DataRow"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e620df60-7ef6-413c-b352-05ec16815463"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="82fc6fe6-3430-4845-8e13-a15b25e5e146"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D(Name%3DgetOneRecord OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c08a4d2c-f641-4642-b835-749c9b95a49d"
+            name="checkConnection"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cc316856-58c9-43f7-a9c2-e4a9977b6289"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3DcheckConnection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c60efd3f-9dfd-4a49-b62b-198d4bed146f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1cab138-d799-46a7-8f8e-f9765e3b705e">
+                    <propertyInstance
+                      Id="438cc7aa-4d0a-4b44-ab53-1f3d321543c3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a489b023-2cb1-4f5d-9dc6-07dd27ee856d">
+                    <propertyInstance
+                      Id="2b0e57d0-ea96-44d7-86e6-9ce94c9701d9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f922b443-1268-4659-806f-bd701bcc148d">
+                    <propertyInstance
+                      Id="f6319c18-67ab-4ec1-b162-3bfb413472a0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a4401c9-a57d-4042-8634-d837437ae16e">
+                    <propertyInstance
+                      Id="af5b463b-b0fa-48da-9a2a-e9bae5ffd114"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0d70320-1403-4a34-9844-6246887d89ae">
+                    <propertyInstance
+                      Id="f9c1726b-8209-4b76-948c-0df85c7d8703"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c497bff4-4296-45cd-9ad0-211ba600c171">
+                    <propertyInstance
+                      Id="6e88516c-890c-4304-ac3f-19e1e481939e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="9ab95250-e21c-4804-aaba-d2200a218016"
+            name="openConnection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c837b6ae-6f19-455c-ac33-b7da801bed49"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3DopenConnection"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="49fe903d-bf83-4124-9888-7beeeec09627"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43741ac0-1bdf-437d-82f0-82ff84b8e772">
+                    <propertyInstance
+                      Id="fa8137cd-b2a4-4b34-a995-e6b93dc3d066"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87fabf17-91ad-4915-88ec-3a75866fc57f">
+                    <propertyInstance
+                      Id="6c5154be-8091-4c3f-9962-e8d20f7b1150"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58a85f3a-7b5c-467f-8e19-26c7a61b48f3">
+                    <propertyInstance
+                      Id="234ebc7c-59c9-4d16-9a30-fc66ccbeeeb0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39a32911-0322-4036-9075-595c4d36494d">
+                    <propertyInstance
+                      Id="c8f87d61-ab1b-418a-961a-e93157cfb25f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13c4b4aa-9f2f-40d7-b716-5b891cf82c9b">
+                    <propertyInstance
+                      Id="03df158a-4e26-4f97-b9da-62ee0b4fd915"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a32cbbbe-58b0-4751-bfab-afdee300ee44">
+                    <propertyInstance
+                      Id="91f64a0b-ccbd-4b3e-a2d1-898780ca9019"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="6726c121-6b23-40fd-b77b-f1de341f6c75"
+            name="Connection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1e63511f-274b-4440-97ff-444d263c8802"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DConnection Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6b218145-8f56-4288-9486-0034a8cdc097"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75cdcd81-f481-4aad-b92c-77411eb69c42">
+                    <propertyInstance
+                      Id="b65f167b-3c84-49b8-994a-b0c66523af3d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84faf4cc-3496-4e08-943b-8ca28475fd43">
+                    <propertyInstance
+                      Id="95798ff4-83ff-471a-8c43-9c66bc98edd6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad4f90da-3f96-4c6a-992f-1a5b1afeb546">
+                    <propertyInstance
+                      Id="04399796-b4f4-4615-898a-9a8984ec5ddf"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ff846aa-71c9-4afd-bcc2-fdd33ab12b0a">
+                    <propertyInstance
+                      Id="91052c07-ebdb-424b-9dd4-ec611b7868b0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b1f3c1f9-a0af-43af-9eb2-9096e9cc10db">
+                    <propertyInstance
+                      Id="20576077-5d3f-418f-9399-310be47b60f6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dedafc47-0c4b-4f01-9283-71f7e621fdac">
+                    <propertyInstance
+                      Id="c9806fa1-b57f-4bae-b0a1-c5bd765a4f07"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f2c9d59c-cb93-4f86-9d59-06f3b9000a8e"
+        name="OrderDAL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="aefdcc3d-1b6b-4e77-ad83-1bdc3424e23f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="51e38016-4b03-48f8-b10d-fb60bf585a34"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e1093d7d-2562-4767-bcb3-cf6467471732">
+                <propertyInstance
+                  Id="c36200bb-38f9-4689-a8dd-f06c36c36f85"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7e3f07b-9419-4619-a5d1-7d3836df28b7">
+                <propertyInstance
+                  Id="98ed7e70-8a16-4494-bf7d-5f46a5c39237"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c58b178-77b4-42be-be07-a4cd61b16b52">
+                <propertyInstance
+                  Id="04340240-3e65-4f96-afeb-a34e1a866da6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="938747fb-c39d-43c9-9bb6-64a3cfaa2b46">
+                <propertyInstance
+                  Id="e0fd1ee8-420b-40df-b33b-999609099689"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8bbf1c9d-42b8-468d-88fd-37bba996cd65">
+                <propertyInstance
+                  Id="133ac6fc-08ae-4cb2-824f-0b4fcd8a1780"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="76dfd5f9-2605-42bd-a42a-38502801c824"
+            name="createOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7723a54a-8a96-4ffa-99d5-bca6f4d78af7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DcreateOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b298e52c-8b44-4d01-8f9d-8378984ac3ba"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d257cb28-4cba-4ec0-910d-6ec3b40b8d75">
+                    <propertyInstance
+                      Id="76f2f8b5-38aa-43d9-8987-c2f45e828f15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4a46d15-7c94-40be-91a8-7e04158a1e82">
+                    <propertyInstance
+                      Id="6be4c56f-6cd9-41f3-9693-c707ec8e2896"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1840ae5f-f3db-458c-9d25-938140974a4f">
+                    <propertyInstance
+                      Id="0da2a32c-5219-4567-94dd-d48d6ccfddd5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f89673f3-70cc-44a0-bac5-4188a6814765">
+                    <propertyInstance
+                      Id="f9a6349c-06e3-4fae-862e-53155daa1da5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8798a67f-4b0f-40f2-bfce-baeda4aaec6b">
+                    <propertyInstance
+                      Id="3fc3d759-a094-48db-815a-bff3765fac3e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d60e11df-acc0-4d96-93d2-82c8993181cd">
+                    <propertyInstance
+                      Id="bb54d26f-b4ae-41fc-94ca-530d2e481d50"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="82d4fe45-37ee-4bc1-8267-ddd5e27e76d2"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2df57598-6037-48c1-994f-61515cd471d3"
+            name="deleteOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cfce4c7a-3d9b-4493-9c08-0a7d04fb52bd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DdeleteOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="80fdca89-6597-4e69-be1f-7a0ab89d8b38"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d45e603f-e7b7-4e66-b82f-1d190e7b0c73">
+                    <propertyInstance
+                      Id="c35174cc-9d88-4a62-b544-8ab7cef49226"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6c22eac-efc3-4693-96e8-e7ccc74a636a">
+                    <propertyInstance
+                      Id="6533a3b6-74d3-47f8-9c24-1789e2f74f2b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f2474e9-f5c6-4981-871c-4ce0ce9032e1">
+                    <propertyInstance
+                      Id="5cdf75b5-8b7c-4d08-be94-6553e747e471"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79176327-86db-477b-9448-b80a841e93f1">
+                    <propertyInstance
+                      Id="42e0d0da-2d02-4ef5-86d6-53095f1e4eaa"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58fe8540-61d8-4220-b3e5-af4819c0e427">
+                    <propertyInstance
+                      Id="caae16fb-4193-43c8-b31b-da36bd35e847"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c39d0696-ef9b-4fa9-9311-effb8919d16e">
+                    <propertyInstance
+                      Id="d819f8fc-cc4c-492f-bdf5-86d8b18be738"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ffc99971-5e42-4bcd-b90e-ea4634818cc0"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5a270822-2995-456c-9aa4-1c1182a1538f"
+            name="getAllOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="46df9a34-827f-4c7a-a62b-6481d11dff18"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DgetAllOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d89cae08-af3d-4fc7-8275-adbeb075ee91"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="43b19087-40c5-4218-9009-af0862a84eae">
+                    <propertyInstance
+                      Id="dbefe860-3cbd-4db5-b1f1-5fb6d43d1797"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b0132da3-01ae-4c9c-8aad-517025aed86a">
+                    <propertyInstance
+                      Id="27ed891d-b8b3-4209-a4ee-79eb130c706d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b71e608a-8f8a-468c-a1d7-873e397f41cb">
+                    <propertyInstance
+                      Id="326ccd1b-6cda-4933-8c87-43a75943700b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a58d53e7-01cb-4ef2-95dc-9013d76dcaf7">
+                    <propertyInstance
+                      Id="6a11417c-6cb6-442c-8a61-e79486d13c01"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46527e14-d099-4824-9449-810eeeb0d7f2">
+                    <propertyInstance
+                      Id="9159376e-3b9f-4a2c-9fca-4de1121bb770"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74dc4e61-f7a5-44c9-8255-ebdee2fbe8e1">
+                    <propertyInstance
+                      Id="45e95306-8632-4814-863e-7ed58dc8d978"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="378717a0-3baf-41a1-964a-a3b8f55b1e11"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="50e89858-06c6-4f67-951b-94712c9d4852"
+            name="getOneOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cfe627ac-84c3-4c53-8a6c-7e8cee7c47c0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DgetOneOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4cae6e85-598a-4a62-9047-f79c2e37619a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="355deedf-7964-48d2-acd2-ba417e40f748">
+                    <propertyInstance
+                      Id="61b34147-6853-41a5-a3bd-1bc3a90296bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56e2a348-c329-4fe8-a52d-42156c165c8f">
+                    <propertyInstance
+                      Id="3dc1120e-91d1-4946-a0ea-82f1033e869a"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99eab415-4972-4994-8062-2405c2047b3a">
+                    <propertyInstance
+                      Id="d849577a-8238-4d0a-835f-2f06eb2a4d06"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c1bb046-aa15-4dd4-b354-ba2ca9596c90">
+                    <propertyInstance
+                      Id="29de1c82-8948-4ce7-9cc5-1c265cb1436d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0abba6c-4643-4c97-9cbb-042e680978e3">
+                    <propertyInstance
+                      Id="e4d26aa6-1974-4b2f-ad11-ee86c581a949"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a318298b-8c63-41b2-8678-ec894d50123e">
+                    <propertyInstance
+                      Id="543f18fa-848b-4398-907f-5cdcf43d7296"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58ede274-a0a0-4782-93eb-5e3a17e815da"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0d51a3ff-fc2e-492d-89d4-5726a49a7cbd"
+                      LastKnownName="Order"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="75d23f76-d39f-4a2f-bb92-b878d679c688"
+            name="getSomeOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cd7c5263-3322-47b5-b515-501ba03e740b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DgetSomeOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="57a18392-0827-4fa1-b0e5-657bf76edd27"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42858d09-c4c4-4077-97b3-8936c834008f">
+                    <propertyInstance
+                      Id="244a3eb3-a977-48a7-af16-5cf8109bb1fa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b83378d-ccf7-42cc-951b-6547abf00a7f">
+                    <propertyInstance
+                      Id="54cbe7d0-833e-48e4-9162-ba0ff67c2695"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0839ab9-58b3-4312-b801-68199cd9ce34">
+                    <propertyInstance
+                      Id="02a996ed-9f57-4c9f-8a6d-7aad654cbde7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f55c2b2c-8f1c-48ce-a916-eaa1960afc50">
+                    <propertyInstance
+                      Id="d9480724-28b8-49f4-9be8-9f874ffa18bb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a194a887-6e4d-42ed-b1d1-c9c1c00f7e21">
+                    <propertyInstance
+                      Id="0ed9c044-72e3-436b-9bce-5b277e90a9bd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fac0e7ba-a7d1-4d81-999a-c71cc06a67c1">
+                    <propertyInstance
+                      Id="39311f4b-531c-4573-9170-ef3192c5218e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3adb05c7-7c2c-4c81-ae50-7afc81df1dc9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1780231d-863a-4d3e-801a-bfb35226b6fa"
+            name="updateOrder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ae1759c4-16f4-44a1-974c-dfbb4ad3aac9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3DupdateOrder"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="243355e1-2de1-437f-954d-c6a671f012f8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57d699fa-fcb3-4bd2-bd6e-6b6ecd89e566">
+                    <propertyInstance
+                      Id="a0f87a27-fe65-4211-9b35-0bd7e7ceea90"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5617299-f4e9-401c-ad0b-380174bb2972">
+                    <propertyInstance
+                      Id="daa264ca-29e5-4450-b750-3a53578aac99"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1495c03-ae74-4dcb-90bb-13d18d40640b">
+                    <propertyInstance
+                      Id="07b13600-71e0-4897-9418-eed252e4c8c4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d50975c-73d4-4f95-b371-09b7029f05f9">
+                    <propertyInstance
+                      Id="5d02753e-a757-470e-a569-ea332fdc4991"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d883966-338a-4977-9f0a-13ea70682af8">
+                    <propertyInstance
+                      Id="e6de6635-b313-44c1-a222-13f53dcfdb89"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb82dd7f-d8ca-43e4-bed9-e0421c7f994d">
+                    <propertyInstance
+                      Id="f685b79d-864b-4dcd-aa82-36f23a0e1a41"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ab3a8a92-e226-4a8c-a7cb-65b7252cc473"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="71fdf026-378d-4459-9535-f836a372e75e"
+            name="OrderDAL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a870385d-1ef4-4416-9fe6-093abc1bed7d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DOrderDAL Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="574411cc-9eea-4486-a415-83c838619310"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65b56dc8-1768-466e-a7f7-dadb8961f249">
+                    <propertyInstance
+                      Id="7070c087-ca41-4520-ac3a-f4021ad2a2aa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="81c3e56a-85de-42e3-9d10-64e457c2c30e">
+                    <propertyInstance
+                      Id="25526a46-46f8-4729-9550-aefde996895d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="288afd39-3732-4425-bea1-fe40aa4f26f1">
+                    <propertyInstance
+                      Id="c7b775f2-09d5-488d-848c-55f1e30f5b1e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f60e9398-f296-4466-a2a2-47b2474bb2bf">
+                    <propertyInstance
+                      Id="41e532e0-cd5b-465a-9d04-02a96459f5f5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74bf53de-9d24-48dc-a551-996fa948a5f9">
+                    <propertyInstance
+                      Id="0eab24b2-ba63-4cd6-a3fe-63ffe4a85f0f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4713ee45-5414-462e-98f4-f583794621e4">
+                    <propertyInstance
+                      Id="364b07a2-160e-4540-97a4-5aec2fea2678"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="eb59604b-f499-460d-a50b-dedd523111d6"
+        name="RepositoryDAL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="5d546139-1005-461f-8137-83b2824f4cf0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b3ce0c6d-d06e-44c8-984b-3988187a1ef1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2289cf6-2694-4ea5-be4a-0cb82d80610a">
+                <propertyInstance
+                  Id="6561c6c0-b96c-45b1-beeb-348f8e51d111"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1f766fed-4136-46d7-b071-d8d223a74396">
+                <propertyInstance
+                  Id="fb80e6dc-e64d-4827-a420-ee272208e0b7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d827ce21-d48c-401d-879a-93e0bedba097">
+                <propertyInstance
+                  Id="6c753c40-4e73-41b6-8e0a-7788c93b49f1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d0bb2d07-132b-46d6-97de-d7835875ea60">
+                <propertyInstance
+                  Id="d052fb8e-0bc3-4834-92c1-2be7876f84ba"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ef29cdad-aa27-400b-9523-6799c19a1304">
+                <propertyInstance
+                  Id="a483e5ca-c316-4d29-aa87-e77ee9c1e7b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f4aa2c4e-48de-4efd-8e86-ee97867a3c1a"
+            name="addRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ead030bd-0704-47dd-aaee-de719a762e91"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DaddRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2ce7ad9-24ae-4420-bc23-c56fe8cdf8d5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ddece83-ed31-4d7d-abef-157af302340e">
+                    <propertyInstance
+                      Id="ab245fe0-295c-42d8-9094-e2fc0325d41d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8e4e5a46-713a-4c73-9a54-a53b93a6cc68">
+                    <propertyInstance
+                      Id="6d8c63ca-bf12-4b89-be7f-15a6846710ac"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13c4f208-ef5b-4d11-a4f1-2d60a6c8c166">
+                    <propertyInstance
+                      Id="51544a2f-0186-47c5-afb6-a298bce514d4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6fd3e39-31ad-4384-a48f-ece852b274b5">
+                    <propertyInstance
+                      Id="b4f5c3ed-ae23-4f06-a825-cd48b11557be"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33cb2959-c21f-4324-951d-0fedc700d568">
+                    <propertyInstance
+                      Id="124ce10f-cf65-4833-afbc-3e78700dcd9f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38b86d2f-47bc-4047-899b-15a766da68cf">
+                    <propertyInstance
+                      Id="0469977d-1278-4125-973f-ea79c2ef27e9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a7ee7314-648f-419e-8bd8-b5175fa65b6e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="31e1c4c9-5b9e-479a-ab69-3aadd088830b"
+                  name="Repo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5041f613-ff32-4797-bb13-fba6e1023f13"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DaddRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DRepository)]) ParameterIdentifier%3DRepo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a1e88809-34fd-46d7-9438-2a4ca02d3d66"
+                      LastKnownName="Repository"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b30d6736-7334-4705-bb11-af9747ee288f"
+            name="deleteRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f31f503c-d8b8-406b-818b-3bc7f8c8d1fd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DdeleteRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0fe41351-2f34-4bec-8ac1-a46601291c66"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da8edce1-65c4-4320-8772-cc972ba5c9cc">
+                    <propertyInstance
+                      Id="80b7444a-3fce-4b65-8bed-4a24ed5a884e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3e3feac-a73e-41b8-8169-30a9711aa508">
+                    <propertyInstance
+                      Id="ccb4ea06-663e-427a-9086-4b9326f4979b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf41a029-a3e4-470b-8c7d-c1c0289ea21e">
+                    <propertyInstance
+                      Id="95b67c26-baa8-400a-82a5-0129725a89ab"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c42560b5-404d-4727-af46-bd84d9cbafa4">
+                    <propertyInstance
+                      Id="17dfe359-7770-4b89-9c2b-d1e18ec3194e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62f4f42a-8025-4488-892b-3a04fb65d85d">
+                    <propertyInstance
+                      Id="004df388-3cad-4b01-9bfd-112cf370702c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fca1b2f6-0742-4fb8-8781-fc0cb4ed9cc5">
+                    <propertyInstance
+                      Id="94c052a6-d8de-45cf-9753-f93264c54cbb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8e38c03d-a44e-48df-ba4e-9ba2665748f4"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f091a81-4860-431a-bb23-cc5c45a3a80b"
+                  name="ID"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f6b842f3-2be8-4131-bea4-ef035fb5b70c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DdeleteRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DID"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4b09d114-9894-4218-a1fa-09a7d0c01009"
+            name="getOneRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="685d7831-38ba-4065-9d19-dfd53de811b2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DgetOneRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="29795536-c6f1-4df4-9f56-a4e5d3c07d17"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6029bc2a-e6ae-452c-a534-bf08691d7c3a">
+                    <propertyInstance
+                      Id="9493e320-b06d-4110-9207-a900ff996637"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="985b260b-edee-4df5-ac99-3ccae1b5e860">
+                    <propertyInstance
+                      Id="94247d0a-c413-4958-aaaa-545218df9146"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50d42a54-8948-49fa-9270-697f8e790f2a">
+                    <propertyInstance
+                      Id="985990ef-fa11-47fc-a885-2eface325c13"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="49d94c36-5d2b-4934-acec-814bd9bc773d">
+                    <propertyInstance
+                      Id="77efe0a5-fd0e-47f8-9122-97534fcf3d87"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d8917204-75c5-4f49-bdf9-89be9c4fbc07">
+                    <propertyInstance
+                      Id="3b63523a-9609-4472-967b-3760b624ddc8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="661cc767-4d07-4171-ba8f-2a69fba9da6c">
+                    <propertyInstance
+                      Id="c9bf782c-7973-4d37-8c7a-c6391e2169d5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cb62ff2f-3544-42d8-8195-ce2d178eed71"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a1e88809-34fd-46d7-9438-2a4ca02d3d66"
+                      LastKnownName="Repository"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f9e88813-f90e-4827-9c46-7314573256e3"
+                  name="ID"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="05520c86-d5ca-45a9-8ffc-13fb8d7b9309"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DgetOneRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DID"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0fa9efda-8a08-4be9-957f-594e6457634a"
+            name="getSomeRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="65bd01e3-1d04-44fd-9f31-0465321798ae"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DgetSomeRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="65b7b6d8-1794-469d-81d0-87ed4ee99352"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a325406b-11e2-4965-a831-0e4b61257181">
+                    <propertyInstance
+                      Id="27dc8b5e-db5b-43d9-bd52-d80b4c7bc7ff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8e3358f-f36d-4208-957b-48bb36e9f61d">
+                    <propertyInstance
+                      Id="7b973c7a-f868-4494-93a3-f9d8ca585a0d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ad132b4-d131-4d52-8cdd-78380d90ca78">
+                    <propertyInstance
+                      Id="f43482fd-5f76-41c5-a0bb-7fc3bb76afb1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="87e616f4-4bc4-4e55-b59d-b72a26fe7f2d">
+                    <propertyInstance
+                      Id="a62d66fa-3419-4e5b-bc11-6ebcd4786f4b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1242ff2-0dbd-459e-bda5-50a713a31e1e">
+                    <propertyInstance
+                      Id="e77105c3-fe96-48e5-8348-576854619578"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d164ad32-cc7b-409e-abd3-b4ee38e92fc0">
+                    <propertyInstance
+                      Id="b58634fe-b0a1-47f1-b3b5-8c45967d1c85"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36ae5dd0-5e80-41f1-bd5d-92624ae6e5c8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6a30f13a-aca2-45b9-bb9f-5147d60fa7bb"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="181cce83-3c27-4eec-bcbf-449bbd4da7da"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DgetSomeRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0f62638b-1a61-48b9-afcb-6d90b118aa76"
+            name="updateRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d0c1e6d8-e4f3-4aae-9bba-54c16413055a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DupdateRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DRepository)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="74bd6dc9-6673-4363-a7e3-8a481d4a1838"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05cf5786-a12d-4578-a638-e9363dce34b6">
+                    <propertyInstance
+                      Id="c5b35a38-d16b-4604-8262-9cd316cd16b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3308097-a4ad-493d-a0b0-e5c1e241a8a2">
+                    <propertyInstance
+                      Id="fc7e84be-4aa9-402f-a418-837c2de2e5b6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f288765-cd56-44b4-9921-0bb7b8f54342">
+                    <propertyInstance
+                      Id="1d5fb460-0ba3-445c-860e-5214060f6466"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e5c89f9-9b13-4e02-9c1a-b66e406386c3">
+                    <propertyInstance
+                      Id="1aa886c3-2f4d-42d7-a051-e31c79052ef7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd4caa77-8ef8-4522-9301-f828258bd721">
+                    <propertyInstance
+                      Id="3181bb34-9b47-40d1-a6df-45da3c1667e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="260a6f27-4bb8-455e-84cf-e514dd0708b3">
+                    <propertyInstance
+                      Id="03f69a10-dc62-4a9e-8f5a-3399a12c89ad"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b8bfcc33-3b0c-4b54-84cb-b5e42bae9e96"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9297e544-c904-4e4d-9b58-fc45c7f516e4"
+                  name="Repo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0e4c26c6-2174-46e8-b400-fa8024ff839b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D(Name%3DupdateRepo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DRepository)]) ParameterIdentifier%3DRepo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a1e88809-34fd-46d7-9438-2a4ca02d3d66"
+                      LastKnownName="Repository"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="705e3e70-d3f4-4f25-8231-af3ca4457ca4"
+            name="getAllRepo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="64055f92-12ba-48e2-aa62-6ff01723f332"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3DgetAllRepo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="259e1d8e-2ed9-444a-9537-7298d5c32da8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="781cafd2-2b2b-41c3-a903-975f71c99ef4">
+                    <propertyInstance
+                      Id="8a6527c7-8291-4a0e-a993-80e9dac22f70"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf8bacfc-aefe-4ee4-9f41-f59ef9631122">
+                    <propertyInstance
+                      Id="2408c66f-46b6-4fe1-a293-984b988b262d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3d7b422d-6a9e-420e-97c5-4d09912a766b">
+                    <propertyInstance
+                      Id="d4938542-1a28-4da5-acc9-cd09f29c0c54"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6ae0752-8647-4664-9539-508266a186fa">
+                    <propertyInstance
+                      Id="91ae0500-882e-438b-b18e-462196e13920"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a33c770-db94-4c84-b8ff-8ae37bd8927d">
+                    <propertyInstance
+                      Id="e41b30b6-511e-43cd-9605-da5d92362dc9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab6ce1e5-8ba1-4a57-acbe-6beebfd8180c">
+                    <propertyInstance
+                      Id="30c8cfaa-f08a-4785-8a2e-f8c2a125abed"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e7a988ca-40fa-4322-a6d5-faf1d8d0f3d8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3e93764f-ccad-47ea-835f-44d02e61258a"
+            name="RepositoryDAL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="adbd718f-c6ed-40d6-9174-22275170a313"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DRepositoryDAL Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ca88451b-fae0-42ad-8945-9331d658f282"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98f0816c-8fd7-4a0b-b90f-8c7c1738d52d">
+                    <propertyInstance
+                      Id="87ac8014-b3db-4a23-8e94-51bfbeabe5eb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="223bc87f-9fb6-4beb-9ab1-1d622c3251c8">
+                    <propertyInstance
+                      Id="5bb72f68-2d2c-4f86-838f-0911e77fa867"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73b60e35-8d71-43bd-9d10-84fd6cea40cb">
+                    <propertyInstance
+                      Id="fda81a25-8d7f-4ec8-9a6f-3163ed571cfd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0ab9e64-e184-4525-ad00-36352ebff7dd">
+                    <propertyInstance
+                      Id="b2853c71-59a6-457e-9a5a-31fcad264a31"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8dacb142-7249-49fa-94e4-c8c02a2296bb">
+                    <propertyInstance
+                      Id="af6a03d1-a826-431f-b26b-9e279d793830"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e9cbd63-33ce-41a2-a106-39eaa62e1163">
+                    <propertyInstance
+                      Id="24fa4a8d-cdcd-4944-8b54-7bbaee1c6700"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="123a2ba3-2dc8-4695-8560-3d1f01df72a4"
+        name="SectorDAL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="acfafbfc-2c4e-4608-ac41-e84ca809cfc4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="931d50fd-dc08-4e4b-b4b3-fa1a573f8ec9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="baf08352-4a2a-42b4-8d54-c1dba4e02a51">
+                <propertyInstance
+                  Id="bcf7947e-e7d8-4add-911e-e8b82b763fa4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="afa94b01-709a-4e8f-9854-0c6398af25e2">
+                <propertyInstance
+                  Id="5bec30f8-f34e-4f60-a7bc-4978c5c32f83"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="192e3d51-3104-47bb-b74e-5b5565b0ba58">
+                <propertyInstance
+                  Id="f033bc8b-9bba-4923-ba7d-b6b4f933c784"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="88f156ec-aeab-40c2-a637-98122060570e">
+                <propertyInstance
+                  Id="0c4479fc-35de-4c13-808a-ee5e67744cd5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1d469a7-05fc-4442-abaf-3ca0428db39e">
+                <propertyInstance
+                  Id="f809318f-a0a0-4093-82b8-3ebef566dc97"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e05f390e-75d2-4739-a8a7-06494adbe025"
+            name="addSector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f82a12f7-fc5b-4cee-b970-0213cdcd16ea"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DaddSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DSector)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="09e069ea-3b25-4006-a9d9-eed4bf4ed36c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc13bd03-cd40-4efa-a784-e6be66585453">
+                    <propertyInstance
+                      Id="3e914b1d-f5a2-49a9-a623-ba5317188a57"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4bdd7b7-4400-4ddd-8e78-eabb889c2d9c">
+                    <propertyInstance
+                      Id="08e082e4-37e2-4d6f-a5fd-26a16c656549"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de726e12-3ea3-4430-a039-78c1f44c46ec">
+                    <propertyInstance
+                      Id="7a37101c-a63b-4991-8151-13419da33cdc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="428e5ddf-752d-4f64-84e2-502870b8bb93">
+                    <propertyInstance
+                      Id="fc5cf5ae-aa88-49f9-b9cd-53523542ca63"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d5d0ef20-f181-44f9-bfb9-8424ac082728">
+                    <propertyInstance
+                      Id="fda48831-7cb3-4e69-a235-53165e21b9fd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1e31f78-b1bf-4be1-8366-66eb05486780">
+                    <propertyInstance
+                      Id="67767925-7eff-4f99-837a-f7c847534895"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="efdf0e36-7c34-47fc-8394-759b8dee6703"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="58406bdc-ae69-439c-a570-7c88c32f9477"
+                  name="sec"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="dbda5c8b-a31e-43cd-a592-963077728fa9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DaddSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DSector)]) ParameterIdentifier%3Dsec"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2447a74c-6af9-48c5-92ec-078bddb39226"
+                      LastKnownName="Sector"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73b37a4a-d304-464e-ac50-af17c08c82ee"
+            name="deleteSector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ea1ef58-4d54-4694-8efa-9d2822b8b86b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DdeleteSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aaadd121-9b4a-404e-841b-7f5f986d5a43"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="811cd9f6-f276-4120-830c-1fed57061551">
+                    <propertyInstance
+                      Id="86088a88-d92d-4628-93c3-b6bd9a9f992d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="877dc77e-e89f-4fb7-91a1-7faaa916c51e">
+                    <propertyInstance
+                      Id="b4b7e1f7-0a16-4ca4-aa7b-8f4b06d8f249"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17220878-2981-4791-9232-94d9ecadfa16">
+                    <propertyInstance
+                      Id="a9a6f03e-0750-403a-a7e1-8fdd745d331c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13baa558-e316-445d-bdc9-82126f3b7059">
+                    <propertyInstance
+                      Id="1058d7c3-36f8-45bb-8b10-a767255936b8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23661051-a2e3-4777-9313-17f298d22970">
+                    <propertyInstance
+                      Id="f976ec53-9bb8-4cc7-a46e-7c1e2f6e6f12"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d850aed-0635-41ad-b61a-c3e73be0f131">
+                    <propertyInstance
+                      Id="9d3f2314-6cc1-4a62-9c5f-b36773bb3890"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d6af40c7-0c91-44c2-9f4e-f83753161082"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f32057a-ac11-4ebe-a3d1-e03fd6a421f6"
+                  name="ID"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="815aa45e-97c9-490c-9402-c23e4d66d76d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DdeleteSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DID"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="041c386c-90e4-4a1e-8045-d27713e0887f"
+            name="getOneSection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9f9bb615-0ae8-42bd-ad86-6b6805d6fb4e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DgetOneSection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1baae3a0-fdb3-4578-b22b-ed55e9ea7e20"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55e8e54d-2e65-4a27-9654-a79669964f3c">
+                    <propertyInstance
+                      Id="6a7b84bb-dd56-420b-a611-885305913aee"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="644bb9c4-7c4e-44f6-ab03-a3e000fb1fe2">
+                    <propertyInstance
+                      Id="1bde60d2-e652-4f51-b4f7-99a1e4469b8b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1c11126-fd94-44c5-b504-2276fd288b2c">
+                    <propertyInstance
+                      Id="b81ffcbb-a8eb-44d4-8142-8d0a905697aa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e97015c-5f93-46b9-95da-d7d26db56d26">
+                    <propertyInstance
+                      Id="5f5b5efd-73cf-4e54-bbfa-217e62312521"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73c3da61-c005-4d2b-bdea-a760670614ed">
+                    <propertyInstance
+                      Id="10f88e37-fe7d-4f1e-8792-b7bbaf12139b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d0d51508-47f1-48f9-a716-091023d0f2ba">
+                    <propertyInstance
+                      Id="08f8bce9-a5a1-4a43-bb05-957d2c6d838a"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="36dd2019-1410-4be7-b587-476a02a9ba03"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2447a74c-6af9-48c5-92ec-078bddb39226"
+                      LastKnownName="Sector"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="577a2eed-569f-4aae-afb7-86d782d07b96"
+                  name="ID"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="09c426a7-aa74-49f5-9c11-4ac93abbe993"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DgetOneSection OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DID"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f872873f-2d6c-45a2-991b-b404ef7e6fac"
+            name="getSomeSector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fcc3c0bf-3bae-47ca-8dbb-bf75c6c09a39"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DgetSomeSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="761aafc7-caff-4b84-b68f-d68a680ed8b4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2ba44f17-3d79-4c93-acdf-7fcfaf82a2fe">
+                    <propertyInstance
+                      Id="5f067c0a-9c97-4a8b-88cc-963529dd7f04"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f25251b1-36e6-4873-a539-d84a006de7e1">
+                    <propertyInstance
+                      Id="f025adfc-b616-4404-a53b-878bfc907ff9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5d18e68-4013-41f9-a58a-242b634eaba4">
+                    <propertyInstance
+                      Id="0c9771a6-4f7f-4996-9114-987537cd9bea"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf7dca4a-6b59-4247-8602-c499c39b60a6">
+                    <propertyInstance
+                      Id="1dca31fd-8d06-4e86-991b-334e6d1a34c4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b63c493-596e-4692-a6e7-e93ddead7b40">
+                    <propertyInstance
+                      Id="d84d4d5d-5aaa-4ebb-abc4-476889da0a3c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e1ba7e63-4e89-4bc6-a6dd-37bd53cb43d9">
+                    <propertyInstance
+                      Id="cf650f4a-b0e4-41bd-af69-d9d6ff64b917"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43120b5d-0115-4d6c-a151-c83d3c338ed7"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6b51d383-df26-4272-bab4-926a46b75035"
+                  name="query"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2aa723cd-8664-43f2-802e-bbbe291429fc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DgetSomeSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dquery"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="64b8b447-78b6-46f1-a1cf-5999f404cf06"
+            name="updateSector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8bca5916-dba6-40c4-aa41-e3809c0ec864"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DupdateSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DSector)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e8da617f-e837-4f05-bd3d-c6eb07da70b2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0eb0e675-2c65-4ab8-b6d3-41b46c3e0415">
+                    <propertyInstance
+                      Id="aafb2e72-a3dc-4965-a890-a160f3ac56e6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14a1e41b-ef40-4ad4-96e2-fdb693b3580c">
+                    <propertyInstance
+                      Id="ab5be7de-ad0f-4d7c-87ca-a363d011221b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="118ffdf9-57df-43ab-8f57-7457cfb23616">
+                    <propertyInstance
+                      Id="e178afed-45c5-49fd-b291-88afdef09d07"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2f5e991-f76e-45c6-9acb-69b3c14fbd30">
+                    <propertyInstance
+                      Id="6a1b619a-d336-4bea-9559-9986f9ab512b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba1d6a15-4b30-41f1-a18c-dda167eba063">
+                    <propertyInstance
+                      Id="e6c8bf41-ceb0-461f-a291-3a30e3e90944"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="567dd139-2233-4b11-b465-e58d51bc56f5">
+                    <propertyInstance
+                      Id="90513a8f-39f6-4544-81fd-c9ae881f10d6"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="52b0e038-2fa1-4dde-bb53-6dac3f7deb13"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a16b1707-d0af-473d-a4be-a79b8bd17348"
+                  name="sec"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="66b1fa78-09e5-4721-b63e-a4e21cf2c7b8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D(Name%3DupdateSector OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DSector)]) ParameterIdentifier%3Dsec"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="2447a74c-6af9-48c5-92ec-078bddb39226"
+                      LastKnownName="Sector"
+                      LastKnownLocation="Package4_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d3885191-0dbe-4c3b-a826-72fbc8f83b9c"
+            name="getAllSector"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="eec627ba-20d1-4f23-a051-d83c2ea19f5c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3DgetAllSector"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d5a8644d-3227-4113-90ed-a4218dd7bff8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="214de71a-3058-42d5-be2a-8b158a9bcd2b">
+                    <propertyInstance
+                      Id="dbb5767c-334e-4fb1-9ac6-1e960e9df46a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00970d86-1c73-470e-a3ce-e4147e4e9e2e">
+                    <propertyInstance
+                      Id="d2f0092e-e7de-423e-a361-7b1e87681a79"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57b746bc-c013-4333-8d8d-aae0fb28e2d5">
+                    <propertyInstance
+                      Id="b95098c6-87b5-4360-837e-a64bd37472b3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5acefd7-539d-4ad1-99f9-cf0b3240dba4">
+                    <propertyInstance
+                      Id="455232d2-74f2-46e3-b74a-b8ff2117bb1c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2c39d265-03a1-4d01-884b-9ab115a17644">
+                    <propertyInstance
+                      Id="6b2f2b83-433f-4dea-a679-79bcce432eb1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74fc7c49-0d71-4ab4-b972-c203406f5cbb">
+                    <propertyInstance
+                      Id="99279aed-6647-4189-a028-66468743f730"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7f899394-7309-45bc-9641-7381a632eb98"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a359f3cd-31e5-4fbc-ba09-fea3336bc740"
+                      LastKnownName="DataTable"
+                      LastKnownLocation="Package2_0143.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6254121c-b8f7-4acb-8dc1-bf2f22318902"
+            name="SectorDAL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="377dcdcc-a8ac-47a2-ad54-71c402bbca7e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseDatabaseHelper%2Fbin%2FDebug%2FWarehouseDatabaseHelper.dll Namespace%3DWarehouseDatabaseHelper Type%3DSectorDAL Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99ccc481-9305-4c4c-bf4c-e98c4d0c8375"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1af98f5-8b43-4598-b6b7-0bb0c0ff6e85">
+                    <propertyInstance
+                      Id="79da7226-763e-4558-8441-12f066763f16"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cc9f079-1b80-4635-94ad-b409a7789324">
+                    <propertyInstance
+                      Id="c85d22ad-19ee-4f5f-a602-37c008f69520"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="adcbe292-7466-4406-8f2f-8fa4abb4357d">
+                    <propertyInstance
+                      Id="6b283fca-a0a1-44e5-887d-1288684f8c35"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ed95b114-c254-40ea-8322-81cb56bb63fc">
+                    <propertyInstance
+                      Id="b732ca3b-bd57-402b-ac37-2c2d3d9ed797"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7df660ba-520f-4642-b90f-bb09cd6a207d">
+                    <propertyInstance
+                      Id="7dd40778-d4c6-4d59-b874-4720ba72e9b4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2e6e37d-4ce4-4896-a195-40dddf9dd143">
+                    <propertyInstance
+                      Id="0c2f1171-670e-4074-b2ab-0bc1c1f276d5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="86319045-7f7f-4f61-ad2d-8a506f8d02ee"
+        LastKnownName="Properties"
+        LastKnownLocation="Package16_0143.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

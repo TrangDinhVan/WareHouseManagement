@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b7007d70-43a0-42a0-aec2-494797c00e24"
+  name="DotNetBar"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="6169cf5a-e92c-4b59-92c8-ed478451b68d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DDevComponents.DotNetBar"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="54834ecf-ce99-4598-b9f6-270a121e800e"
+        name="ButtonX"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="016840ba-93e2-4470-865f-ac84275641f7"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar Type%3DButtonX"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d4424e2f-1ac3-46e4-af78-478165329b2b"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="83880f51-cea8-4ccb-8d28-faef2d7efca1">
+                <propertyInstance
+                  Id="e812305e-b66a-4b31-af7f-c5e23f1b826b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fe69f220-c609-4fc5-a400-3070c4fae701">
+                <propertyInstance
+                  Id="a71166dd-56f4-45b7-a77e-5241f3314831"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="732f85a3-7fc7-4b0f-8a0a-c8307f091b08">
+                <propertyInstance
+                  Id="3b24da02-f093-4cc7-aac9-9550d161389e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f40a32a4-12ee-40f6-b317-94451776d958">
+                <propertyInstance
+                  Id="d0c46d97-e7a1-4e90-92d6-a5983f0bf91f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="674ec79e-ed73-462a-9c57-b758aa2b5696">
+                <propertyInstance
+                  Id="1acfe6cc-6b0a-4a73-9ed4-237d25968e93"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4a512ef5-8c10-43a9-8356-4d163835d828"
+        name="SuperTabControlPanel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a35b7434-2e2a-4dba-99b3-455ece2c37da"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar Type%3DSuperTabControlPanel"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dccd7a42-515b-4f82-bcb1-c3fbf96b0854"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b4d878ef-70a4-485c-860a-e3f345a1a2ab">
+                <propertyInstance
+                  Id="78366f9d-07d0-4b67-921b-7632e0c3dbec"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="41886d0d-6c65-4303-9f63-e5c4dd938150">
+                <propertyInstance
+                  Id="b4c0d092-fc74-4b55-9f07-07ba765f4350"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="91a0d108-4554-43a5-818b-6546913ca53d">
+                <propertyInstance
+                  Id="5361710f-e267-4b49-bb0a-04a088ddccbb"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2c681388-1144-48fa-8e91-ff08e945f57f">
+                <propertyInstance
+                  Id="a291153a-feb3-4628-bef6-b15167e9a293"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="48ea6632-ab53-4a3c-892b-fce83f742b2c">
+                <propertyInstance
+                  Id="be002fba-e6c0-491a-abc2-e14ce7f7a404"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ceba4ada-40eb-493b-9de8-a61f28d135c2"
+        name="SuperTabControl"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c9f20579-0e91-4dbc-bdc9-ae63f682c587"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar Type%3DSuperTabControl"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="4507e6a9-6369-4fb6-bb5b-af2fd2eb6cec"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="03779f84-7c3c-4d6b-8689-4fca44c9200f">
+                <propertyInstance
+                  Id="cb7b907b-ba22-45e0-96ce-da20c2e435a9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5093d86c-5c12-4a62-b867-c5c373a5b463">
+                <propertyInstance
+                  Id="8e55fb01-70a7-4de6-ba1a-4b121c5d7dc7"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b9de39e2-d96f-433f-83aa-a7ff7a810455">
+                <propertyInstance
+                  Id="a9fb25af-5615-431e-a69e-a69b159c0ee5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b56b851-cf7b-461f-98da-9a6a2d85ac25">
+                <propertyInstance
+                  Id="f3607683-b3e2-405b-a06c-6a0ee6f78744"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="019854c5-e63c-4f86-81e7-4af1e9d9d5c9">
+                <propertyInstance
+                  Id="a84fec46-e13f-44fe-81b7-ef29e29bb2a5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="43880940-12aa-46e9-b400-78ee07b425ac"
+        name="SuperTabItem"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="823eb972-efcb-43f4-bb55-f90c21c23eb0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar Type%3DSuperTabItem"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cfbe1ddf-894f-486d-9461-12859ee865c4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e67ab284-ed3e-4913-b2a4-1cd1268c7ebf">
+                <propertyInstance
+                  Id="0c1685f6-b3cb-440e-b725-a377c66e0902"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7902f641-f9b7-4883-b7e4-f63fc6ba5cc5">
+                <propertyInstance
+                  Id="ca21c0d6-5b54-42de-8098-65c23a28adac"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="796ab624-9c0a-4cc8-b241-2a51bcd8cb5a">
+                <propertyInstance
+                  Id="8930fb15-8078-44da-a461-fa851971f431"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0bd82d87-df8a-45b4-9312-8ae496300916">
+                <propertyInstance
+                  Id="145d7153-aa98-46c8-a33d-56b126fddcf6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b3993e42-f552-4332-a441-c46d0ec77c56">
+                <propertyInstance
+                  Id="1bb0510d-0cb9-4d15-bdb1-dc1b90243dda"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4c4004e2-4245-42d8-ae47-71872bfb9e44"
+        LastKnownName="Controls"
+        LastKnownLocation="Package11_0143.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d13ee233-40b8-4658-a757-ad267e306942"
+        name="LabelX"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a77bc6db-0787-481f-b221-7b1b4a4b804f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar Type%3DLabelX"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2d5af0c7-65ce-47d7-8fdf-8eaba0df7809"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3143ff36-b023-446d-9c24-46e137604270">
+                <propertyInstance
+                  Id="004394d9-a76b-468c-bdd9-4fc698d7dbfa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e6b0116-a4ff-4da3-a31e-f8bce357794c">
+                <propertyInstance
+                  Id="2e194267-596a-4351-9624-62f6cf6b6b0f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7046eef9-55f6-4f03-98e4-a3aa9cdf0dbb">
+                <propertyInstance
+                  Id="a7df8800-f707-4755-a163-3403b4ce79d7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fcf687c4-3801-40e7-a819-9279d65a6214">
+                <propertyInstance
+                  Id="f7110265-5459-4dca-8f11-fc9eb9b7f21f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4341c594-1c9d-44a2-9d32-6f0110e296c7">
+                <propertyInstance
+                  Id="26c4df8e-d99e-434b-b2f1-c83835d5f8dd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="65acfc73-994a-4285-b703-b1c9297b3478"
+        LastKnownName="Metro"
+        LastKnownLocation="Package12_0143.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

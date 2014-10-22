@@ -33,6 +33,11 @@ namespace WarehouseEntity
                 _Name = value;
             }
         }
+        public string Address
+        {
+            get { return _Address; }
+            set { _Address = value; }
+        }
         public string Phone
         {
             get { return _Phone; }
@@ -47,6 +52,12 @@ namespace WarehouseEntity
         {
             get { return _lstOrder; }
             set { _lstOrder = value; }
+        }
+        public double getTotalOrderValue()
+        {
+            double total = 0;
+            
+            return total;
         }
     }
 }
