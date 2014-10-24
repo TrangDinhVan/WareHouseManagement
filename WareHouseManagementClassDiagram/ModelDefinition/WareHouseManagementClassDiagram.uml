@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="0f188200-161f-4185-8b7f-7c917fa53c76"
   name="WareHouseManagementClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -70,7 +70,7 @@
     <packageHasNamedElement>
       <actor
         Id="4819eb54-3164-4c05-bb94-1a3cc8dcd94e"
-        name="Protector and Technian"
+        name="Protector and Technian Admin"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -238,7 +238,49 @@
         Id="b378e213-f744-4c23-9886-56e30bc26670"
         name="manage Sector"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a59df9db-5b93-48cf-a847-17f793226e5a"
+            isDerived="false"
+            sourceEndRoleName="manage Sector"
+            targetEndRoleName="delete Sector"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="03033c72-2da4-4fb7-9910-079907059cb2"
+              LastKnownName="delete Sector"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f775daa5-60ae-42a5-9ed2-af15eb388402"
+                  name="manage Sector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c13e60bc-8f89-4526-81e7-1fb68ccebcd3"
+                  name="delete Sector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -682,6 +724,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="0aa3f740-614e-4972-ad36-367809c703fb"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="add Repo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cc97a347-baf1-45a9-9a8d-025c8d7dcbab"
+              LastKnownName="add Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="87058089-2a22-44a0-bb36-36e3cc0251b4"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89163c91-6f42-4815-92c4-24162508ba6e"
+                  name="add Repo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </useCase>
     </packageHasNamedElement>
@@ -753,7 +834,58 @@
         Id="d2fd85aa-3c8f-478c-9814-4f0a060ec276"
         name="manage Staff"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="49939146-75d8-4051-b9be-0e4f0dfa44f9"
+            isDerived="false"
+            sourceEndRoleName="manage Staff"
+            targetEndRoleName="get undertaken Repo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7fee2129-019a-4945-8137-362cd6bf9865"
+              LastKnownName="get undertaken Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8c63cbb5-7c30-4883-abe6-926d8a868aef"
+                  name="manage Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2b7f0e8-a4f6-4048-b225-47d5e5bad7c5"
+                  name="get undertaken Repo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <additions>
+          <include
+            Id="7aa1b8e6-3b5b-463d-94a2-40e04b5ee528">
+            <useCaseMoniker
+              Id="acc3e942-7bdd-472b-a0f1-72fdb7cf537e"
+              LastKnownName="grant Permission"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -786,7 +918,7 @@
     <packageHasNamedElement>
       <actor
         Id="3719288e-31db-4c23-879b-48567acd0f99"
-        name="Manager"
+        name="Manager Admin"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -838,7 +970,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="3be428c3-fb8f-44c4-89c6-ff9f6490c46f"
-              LastKnownName="assign Protecting Schedule"
+              LastKnownName="assign Responsibility"
               LastKnownLocation="WareHouseManagementClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1040,7 +1172,7 @@
     <packageHasNamedElement>
       <useCase
         Id="3be428c3-fb8f-44c4-89c6-ff9f6490c46f"
-        name="assign Protecting Schedule"
+        name="assign Responsibility"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -1200,6 +1332,84 @@
             isLeaf="false" />
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="03033c72-2da4-4fb7-9910-079907059cb2"
+        name="delete Sector"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="269a8250-7a10-4acd-96d6-771007e4678e">
+            <useCaseMoniker
+              Id="1a3337d2-5ac7-4809-9977-5848e1f253a5"
+              LastKnownName="delete belonged Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1a3337d2-5ac7-4809-9977-5848e1f253a5"
+        name="delete belonged Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="acc3e942-7bdd-472b-a0f1-72fdb7cf537e"
+        name="grant Permission"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7fee2129-019a-4945-8137-362cd6bf9865"
+        name="get undertaken Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cc97a347-baf1-45a9-9a8d-025c8d7dcbab"
+        name="add Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9d268f83-c641-43a4-bdc5-aeec42f99cce"
+        name="assign undertaking Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2aa1eeb2-e806-47a6-817c-a71080099762">
+            <useCaseMoniker
+              Id="cc97a347-baf1-45a9-9a8d-025c8d7dcbab"
+              LastKnownName="add Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="780f9a0d-e4e2-44db-9cd0-4b4c7a51609d">
+            <useCaseMoniker
+              Id="41e11198-00fd-4953-bdc3-32a008e8bed0"
+              LastKnownName="filter available Staff"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="41e11198-00fd-4953-bdc3-32a008e8bed0"
+        name="filter available Staff"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

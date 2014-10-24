@@ -10,21 +10,21 @@
   <Class Name="WarehouseEntity.Repository">
     <Position X="2.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>ACACEAAACQAAAAAAAgACIQQAIAAAACAAAAIAQAAEAAA=</HashCode>
+      <HashCode>ACACEAAACQAACAAAAggCIQQAICAAACAAAAIARAAEAAA=</HashCode>
       <FileName>Repository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WarehouseEntity.Customer">
     <Position X="4.5" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAAgAAQgAACIEQAAAIAAAACAAAAIAAEAAA=</HashCode>
+      <HashCode>AAACAAAAgCAAgAAQgAACIEQAAAIAAAACAAACIAAEAAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WarehouseEntity.Maintainance">
     <Position X="0.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIACQAAAAAAAAAAAAAAAAAAhAAAAIAAAAAAAAEAEAAA=</HashCode>
+      <HashCode>AKACQAAAAQAAAAAAAgAAAAAhAAAAIAAAAAAAQEAEAAA=</HashCode>
       <FileName>Maintainance.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -36,7 +36,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WarehouseEntity.OrderDetail">
-    <Position X="4.75" Y="5.25" Width="1.5" />
+    <Position X="5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIECQAAAAAAAAAAAAAAAAAAjAAAAIAAIAAAAAEAEAAA=</HashCode>
       <FileName>OrderDetail.cs</FileName>

@@ -6,18 +6,18 @@ using System.Data;
 
 namespace WarehouseEntity
 {
-    public class Customer
+    public class Staff
     {
         private int _Id;
         private string _Name;
+        private string _Permission;
         private string _Address;
         private string _Phone;
         private string _Mail;
-        private string _Fax;
-        private DataTable _lstOrder;
-        public Customer()
+        private DataTable _lstUndertakenRepo;
+        public Staff()
         {
-            _lstOrder = new DataTable();
+            _lstUndertakenRepo = new DataTable();
         }
         public int Id
         {
@@ -30,7 +30,7 @@ namespace WarehouseEntity
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new Exception("Customer's name must not be empty.");
+                    throw new Exception("Name must not be empty.");
                 _Name = value;
             }
         }
@@ -49,21 +49,11 @@ namespace WarehouseEntity
             get { return _Mail; }
             set { _Mail = value; }
         }
-        public string Fax
+        public DataTable lstUndertakenRepo
         {
-            get { return _Fax; }
-            set { _Fax = value; }
+            get { return _lstUndertakenRepo; }
+            set { _lstUndertakenRepo = value; }
         }
-        public DataTable lstOrder
-        {
-            get { return _lstOrder; }
-            set { _lstOrder = value; }
-        }
-        public double getTotalOrderValue()
-        {
-            double total = 0;
-            
-            return total;
-        }
+
     }
 }

@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WarehouseDatabaseHelper.OrderDAL">
-    <Position X="8.75" Y="1.75" Width="2" />
+    <Position X="6.25" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAIAEAAAAAACAABAAAAAAAAABAAAAA=</HashCode>
       <FileName>OrderDAL.cs</FileName>

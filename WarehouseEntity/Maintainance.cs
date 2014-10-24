@@ -10,6 +10,8 @@ namespace WarehouseEntity
         private int _Id;
         private DateTime _StartDate;
         private DateTime _EndDate;
+        private string _Desc;
+        private double _Price;
         private Repository _Repo;
         public Maintainance()
         {
@@ -29,6 +31,16 @@ namespace WarehouseEntity
         {
             get { return _EndDate; }
             set { _EndDate = value; }
+        }
+        public string Desc
+        {
+            get { return _Desc; }
+            set { _Desc = value; }
+        }
+        public double Price
+        {
+            get { return _Price; }
+            set { _Price = value; }
         }
         public Repository Repo
         {
