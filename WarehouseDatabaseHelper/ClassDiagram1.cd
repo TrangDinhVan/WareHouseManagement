@@ -28,5 +28,12 @@
       <FileName>OrderDAL.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="WarehouseDatabaseHelper.MaintainanceDAL">
+    <Position X="3.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAEAAAAAECAIAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>MaintainanceDAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

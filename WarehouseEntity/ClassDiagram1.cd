@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
   <Class Name="WarehouseEntity.Sector">
     <Position X="0.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WarehouseEntity.Order">
-    <Position X="2.5" Y="5.5" Width="1.5" />
+    <Position X="2.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECAAAAAAAgCAAAAAEAAAAAAAAAAAABBAAABAAEgAA=</HashCode>
       <FileName>Order.cs</FileName>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="0f188200-161f-4185-8b7f-7c917fa53c76"
   name="WareHouseManagementClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -66,6 +66,1140 @@
       <undefinedType
         Id="7b2bc0ac-15b1-414c-a6f8-5f4021c5a147"
         name="Sector" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4819eb54-3164-4c05-bb94-1a3cc8dcd94e"
+        name="Protector and Technian"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="286c768f-438d-4221-971a-ebe084d20726"
+            isDerived="false"
+            sourceEndRoleName="Actor1"
+            targetEndRoleName="UseCase1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b378e213-f744-4c23-9886-56e30bc26670"
+              LastKnownName="manage Sector"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e0e9b014-ffea-48a0-b6d1-6006bfecb635"
+                  name="Actor1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9105a92b-dea8-4168-897d-017af476ab53"
+                  name="UseCase1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fc3a12ed-5055-4644-b632-48498c331233"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="manage Repository"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2e58f930-7ec4-4c8a-91aa-1104ca5ec8dd"
+              LastKnownName="manage Repository"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="38b0e8d7-7631-4251-95f3-a3387d81f73c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7ac2472-3bbb-4b1e-abfc-8b8d20c1e7fa"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="611f7f87-c015-433d-bf5c-dccf0f0b3ff1"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="manage Maintainance"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a7c1fd5d-b905-4434-894c-a756007365f0"
+              LastKnownName="manage Maintainance"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71cc1687-44be-447d-acca-2aad5744be82"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c84f6a96-b238-435f-b02f-80375084e54e"
+                  name="manage Maintainance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6cfdb35d-14e8-4398-8e60-d98cd9fc03aa"
+            isDerived="false"
+            sourceEndRoleName="Protector and Technian"
+            targetEndRoleName="login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c945c397-b499-4dae-9999-1c36619795ba"
+              LastKnownName="login"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="615571a5-abfc-4f0d-bf45-e3c5a2d0f512"
+                  name="Protector and Technian"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="080ddaa7-031c-41cc-b3c7-1d6e17b7d6c8"
+                  name="login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b378e213-f744-4c23-9886-56e30bc26670"
+        name="manage Sector"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d64de867-1f2f-449e-83a2-5bafbcda8dfa"
+        name="manage Order"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="345fd92e-6287-4faf-b63f-47de2e0f5e0e"
+            isDerived="false"
+            sourceEndRoleName="manage Order"
+            targetEndRoleName="create Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="044e3469-bee4-4d55-8fe7-47efb3907971"
+              LastKnownName="create Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b085ec2-1bdb-4b0a-9efc-e03c312cae79"
+                  name="manage Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dda08c88-49fb-488b-8f4a-a4429f9d7fc5"
+                  name="create Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d5e103b5-328f-4693-a318-3df1a5a9bb02"
+            isDerived="false"
+            sourceEndRoleName="manage Order"
+            targetEndRoleName="get near Duedate Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="7c97bcc4-41a0-49fc-acbb-4c3efe164b78"
+              LastKnownName="get near Duedate Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b0b07ab-692d-48a1-b128-f42dc63999d3"
+                  name="manage Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="376d48b0-3ae0-4348-b5a5-2426e9ec98d9"
+                  name="get near Duedate Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="51745ec4-1cce-4b1c-8bb3-2c7fa84e0221"
+            isDerived="false"
+            sourceEndRoleName="manage Order"
+            targetEndRoleName="get over Duedate Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="52265ed0-33d6-4dab-b6fa-4b5651d209f4"
+              LastKnownName="get over Duedate Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39cad12a-5919-4cc4-a2d2-6e62030a7379"
+                  name="manage Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c958c774-a345-4b67-86e6-c590ea35863d"
+                  name="get over Duedate Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <additions>
+          <include
+            Id="456212a4-1fd6-4c49-9780-b6b57aab8abc">
+            <useCaseMoniker
+              Id="51cf0199-69cc-4923-a0af-84dc5f1d27a5"
+              LastKnownName="manage Order Detail"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="044e3469-bee4-4d55-8fe7-47efb3907971"
+        name="create Order"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="754e58a4-4e25-4a8f-8f02-08ffb02eda19">
+            <useCaseMoniker
+              Id="73185187-7ba9-49ee-ba36-eec64d032b1f"
+              LastKnownName="add Customer"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+          <include
+            Id="a240c925-6224-4b87-9e60-8ec270fd091c">
+            <useCaseMoniker
+              Id="b2c7cb1c-6598-479d-93b1-3ae9fd9c4524"
+              LastKnownName="filter Available Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+          <include
+            Id="5f1ad463-8d14-4625-8c0f-9945a9350155">
+            <useCaseMoniker
+              Id="995ee6e8-fdba-4cab-9fe6-244de0cd2adb"
+              LastKnownName="caculate Bill"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+          <include
+            Id="66366576-349e-41ee-a1c0-9bc84ac6b37d">
+            <useCaseMoniker
+              Id="ab4bf0fc-d416-45d4-bb40-a74fa1f232ce"
+              LastKnownName="sumary Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="73185187-7ba9-49ee-ba36-eec64d032b1f"
+        name="add Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0a0ea413-3a19-4885-8450-c8d53463e0dc">
+            <useCaseMoniker
+              Id="1dd119f5-dc2a-45f4-a5d4-56d952cb13a9"
+              LastKnownName="check exist Customer"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1dd119f5-dc2a-45f4-a5d4-56d952cb13a9"
+        name="check exist Customer"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b2c7cb1c-6598-479d-93b1-3ae9fd9c4524"
+        name="filter Available Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="995ee6e8-fdba-4cab-9fe6-244de0cd2adb"
+        name="caculate Bill"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ab4bf0fc-d416-45d4-bb40-a74fa1f232ce"
+        name="sumary Order"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7c97bcc4-41a0-49fc-acbb-4c3efe164b78"
+        name="get near Duedate Order"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="52265ed0-33d6-4dab-b6fa-4b5651d209f4"
+        name="get over Duedate Order"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="51cf0199-69cc-4923-a0af-84dc5f1d27a5"
+        name="manage Order Detail"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e58f930-7ec4-4c8a-91aa-1104ca5ec8dd"
+        name="manage Repository"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3f835d6c-6199-4a29-a57e-cbd8aa58389a"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="get Report Renting"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="131aaf8c-ac21-41e2-9eae-fe56a1b23dd8"
+              LastKnownName="report Renting"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70dbf909-d6b2-47d8-8f3c-05796c2bce4b"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2783c2ee-93f8-4ca4-a6b5-0d53108037a5"
+                  name="get Report Renting"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="36926527-b2fc-41e0-a9ed-42d69d060e87"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="get Report  Maintainance"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b82aabf9-a42f-41d1-81e4-910d10b8f9ca"
+              LastKnownName="report  Maintainance"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dee7d9b7-052e-4cd6-9fd0-049b44376b43"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca51f5bd-bb0b-4863-8906-fc4f2b3bb5b4"
+                  name="get Report  Maintainance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9e6634cf-bf2b-47df-848e-3512f55dda6d"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="filter free Repo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c8d35ee1-52e4-42d8-b95d-c0fe809f7ecd"
+              LastKnownName="filter free Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7507fe86-6aa1-40df-9040-23825cb5094e"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b1b782f-723b-4e09-9d9a-fe7a51dcf5c7"
+                  name="filter free Repo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="81d21e6d-b859-4779-b5f6-dd55275c9811"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="get inmaintain Repo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ae7eb179-7a72-410e-8900-7f9196c9625b"
+              LastKnownName="get inmaintain Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6169cafa-4eb3-4a01-a24e-0c97ab5beb84"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c18eac3-67db-4eae-a2c8-3de07e52e798"
+                  name="get inmaintain Repo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b08ee6f1-22bc-4440-8f40-0c3ae6665a18"
+            isDerived="false"
+            sourceEndRoleName="manage Repository"
+            targetEndRoleName="filter inuse  Repo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="eb7e8036-d22e-4ea3-8f31-173100248e6d"
+              LastKnownName="filter inuse  Repo"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac1ecdd6-1506-4cd8-bb9f-8141edae058f"
+                  name="manage Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02aadbb4-c79a-4ce4-b150-d6f5907d1f11"
+                  name="filter inuse  Repo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="131aaf8c-ac21-41e2-9eae-fe56a1b23dd8"
+        name="report Renting"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b82aabf9-a42f-41d1-81e4-910d10b8f9ca"
+        name="report  Maintainance"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="21f56750-ee9a-47ff-8e80-2a5ffd57fa78"
+        name="manage Customer"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d90921fc-b567-4656-bc8b-d946441125d1"
+            isDerived="false"
+            sourceEndRoleName="manage Customer"
+            targetEndRoleName="report Oders"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5cde2d5b-716b-4837-90c4-28088000cc22"
+              LastKnownName="report Oders"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="06938411-5402-442a-b569-d7fa3ab9a168"
+                  name="manage Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e5f033a-a805-4418-956d-0f40bd11e105"
+                  name="report Oders"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d2fd85aa-3c8f-478c-9814-4f0a060ec276"
+        name="manage Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a7c1fd5d-b905-4434-894c-a756007365f0"
+        name="manage Maintainance"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="eb7e8036-d22e-4ea3-8f31-173100248e6d"
+        name="filter inuse  Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c8d35ee1-52e4-42d8-b95d-c0fe809f7ecd"
+        name="filter free Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ae7eb179-7a72-410e-8900-7f9196c9625b"
+        name="get inmaintain Repo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="3719288e-31db-4c23-879b-48567acd0f99"
+        name="Manager"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e52fe655-83c6-45ce-9baa-3dcb884e6432"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="manage Staff"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d2fd85aa-3c8f-478c-9814-4f0a060ec276"
+              LastKnownName="manage Staff"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1717125-d7d4-4a64-9833-9260517d28e9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69457294-7d1b-414f-89ad-c1b3871bd3a6"
+                  name="manage Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f1e05545-6664-4651-ad2a-2594c0f2b2a8"
+            isDerived="false"
+            sourceEndRoleName="Manager"
+            targetEndRoleName="assign Protecting Schedule"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3be428c3-fb8f-44c4-89c6-ff9f6490c46f"
+              LastKnownName="assign Protecting Schedule"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0d0010c6-39d0-40cb-baf0-c2ae5816290b"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="49ddbb6d-73db-4f28-b905-66618b7c8d0c"
+                  name="assign Protecting Schedule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="40e1b979-1650-44e6-9a0c-aebe0bc39bc0"
+            isDerived="false"
+            sourceEndRoleName="Manager"
+            targetEndRoleName="login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c945c397-b499-4dae-9999-1c36619795ba"
+              LastKnownName="login"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e188fe3f-e3f2-4fb4-82d4-a6f76d6e5c0e"
+                  name="Manager"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09344cad-986f-442d-96e4-4cde87ffe8ba"
+                  name="login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b0b0a0b3-1ff4-43f4-b69e-a15956eb6579"
+        name="Transactor"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a372b5b0-9511-4455-87cf-63c89f12b610"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="manage Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d64de867-1f2f-449e-83a2-5bafbcda8dfa"
+              LastKnownName="manage Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f048e592-ab70-4ada-8c70-918401ba6e1c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb79dc75-36a8-4dc2-b888-7dfb6f6e4844"
+                  name="manage Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="60c85958-e3f7-423b-a5cb-95b8010b05d1"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="manage Customer"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="21f56750-ee9a-47ff-8e80-2a5ffd57fa78"
+              LastKnownName="manage Customer"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="48548826-e37a-4348-b246-e23023b47d9c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f437a9b1-2b64-4815-b978-5d2f4b5d4b1c"
+                  name="manage Customer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0ebc0a6f-4c6e-4de6-9abe-a973a3c7e6b4"
+            isDerived="false"
+            sourceEndRoleName="Transactor"
+            targetEndRoleName="login"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c945c397-b499-4dae-9999-1c36619795ba"
+              LastKnownName="login"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3513c7c-0646-4747-b360-a654954b2a0b"
+                  name="Transactor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e501e443-1d18-489f-a536-bf56362d839a"
+                  name="login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3be428c3-fb8f-44c4-89c6-ff9f6490c46f"
+        name="assign Protecting Schedule"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="46652762-562c-4431-8224-fbd7167bb055"
+            isDerived="false"
+            sourceEndRoleName="assign Protecting Schedule"
+            targetEndRoleName="get Report Protecting"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5c08b621-170b-4024-877f-f60f279dd160"
+              LastKnownName="report Protecting"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe06ea8e-bf07-484f-b8e8-31b64c7fd73c"
+                  name="assign Protecting Schedule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="38ceb875-cd2e-475e-a62f-10f96c5e7f0b"
+                  name="get Report Protecting"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <additions>
+          <include
+            Id="7524aac6-671f-4b67-b46e-2eaca3057e28">
+            <useCaseMoniker
+              Id="45c358e7-daa1-48d5-b4ea-f7f3739b4a33"
+              LastKnownName="filter available Staff"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="45c358e7-daa1-48d5-b4ea-f7f3739b4a33"
+        name="filter available Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5c08b621-170b-4024-877f-f60f279dd160"
+        name="report Protecting"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5cde2d5b-716b-4837-90c4-28088000cc22"
+        name="report Oders"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c945c397-b499-4dae-9999-1c36619795ba"
+        name="login"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="0719527b-c8e7-4db3-91d0-cfb02ce97678"
+        name="AssignProtectortoRepo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="3aa18d3b-a664-4045-8ab0-46794952e759"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="65b81c82-3a9d-41ae-9aa7-befa1771bdd4"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="382afc72-99b2-4453-b299-1067530b7fea"
+                  LastKnownName="pick Repo"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="382afc72-99b2-4453-b299-1067530b7fea"
+            name="pick Repo"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7cd2c47f-d363-42a3-b1d9-74583f771194"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c5b5bb59-9748-4e01-adae-31ace04f0588"
+                  LastKnownName="add Start Date and Due Date"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c5b5bb59-9748-4e01-adae-31ace04f0588"
+            name="add Start Date and Due Date"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="25589e37-d09c-4191-ae34-aad96d1d1079"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="41eef06a-3a26-4695-b8f7-aca729ba3c6b"
+                  LastKnownName="pick available protector"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="41eef06a-3a26-4695-b8f7-aca729ba3c6b"
+            name="pick available protector"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="393a2983-4832-4fb5-9a3c-f173c132bf15"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="e030ce30-e4eb-4804-a794-536cd76375e4"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="e030ce30-e4eb-4804-a794-536cd76375e4"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

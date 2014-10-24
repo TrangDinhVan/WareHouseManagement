@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AssignProtectortoRepo">
+  <activityRootModelMoniker Id="e0f42330-04cd-458b-9d2c-44c4d2ad03a5" />
+  <nestedChildShapes>
+    <initialNodeShape Id="eac7f143-9724-4b31-937a-9b9f3b91610e" absoluteBounds="3.875, 0.625, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="c0d964ce-79b3-4f41-af28-69f0cf372cf8" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <actionShape Id="cad8d2dd-8409-4a12-b1c5-f2e01bc63de5" absoluteBounds="3.375, 1.125, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="06e99892-8e23-4b1b-bedc-e105f2a78cc4" LastKnownName="pick Repo" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(3.9375 : 0.75); (3.9375 : 1.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="f459ac03-42cd-49e9-bbcb-4f513b8b5b4c" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="eac7f143-9724-4b31-937a-9b9f3b91610e" />
+        <actionShapeMoniker Id="cad8d2dd-8409-4a12-b1c5-f2e01bc63de5" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="ff233065-2e15-4ac7-bf2f-f9188d8e0251" absoluteBounds="3.375, 1.875, 1.125, 0.5" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="54043bc1-8a74-4d73-ab9e-597bdda1b511" LastKnownName="add Start Date and Due Date" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(3.9375 : 1.5); (3.9375 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="46bacb66-d2aa-4e4b-9d4b-361c8169829a" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="cad8d2dd-8409-4a12-b1c5-f2e01bc63de5" />
+        <actionShapeMoniker Id="ff233065-2e15-4ac7-bf2f-f9188d8e0251" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="ba5559f6-76cf-4d25-b470-1109b5564198" absoluteBounds="3.375, 2.875, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="c86fb25e-66ea-4778-8e32-928cdc578338" LastKnownName="pick available protector" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(3.9375 : 2.375); (3.9375 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="8612b1c5-3684-4061-a09c-e68179fa359d" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="ff233065-2e15-4ac7-bf2f-f9188d8e0251" />
+        <actionShapeMoniker Id="ba5559f6-76cf-4d25-b470-1109b5564198" />
+      </nodes>
+    </controlFlowConnector>
+    <activityFinalNodeShape Id="5669e9a6-912d-4981-ba7f-7e0120df3b88" absoluteBounds="3.875, 4, 0.125, 0.125" customColor="89, 89, 89">
+      <activityFinalNodeMoniker Id="30a15389-ce43-498e-adad-610593bc5533" LastKnownName="ActivityFinal1" />
+    </activityFinalNodeShape>
+    <controlFlowConnector edgePoints="[(3.9375 : 3.25); (3.9375 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="8762cfc2-c909-4bf7-b553-1c0f6317acac" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="ba5559f6-76cf-4d25-b470-1109b5564198" />
+        <activityFinalNodeShapeMoniker Id="5669e9a6-912d-4981-ba7f-7e0120df3b88" />
+      </nodes>
+    </controlFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>
