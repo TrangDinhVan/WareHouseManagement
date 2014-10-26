@@ -33,8 +33,8 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button_addSector = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btn_add = new DevComponents.DotNetBar.ButtonX();
+            this.btn_save = new DevComponents.DotNetBar.ButtonX();
             this.dataGridView_Repo = new DevComponents.DotNetBar.Controls.DataGridViewX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "labelX1";
+            this.labelX1.Text = "Name";
             // 
             // labelX2
             // 
@@ -59,9 +59,9 @@
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(12, 52);
             this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
+            this.labelX2.Size = new System.Drawing.Size(122, 25);
             this.labelX2.TabIndex = 1;
-            this.labelX2.Text = "labelX2";
+            this.labelX2.Text = "Description";
             // 
             // textBox1
             // 
@@ -78,29 +78,29 @@
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
-            // button_addSector
+            // btn_add
             // 
-            this.button_addSector.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.button_addSector.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.button_addSector.Location = new System.Drawing.Point(377, 131);
-            this.button_addSector.Name = "button_addSector";
-            this.button_addSector.Size = new System.Drawing.Size(75, 23);
-            this.button_addSector.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.button_addSector.TabIndex = 4;
-            this.button_addSector.Text = "Add";
-            this.button_addSector.Click += new System.EventHandler(this.button_addSector_Click);
+            this.btn_add.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_add.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_add.Location = new System.Drawing.Point(377, 131);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_add.TabIndex = 4;
+            this.btn_add.Text = "Add";
+            this.btn_add.Click += new System.EventHandler(this.button_addSector_Click);
             // 
-            // buttonX1
+            // btn_save
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(134, 130);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 5;
-            this.buttonX1.Text = "Save";
-            this.buttonX1.Click += new System.EventHandler(this.button_updateSector_Click);
+            this.btn_save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_save.Location = new System.Drawing.Point(134, 130);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_save.TabIndex = 5;
+            this.btn_save.Text = "Save";
+            this.btn_save.Click += new System.EventHandler(this.button_updateSector_Click);
             // 
             // dataGridView_Repo
             // 
@@ -125,8 +125,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 337);
             this.Controls.Add(this.dataGridView_Repo);
-            this.Controls.Add(this.buttonX1);
-            this.Controls.Add(this.button_addSector);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelX2);
@@ -148,8 +148,8 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private DevComponents.DotNetBar.ButtonX button_addSector;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btn_add;
+        private DevComponents.DotNetBar.ButtonX btn_save;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridView_Repo;
     }
 }

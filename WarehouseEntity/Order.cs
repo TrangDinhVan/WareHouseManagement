@@ -48,7 +48,7 @@ namespace WarehouseEntity
             double total = 0;
             foreach (DataRow r in _lstOrderDetail.Rows)
             {
-                //
+                
             }
             return total;
         }

@@ -45,7 +45,7 @@ namespace WarehouseEntity
         }
         public int getDuration()
         {
-            TimeSpan difference = _EndDate - _StartDate;
+            var difference = _EndDate - _StartDate;
             int days = difference.Days;
             return days;
             

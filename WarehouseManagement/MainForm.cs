@@ -19,71 +19,99 @@ namespace WarehouseManagement
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            reload();
+            reloadData();
         }
 
-        public void reload()
+        public void reloadData()
         {
-            dataGridView_Sectors.DataSource = new SectorDAL().getAllSector();
+            dataGridView_Sector.DataSource = new SectorDAL().getAllSector();
             dataGridView_Repo.DataSource = new RepositoryDAL().getAllRepo();
+            dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
         }
-        private void buttonX1_Click(object sender, EventArgs e)
+        public void loadSubForm(object sender, EventArgs e)
         {
-            SectorForm sectorForm = new SectorForm();
-            sectorForm.f = this;
-            sectorForm.Show();
-        }
-
-        private void dataGridView_Sectors_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //MessageBox.Show(e.ColumnIndex.ToString());
-            
-            if (e.ColumnIndex != 0 && e.RowIndex > -1)
+            string ctrlName = ((Control)sender).Name;
+            switch (ctrlName)
             {
-                int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                SectorForm sectorForm = new SectorForm();
-                sectorForm.f = this;
-                sectorForm.SectorID = SectorID;
-                sectorForm.Show();
+                case "btn_addStaff":
+                    StaffForm staff_Form = new StaffForm();
+                    staff_Form.f = this;
+                    staff_Form.Show();
+                    break;
+                case "btn_addSector":
+                    SectorForm sectorForm = new SectorForm();
+                    sectorForm.f = this;
+                    sectorForm.Show();
+                    break;
+                case "btn_addRepo":
+                    RepositoryForm repo = new RepositoryForm();
+                    repo.Show();
+                    break;
+                default:
+                    break;
+            }
+                
+        }
+        public void loadSubForm(object sender, DataGridViewCellEventArgs e)
+        {
+            string ctrlName = ((Control)sender).Name;
+            switch (ctrlName)
+            {
+                case "dataGridView_Staff":
+                    if (e.ColumnIndex != 0 && e.RowIndex > -1)
+                    {
+                        int StaffID = int.Parse(this.dataGridView_Staff.Rows[e.RowIndex].Cells["staff_id"].Value.ToString());
+                        RepositoryForm repo = new RepositoryForm();
+                        StaffForm StaffForm = new StaffForm();
+                        StaffForm.f = this;
+                        StaffForm.StaffID = StaffID;
+                        StaffForm.Show();
+                    }
+                    break;
+                case "dataGridView_Repo":
+                    if (e.ColumnIndex != 0 && e.RowIndex > -1)
+                    {
+                        int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
+                        RepositoryForm repo = new RepositoryForm();
+                        repo.f = this;
+                        repo.RepoID = RepoID;
+                        repo.Show();
+                    }
+                    break;
+                case "dataGridView_Sector":
+                    if (e.ColumnIndex != 0 && e.RowIndex > -1)
+                    {
+                        int SectorID = int.Parse(this.dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        SectorForm sectorForm = new SectorForm();
+                        sectorForm.f = this;
+                        sectorForm.SectorID = SectorID;
+                        sectorForm.Show();
 
+                    }
+                    break;
+                default:
+                    break;
             }
         }
-
-        private void dataGridView_Sectors_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void deleteRecorde(object sender, DataGridViewCellEventArgs e)
         {
-            
-            if (e.ColumnIndex == 0 && e.RowIndex > -1)
+            string ctrlName = ((Control)sender).Name;
+            switch (ctrlName)
             {
-                int SectorID = int.Parse(this.dataGridView_Sectors.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Section " + SectorID, MessageBoxButtons.YesNo);
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-                    new SectorDAL().deleteSector(SectorID);
-                    this.reload();
-                }
-            }
-        }
-
-        private void button_add_Repo_Click(object sender, EventArgs e)
-        {
-            RepositoryForm repo = new RepositoryForm();
-            repo.Show();
-        }
-
-        private void dataGridView_Repo_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView_Repo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex != 0 && e.RowIndex > -1)
-            {
-                int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
-                RepositoryForm repo = new RepositoryForm();
-                repo.f = this;
-                repo.RepoID = RepoID;
-                repo.Show();
+                case "dataGridView_Sector":
+                    if (e.ColumnIndex == 0 && e.RowIndex > -1)
+                    {
+                        int SectorID = int.Parse(this.dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Section " + SectorID, MessageBoxButtons.YesNo);
+                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            new SectorDAL().deleteSector(SectorID);
+                            this.reloadData();
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     }

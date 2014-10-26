@@ -21,15 +21,22 @@ namespace WarehouseManagement
         }
         private void SectorForm_Load(object sender, EventArgs e)
         {
+            btn_add.Hide();
+            btn_save.Hide();
             try
             {
                 if (this.SectorID != 0)
                 {
+                    btn_save.Show();
                     this.Text = "Section ID: " + SectorID;
                     Sector sector = new SectorDAL().getOneSection(this.SectorID);
                     textBox1.Text = sector.Name;
                     richTextBox1.Text = sector.Desc;
                     dataGridView_Repo.DataSource = sector.lstRepo;
+                }
+                else
+                {
+                    btn_add.Show();
                 }
             }
             catch (Exception ex)
@@ -46,7 +53,7 @@ namespace WarehouseManagement
                 sector.Name = textBox1.Text;
                 sector.Desc = richTextBox1.Text;
                 new SectorDAL().addSector(sector);
-                f.reload();
+                f.reloadData();
                 this.Close();
             }
             catch(Exception ex)
@@ -63,7 +70,7 @@ namespace WarehouseManagement
                 sector.Name = textBox1.Text;
                 sector.Desc = richTextBox1.Text;
                 new SectorDAL().updateSector(sector);
-                f.reload();
+                f.reloadData();
                 this.Close();
             }
             catch (Exception ex)
