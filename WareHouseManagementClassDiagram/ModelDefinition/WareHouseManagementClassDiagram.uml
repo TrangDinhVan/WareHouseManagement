@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="0f188200-161f-4185-8b7f-7c917fa53c76"
   name="WareHouseManagementClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -406,6 +406,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="9ebd9b38-97b2-4921-935a-48c76d5f3517"
+            isDerived="false"
+            sourceEndRoleName="create Order"
+            targetEndRoleName="cancel Order"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b87eee78-3330-4e7f-94ab-d31794dc0ade"
+              LastKnownName="cancel Order"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="56075c05-3ee2-4117-8f16-a84a8639c06f"
+                  name="create Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2a666fa-6c2f-4e0e-805d-7d4b11099956"
+                  name="cancel Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <additions>
           <include
@@ -467,7 +506,7 @@
             Id="0a0ea413-3a19-4885-8450-c8d53463e0dc">
             <useCaseMoniker
               Id="1dd119f5-dc2a-45f4-a5d4-56d952cb13a9"
-              LastKnownName="check exist Customer"
+              LastKnownName="check existed Customer"
               LastKnownLocation="WareHouseManagementClassDiagram.uml" />
           </include>
         </additions>
@@ -476,7 +515,7 @@
     <packageHasNamedElement>
       <useCase
         Id="1dd119f5-dc2a-45f4-a5d4-56d952cb13a9"
-        name="check exist Customer"
+        name="check existed Customer"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -529,45 +568,6 @@
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
-          <association
-            Id="3f835d6c-6199-4a29-a57e-cbd8aa58389a"
-            isDerived="false"
-            sourceEndRoleName="manage Repository"
-            targetEndRoleName="get Report Renting"
-            isLeaf="false"
-            isAbstract="false">
-            <useCaseMoniker
-              Id="131aaf8c-ac21-41e2-9eae-fe56a1b23dd8"
-              LastKnownName="report Renting"
-              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="70dbf909-d6b2-47d8-8f3c-05796c2bce4b"
-                  name="manage Repository"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2783c2ee-93f8-4ca4-a6b5-0d53108037a5"
-                  name="get Report Renting"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="36926527-b2fc-41e0-a9ed-42d69d060e87"
             isDerived="false"
@@ -655,7 +655,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="ae7eb179-7a72-410e-8900-7f9196c9625b"
-              LastKnownName="get inmaintain Repo"
+              LastKnownName="filter inmaintain Repo"
               LastKnownLocation="WareHouseManagementClassDiagram.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -911,7 +911,7 @@
     <packageHasNamedElement>
       <useCase
         Id="ae7eb179-7a72-410e-8900-7f9196c9625b"
-        name="get inmaintain Repo"
+        name="filter inmaintain Repo"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -1045,7 +1045,7 @@
     <packageHasNamedElement>
       <actor
         Id="b0b0a0b3-1ff4-43f4-b69e-a15956eb6579"
-        name="Transactor"
+        name="Transactor and Accountant"
         isAbstract="false"
         isLeaf="false">
         <targetEnds>
@@ -1156,6 +1156,84 @@
                 <memberEnd
                   Id="e501e443-1d18-489f-a536-bf56362d839a"
                   name="login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9b061209-0011-40bf-97e7-4e5736f5db28"
+            isDerived="false"
+            sourceEndRoleName="Transactor and Accountant"
+            targetEndRoleName="report  Maintainance"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b82aabf9-a42f-41d1-81e4-910d10b8f9ca"
+              LastKnownName="report  Maintainance"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="238b0921-6d04-47d3-a5ba-383ca119c46c"
+                  name="Transactor and Accountant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09a9724d-27e3-46e7-8f6a-e69b553124b7"
+                  name="report  Maintainance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="89906888-f627-4c0e-b5bd-26adcd6bf3e3"
+            isDerived="false"
+            sourceEndRoleName="Transactor and Accountant"
+            targetEndRoleName="report Renting"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="131aaf8c-ac21-41e2-9eae-fe56a1b23dd8"
+              LastKnownName="report Renting"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="128f7c60-361a-4511-883a-71944a24cfae"
+                  name="Transactor and Accountant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="de9e2634-bb44-4a1b-82e0-41b5b757cc3f"
+                  name="report Renting"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1408,6 +1486,44 @@
       <useCase
         Id="41e11198-00fd-4953-bdc3-32a008e8bed0"
         name="filter available Staff"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b87eee78-3330-4e7f-94ab-d31794dc0ade"
+        name="cancel Order"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5aae33d4-5721-4359-9da7-fb5e67589459">
+            <useCaseMoniker
+              Id="870a09cf-f4ab-4f1f-8907-90751f9cc5a6"
+              LastKnownName="clear related Data"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+          <include
+            Id="46c75d88-6d0d-4df7-beb7-dc841f8f43da">
+            <useCaseMoniker
+              Id="d01201b3-720f-471d-bd5d-21163ab426cf"
+              LastKnownName="check cancel Condition"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="870a09cf-f4ab-4f1f-8907-90751f9cc5a6"
+        name="clear related Data"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d01201b3-720f-471d-bd5d-21163ab426cf"
+        name="check cancel Condition"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

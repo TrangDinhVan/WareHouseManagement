@@ -29,6 +29,7 @@ namespace WarehouseManagement
                     Sector sector = new SectorDAL().getOneSection(this.SectorID);
                     textBox1.Text = sector.Name;
                     richTextBox1.Text = sector.Desc;
+                    dataGridView_Repo.DataSource = sector.lstRepo;
                 }
             }
             catch (Exception ex)

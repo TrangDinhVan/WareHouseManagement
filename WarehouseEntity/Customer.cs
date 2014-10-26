@@ -44,7 +44,7 @@ namespace WarehouseEntity
             get { return _Phone; }
             set { _Phone = value; }
         }
-        public string Email
+        public string Mail
         {
             get { return _Mail; }
             set { _Mail = value; }

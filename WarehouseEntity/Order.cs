@@ -43,5 +43,14 @@ namespace WarehouseEntity
             get { return _lstOrderDetail; }
             set { _lstOrderDetail = value; }
         }
+        public double calculateTotalValue()
+        {
+            double total = 0;
+            foreach (DataRow r in _lstOrderDetail.Rows)
+            {
+                //
+            }
+            return total;
+        }
     }
 }

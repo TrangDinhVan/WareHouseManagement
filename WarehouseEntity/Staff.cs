@@ -34,6 +34,11 @@ namespace WarehouseEntity
                 _Name = value;
             }
         }
+        public string Permission
+        {
+            get { return _Permission; }
+            set { _Permission = value; }
+        }
         public string Address
         {
             get { return _Address; }
@@ -44,7 +49,7 @@ namespace WarehouseEntity
             get { return _Phone; }
             set { _Phone = value; }
         }
-        public string Email
+        public string Mail
         {
             get { return _Mail; }
             set { _Mail = value; }

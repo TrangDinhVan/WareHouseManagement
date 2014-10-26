@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="1c407bc2-1075-4d15-b9b3-ab400d257368" name="Protector and Technian Admin" isAbstract="false" isLeaf="false">
@@ -147,6 +147,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="51745ec4-1cce-4b1c-8bb3-2c7fa84e0221" />
           </association>
+          <association Id="f0d38b78-a0b2-4758-b720-927c0aa8b6b1" isDerived="false" sourceEndRoleName="create Order" targetEndRoleName="cancel Order" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a5267139-f771-437f-9f8e-f883c3695a4b" LastKnownName="cancel Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1237401c-821b-4d71-8b5c-78955d39e11a" name="create Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="56075c05-3ee2-4117-8f16-a84a8639c06f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8403707-af08-4ce1-935a-708e9bcb3bd9" name="cancel Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f2a666fa-6c2f-4e0e-805d-7d4b11099956" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9ebd9b38-97b2-4921-935a-48c76d5f3517" />
+          </association>
         </targetEnds>
         <additions>
           <include Id="b0c3ec4a-c0c0-4634-96a1-2be9fdcdee98">
@@ -184,14 +200,14 @@
         <elementDefinition Id="73185187-7ba9-49ee-ba36-eec64d032b1f" />
         <additions>
           <include Id="7c7d8ba4-9352-4995-9476-1be9504a2717">
-            <useCaseMoniker Id="caf8d298-f8c5-49ec-a49d-71047f72c3f4" LastKnownName="check exist Customer" />
+            <useCaseMoniker Id="caf8d298-f8c5-49ec-a49d-71047f72c3f4" LastKnownName="check existed Customer" />
             <elementDefinition Id="0a0ea413-3a19-4885-8450-c8d53463e0dc" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="caf8d298-f8c5-49ec-a49d-71047f72c3f4" name="check exist Customer" isAbstract="false" isLeaf="false">
+      <useCase Id="caf8d298-f8c5-49ec-a49d-71047f72c3f4" name="check existed Customer" isAbstract="false" isLeaf="false">
         <elementDefinition Id="1dd119f5-dc2a-45f4-a5d4-56d952cb13a9" />
       </useCase>
     </useCaseModelRootHasTypes>
@@ -229,22 +245,6 @@
       <useCase Id="4d855e1c-7eac-47fa-8357-5fe81ed58753" name="manage Repository" isAbstract="false" isLeaf="false">
         <elementDefinition Id="2e58f930-7ec4-4c8a-91aa-1104ca5ec8dd" />
         <targetEnds>
-          <association Id="5eb13228-2f71-445d-b5e0-872800049149" isDerived="false" sourceEndRoleName="manage Repository" targetEndRoleName="get Report Renting" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="881d0448-30ed-48bc-8883-76b832ea1e55" LastKnownName="report Renting" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="630c9dfd-4769-4c29-bad5-e46df5f08780" name="manage Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="70dbf909-d6b2-47d8-8f3c-05796c2bce4b" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="4116cbe3-51b8-4f0f-9b15-d90dee32190a" name="get Report Renting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2783c2ee-93f8-4ca4-a6b5-0d53108037a5" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="3f835d6c-6199-4a29-a57e-cbd8aa58389a" />
-          </association>
           <association Id="c7018603-92e9-496c-9395-7d1ca140f9f0" isDerived="false" sourceEndRoleName="manage Repository" targetEndRoleName="get Report  Maintainance" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="e987d391-66d9-46cc-9313-0a8be5b335af" LastKnownName="report  Maintainance" />
             <relationshipOwnedElementsInternal>
@@ -278,7 +278,7 @@
             <elementDefinition Id="9e6634cf-bf2b-47df-848e-3512f55dda6d" />
           </association>
           <association Id="5f06d412-0c9a-4ceb-9d27-8459af59c4c8" isDerived="false" sourceEndRoleName="manage Repository" targetEndRoleName="get inmaintain Repo" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="f47c7603-bf35-4499-bd65-5b5208934fd5" LastKnownName="get inmaintain Repo" />
+            <useCaseMoniker Id="f47c7603-bf35-4499-bd65-5b5208934fd5" LastKnownName="filter inmaintain Repo" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="7c2326aa-78e4-4637-b975-3d49a3e227b2" name="manage Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -388,7 +388,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="f47c7603-bf35-4499-bd65-5b5208934fd5" name="get inmaintain Repo" isAbstract="false" isLeaf="false">
+      <useCase Id="f47c7603-bf35-4499-bd65-5b5208934fd5" name="filter inmaintain Repo" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ae7eb179-7a72-410e-8900-7f9196c9625b" />
       </useCase>
     </useCaseModelRootHasTypes>
@@ -432,7 +432,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <actor Id="e26475c6-b564-44a2-bd61-076c5a88071b" name="Transactor" isAbstract="false" isLeaf="false">
+      <actor Id="e26475c6-b564-44a2-bd61-076c5a88071b" name="Transactor and Accountant" isAbstract="false" isLeaf="false">
         <elementDefinition Id="b0b0a0b3-1ff4-43f4-b69e-a15956eb6579" />
         <targetEnds>
           <association Id="2927ee77-387f-4442-b45a-61ee07fdf96d" isDerived="false" sourceEndRoleName="User" targetEndRoleName="manage Order" isLeaf="false" isAbstract="false">
@@ -482,6 +482,38 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="0ebc0a6f-4c6e-4de6-9abe-a973a3c7e6b4" />
+          </association>
+          <association Id="12afe7b7-fd9f-43b0-b3df-82d807bb0141" isDerived="false" sourceEndRoleName="Transactor and Accountant" targetEndRoleName="report  Maintainance" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e987d391-66d9-46cc-9313-0a8be5b335af" LastKnownName="report  Maintainance" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c9686f2-bb9f-4228-a051-2bc9cf89047f" name="Transactor and Accountant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="238b0921-6d04-47d3-a5ba-383ca119c46c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7b5e9eb-f735-4551-b35b-cbc5b6b138a6" name="report  Maintainance" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="09a9724d-27e3-46e7-8f6a-e69b553124b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9b061209-0011-40bf-97e7-4e5736f5db28" />
+          </association>
+          <association Id="dad98bdb-5731-4bbe-b7f6-74605fcfa38a" isDerived="false" sourceEndRoleName="Transactor and Accountant" targetEndRoleName="report Renting" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="881d0448-30ed-48bc-8883-76b832ea1e55" LastKnownName="report Renting" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="571fd467-ec9a-4241-b78b-8af7c7d96af3" name="Transactor and Accountant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="128f7c60-361a-4511-883a-71944a24cfae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6cd494ae-bd57-4a70-8c11-3779149f4654" name="report Renting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="de9e2634-bb44-4a1b-82e0-41b5b757cc3f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89906888-f627-4c0e-b5bd-26adcd6bf3e3" />
           </association>
         </targetEnds>
       </actor>
@@ -542,6 +574,31 @@
     <useCaseModelRootHasTypes>
       <useCase Id="5a59f501-4ce6-4d67-80b7-f67cafc2eccf" name="filter available Staff" isAbstract="false" isLeaf="false">
         <elementDefinition Id="41e11198-00fd-4953-bdc3-32a008e8bed0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a5267139-f771-437f-9f8e-f883c3695a4b" name="cancel Order" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b87eee78-3330-4e7f-94ab-d31794dc0ade" />
+        <additions>
+          <include Id="1e49e4df-590a-4d0f-88b5-f49582c3e8bb">
+            <useCaseMoniker Id="7c6f5fb8-e55c-4deb-950e-7948401eff4c" LastKnownName="clear related Data" />
+            <elementDefinition Id="5aae33d4-5721-4359-9da7-fb5e67589459" />
+          </include>
+          <include Id="01de9d61-312f-4c1f-8fe2-3c5bd8c4fcef">
+            <useCaseMoniker Id="5c343a68-f205-48b1-9673-4e4241cd8d41" LastKnownName="check cancel Condition" />
+            <elementDefinition Id="46c75d88-6d0d-4df7-beb7-dc841f8f43da" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7c6f5fb8-e55c-4deb-950e-7948401eff4c" name="clear related Data" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="870a09cf-f4ab-4f1f-8907-90751f9cc5a6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5c343a68-f205-48b1-9673-4e4241cd8d41" name="check cancel Condition" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d01201b3-720f-471d-bd5d-21163ab426cf" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

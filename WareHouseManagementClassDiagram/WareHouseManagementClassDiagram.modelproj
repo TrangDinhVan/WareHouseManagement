@@ -104,12 +104,12 @@
       <SubType>Content</SubType>
       <DependentUpon>EntityClassDG.classdiagram</DependentUpon>
     </Content>
-    <Content Include="UseCaseDG.usecasediagram">
+    <Content Include="UseCase.usecasediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="UseCaseDG.usecasediagram.layout">
+    <Content Include="UseCase.usecasediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>UseCaseDG.usecasediagram</DependentUpon>
+      <DependentUpon>UseCase.usecasediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\WareHouseManagementClassDiagram.uml">

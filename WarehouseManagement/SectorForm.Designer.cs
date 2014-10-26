@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button_addSector = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.dataGridView_Repo = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelX1
@@ -99,11 +102,29 @@
             this.buttonX1.Text = "Save";
             this.buttonX1.Click += new System.EventHandler(this.button_updateSector_Click);
             // 
+            // dataGridView_Repo
+            // 
+            this.dataGridView_Repo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Repo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Repo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridView_Repo.Location = new System.Drawing.Point(12, 175);
+            this.dataGridView_Repo.Name = "dataGridView_Repo";
+            this.dataGridView_Repo.Size = new System.Drawing.Size(443, 150);
+            this.dataGridView_Repo.TabIndex = 6;
+            // 
             // SectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 158);
+            this.ClientSize = new System.Drawing.Size(467, 337);
+            this.Controls.Add(this.dataGridView_Repo);
             this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.button_addSector);
             this.Controls.Add(this.richTextBox1);
@@ -115,6 +136,7 @@
             this.Name = "SectorForm";
             this.Text = "SectorForm";
             this.Load += new System.EventHandler(this.SectorForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +150,6 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private DevComponents.DotNetBar.ButtonX button_addSector;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridView_Repo;
     }
 }
