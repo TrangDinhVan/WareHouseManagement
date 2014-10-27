@@ -8,6 +8,7 @@ namespace WarehouseEntity
 {
     public class Staff
     {
+        public string[] Permission_set = { "Admin Manager", "Transactor - Accountant", "Protector - Technician Admin" };
         private int _Id;
         private string _Name;
         private string _Permission;

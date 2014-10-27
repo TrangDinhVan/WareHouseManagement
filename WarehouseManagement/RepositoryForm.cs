@@ -19,25 +19,41 @@ namespace WarehouseManagement
         public RepositoryForm()
         {
             InitializeComponent();
-            
         }
 
         private void RepositoryForm_Load(object sender, EventArgs e)
         {
-            DataTable data = new SectorDAL().getAllSector();
-            comboBox_Sector.DataSource = data.DefaultView;
-            comboBox_Sector.DisplayMember = "Name";
-            comboBox_Sector.ValueMember = data.Columns["ID"].ToString();
+            btn_add.Hide();
+            btn_save.Hide();
+            DataTable data_sector = new SectorDAL().getAllSector();
+            field_sector.DataSource = data_sector.DefaultView;
+            field_sector.DisplayMember = "Name";
+            field_sector.ValueMember = data_sector.Columns["ID"].ToString();
+            DataTable data_staff = new StaffDAL().getAllStaff();
+            field_staff.DataSource = data_staff.DefaultView;
+            field_staff.DisplayMember = "staff_name";
+            field_staff.ValueMember = data_staff.Columns["staff_id"].ToString();
+            field_volume.DataSource = new Repository().Volume_set;
             try
             {
                 if (this.RepoID != 0)
                 {
+                    btn_save.Show();
                     this.Text = "Repository ID: " + RepoID;
                     Repository repo = new RepositoryDAL().getOneRepo(this.RepoID);
-                    comboBox_Sector.SelectedValue = repo.Sector.Id.ToString();
-                    textBoxX1.Text = repo.Name;
-                    richTextBox1.Text = repo.Desc;
-                    textBoxX2.Text = repo.Price.ToString();
+                    field_sector.SelectedValue = repo.Sector.Id.ToString();
+                    field_staff.SelectedValue = repo.Staff.Id.ToString();
+                    field_name.Text = repo.Name;
+                    field_desc.Text = repo.Desc;
+                    field_price.Text = repo.Price.ToString();
+                    field_volume.Text = repo.Volume;
+                }
+                else
+                {
+                    this.Text = "Add new Repository";
+                    btn_add.Show();
+                    field_sector.Text = "";
+                    field_staff.Text = "";
                 }
             }
             catch (Exception ex)
@@ -45,5 +61,47 @@ namespace WarehouseManagement
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void addRepo(object sender, EventArgs e)
+        {
+            try
+            {
+                Repository repo = getInfo();
+                new RepositoryDAL().addRepo(repo);
+                f.reloadData();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ": " + ex.ToString());
+            }
+        }
+        public void updateRepo(object sender, EventArgs e)
+        {
+            try
+            {
+                Repository repo = getInfo();
+                new RepositoryDAL().updateRepo(repo);
+                f.reloadData();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ": " + ex.ToString());
+            }
+        }
+        public Repository getInfo()
+        {
+            Repository repo = new Repository();
+            repo.Id = RepoID;
+            repo.Name = field_name.Text;
+            repo.Desc = field_desc.Text;
+            repo.Volume = field_volume.Text;
+            repo.Price = double.Parse(field_price.Text.ToString());
+            repo.Sector.Id = int.Parse(field_sector.SelectedValue.ToString());
+            repo.Staff.Id = int.Parse(field_staff.SelectedValue.ToString());
+            return repo;
+        }
+        
     }
 }

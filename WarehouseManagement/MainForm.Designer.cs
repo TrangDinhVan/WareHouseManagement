@@ -36,28 +36,28 @@
             this.dataGridView_Sector = new System.Windows.Forms.DataGridView();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.superTabItem_Sector = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.btn_addStaff = new DevComponents.DotNetBar.ButtonX();
-            this.statusBar1 = new System.Windows.Forms.StatusBar();
-            this.dataGridView_Staff = new System.Windows.Forms.DataGridView();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.superTabItem_Staff = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.statusBar_Repo = new System.Windows.Forms.StatusBar();
             this.btn_addRepo = new DevComponents.DotNetBar.ButtonX();
             this.dataGridView_Repo = new System.Windows.Forms.DataGridView();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.superTabItem_Repository = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.btn_addStaff = new DevComponents.DotNetBar.ButtonX();
+            this.statusBar1 = new System.Windows.Forms.StatusBar();
+            this.dataGridView_Staff = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.superTabItem_Staff = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabItem_REPO = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl_Sector)).BeginInit();
             this.superTabControl_Sector.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sector)).BeginInit();
-            this.superTabControlPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Staff)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
+            this.superTabControlPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Staff)).BeginInit();
             this.SuspendLayout();
             // 
             // superTabControl_Sector
@@ -81,9 +81,9 @@
             this.superTabControl_Sector.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Sector.ControlBox.MenuBox,
             this.superTabControl_Sector.ControlBox.CloseBox});
-            this.superTabControl_Sector.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel2);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl_Sector.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Sector.ForeColor = System.Drawing.Color.Black;
             this.superTabControl_Sector.Location = new System.Drawing.Point(0, 2);
             this.superTabControl_Sector.Name = "superTabControl_Sector";
@@ -168,72 +168,6 @@
             this.superTabItem_Sector.Name = "superTabItem_Sector";
             this.superTabItem_Sector.Text = "SECTOR";
             // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Controls.Add(this.btn_addStaff);
-            this.superTabControlPanel3.Controls.Add(this.statusBar1);
-            this.superTabControlPanel3.Controls.Add(this.dataGridView_Staff);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 46);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(785, 415);
-            this.superTabControlPanel3.TabIndex = 3;
-            this.superTabControlPanel3.TabItem = this.superTabItem_Staff;
-            // 
-            // btn_addStaff
-            // 
-            this.btn_addStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_addStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_addStaff.Location = new System.Drawing.Point(3, 1);
-            this.btn_addStaff.Name = "btn_addStaff";
-            this.btn_addStaff.Size = new System.Drawing.Size(90, 23);
-            this.btn_addStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_addStaff.TabIndex = 4;
-            this.btn_addStaff.Text = "Add New";
-            this.btn_addStaff.Click += new System.EventHandler(this.loadSubForm);
-            // 
-            // statusBar1
-            // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 386);
-            this.statusBar1.Name = "statusBar1";
-            this.statusBar1.Size = new System.Drawing.Size(785, 29);
-            this.statusBar1.TabIndex = 2;
-            this.statusBar1.Text = "Repository";
-            // 
-            // dataGridView_Staff
-            // 
-            this.dataGridView_Staff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_Staff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Staff.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridView_Staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView_Staff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewButtonColumn2});
-            this.dataGridView_Staff.Location = new System.Drawing.Point(2, 24);
-            this.dataGridView_Staff.Name = "dataGridView_Staff";
-            this.dataGridView_Staff.Size = new System.Drawing.Size(780, 363);
-            this.dataGridView_Staff.TabIndex = 0;
-            this.dataGridView_Staff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadSubForm);
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "Delete";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn2.Text = "Delete";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            // 
-            // superTabItem_Staff
-            // 
-            this.superTabItem_Staff.AttachedControl = this.superTabControlPanel3;
-            this.superTabItem_Staff.GlobalItem = false;
-            this.superTabItem_Staff.Icon = ((System.Drawing.Icon)(resources.GetObject("superTabItem_Staff.Icon")));
-            this.superTabItem_Staff.Name = "superTabItem_Staff";
-            this.superTabItem_Staff.Text = "STAFF";
-            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Controls.Add(this.statusBar_Repo);
@@ -282,6 +216,7 @@
             this.dataGridView_Repo.Name = "dataGridView_Repo";
             this.dataGridView_Repo.Size = new System.Drawing.Size(780, 363);
             this.dataGridView_Repo.TabIndex = 0;
+            this.dataGridView_Repo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deleteRecorde);
             this.dataGridView_Repo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadSubForm);
             // 
             // dataGridViewButtonColumn1
@@ -299,6 +234,73 @@
             this.superTabItem_Repository.Icon = ((System.Drawing.Icon)(resources.GetObject("superTabItem_Repository.Icon")));
             this.superTabItem_Repository.Name = "superTabItem_Repository";
             this.superTabItem_Repository.Text = "REPOSITORY";
+            // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.btn_addStaff);
+            this.superTabControlPanel3.Controls.Add(this.statusBar1);
+            this.superTabControlPanel3.Controls.Add(this.dataGridView_Staff);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 46);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(785, 415);
+            this.superTabControlPanel3.TabIndex = 3;
+            this.superTabControlPanel3.TabItem = this.superTabItem_Staff;
+            // 
+            // btn_addStaff
+            // 
+            this.btn_addStaff.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_addStaff.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_addStaff.Location = new System.Drawing.Point(3, 1);
+            this.btn_addStaff.Name = "btn_addStaff";
+            this.btn_addStaff.Size = new System.Drawing.Size(90, 23);
+            this.btn_addStaff.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_addStaff.TabIndex = 4;
+            this.btn_addStaff.Text = "Add New";
+            this.btn_addStaff.Click += new System.EventHandler(this.loadSubForm);
+            // 
+            // statusBar1
+            // 
+            this.statusBar1.Location = new System.Drawing.Point(0, 386);
+            this.statusBar1.Name = "statusBar1";
+            this.statusBar1.Size = new System.Drawing.Size(785, 29);
+            this.statusBar1.TabIndex = 2;
+            this.statusBar1.Text = "Repository";
+            // 
+            // dataGridView_Staff
+            // 
+            this.dataGridView_Staff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_Staff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Staff.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView_Staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_Staff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewButtonColumn2});
+            this.dataGridView_Staff.Location = new System.Drawing.Point(2, 24);
+            this.dataGridView_Staff.Name = "dataGridView_Staff";
+            this.dataGridView_Staff.Size = new System.Drawing.Size(780, 363);
+            this.dataGridView_Staff.TabIndex = 0;
+            this.dataGridView_Staff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deleteRecorde);
+            this.dataGridView_Staff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.loadSubForm);
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "Delete";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn2.Text = "Delete";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            // 
+            // superTabItem_Staff
+            // 
+            this.superTabItem_Staff.AttachedControl = this.superTabControlPanel3;
+            this.superTabItem_Staff.GlobalItem = false;
+            this.superTabItem_Staff.Icon = ((System.Drawing.Icon)(resources.GetObject("superTabItem_Staff.Icon")));
+            this.superTabItem_Staff.Name = "superTabItem_Staff";
+            this.superTabItem_Staff.Text = "STAFF";
             // 
             // superTabItem_REPO
             // 
@@ -325,10 +327,10 @@
             this.superTabControl_Sector.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Sector)).EndInit();
-            this.superTabControlPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Staff)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).EndInit();
+            this.superTabControlPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Staff)).EndInit();
             this.ResumeLayout(false);
 
         }

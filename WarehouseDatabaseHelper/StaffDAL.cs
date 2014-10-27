@@ -24,6 +24,7 @@ namespace WarehouseDatabaseHelper
             DataRow r = new Connection().getOneRecord(queryOne);
             DataTable lstRepo = new RepositoryDAL().getSomeRepo(string.Format("select * from [repository] where staff_id = {0}", ID));
             Staff staff = new Staff();
+            staff.Id = ID;
             staff.Name = r["staff_name"].ToString();
             staff.Permission = r["staff_permission"].ToString();
             staff.Address = r["staff_address"].ToString();
@@ -44,7 +45,7 @@ namespace WarehouseDatabaseHelper
         }
         public int updateStaff(Staff staff)
         {
-            string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}'", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail);
+            string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}' where staff_id = {5}", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail, staff.Id);
             return new Connection().exeNonQuery(queryUpdate);
         }
     }

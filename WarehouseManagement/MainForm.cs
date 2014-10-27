@@ -44,8 +44,9 @@ namespace WarehouseManagement
                     sectorForm.Show();
                     break;
                 case "btn_addRepo":
-                    RepositoryForm repo = new RepositoryForm();
-                    repo.Show();
+                    RepositoryForm RepoForm = new RepositoryForm();
+                    RepoForm.f = this;
+                    RepoForm.Show();
                     break;
                 default:
                     break;
@@ -98,11 +99,35 @@ namespace WarehouseManagement
             string ctrlName = ((Control)sender).Name;
             switch (ctrlName)
             {
+                case "dataGridView_Repo":
+                    if (e.ColumnIndex == 0 && e.RowIndex > -1)
+                    {
+                        int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Repository " + RepoID, MessageBoxButtons.YesNo);
+                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            new RepositoryDAL().deleteRepo(RepoID);
+                            this.reloadData();
+                        }
+                    }
+                    break;
+                case "dataGridView_Staff":
+                    if (e.ColumnIndex == 0 && e.RowIndex > -1)
+                    {
+                        int StaffID = int.Parse(this.dataGridView_Staff.Rows[e.RowIndex].Cells["staff_id"].Value.ToString());
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Staff " + StaffID, MessageBoxButtons.YesNo);
+                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            new StaffDAL().deleteStaff(StaffID);
+                            this.reloadData();
+                        }
+                    }
+                    break;
                 case "dataGridView_Sector":
                     if (e.ColumnIndex == 0 && e.RowIndex > -1)
                     {
                         int SectorID = int.Parse(this.dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Section " + SectorID, MessageBoxButtons.YesNo);
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Sector " + SectorID, MessageBoxButtons.YesNo);
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
                             new SectorDAL().deleteSector(SectorID);

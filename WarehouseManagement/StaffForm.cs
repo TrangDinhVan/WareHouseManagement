@@ -20,7 +20,7 @@ namespace WarehouseManagement
         public StaffForm()
         {
             InitializeComponent();
-            field_permission.DataSource = permission_set;
+            field_permission.DataSource = new Staff().Permission_set;
         }
 
         private void StaffForm_Load(object sender, EventArgs e)
@@ -56,14 +56,9 @@ namespace WarehouseManagement
 
         private void add_Staff(object sender, EventArgs e)
         {
-            Staff staff = new Staff();
             try
             {
-                staff.Name = field_name.Text;
-                staff.Permission = field_permission.Text;
-                staff.Address = field_address.Text;
-                staff.Mail = field_mail.Text;
-                staff.Phone = field_phone.Text;
+                Staff staff = getInfo();
                 new StaffDAL().addStaff(staff);
                 f.reloadData();
                 this.Close();
@@ -75,15 +70,9 @@ namespace WarehouseManagement
         }
         private void grant_Permission(object sender, EventArgs e)
         {
-            Staff staff = new Staff();
             try
             {
-                staff.Id = this.StaffID;
-                staff.Name = field_name.Text;
-                staff.Permission = field_permission.Text;
-                staff.Address = field_address.Text;
-                staff.Mail = field_mail.Text;
-                staff.Phone = field_phone.Text;
+                Staff staff = getInfo();
                 new StaffDAL().updateStaff(staff);
                 f.reloadData();
                 this.Close();
@@ -92,6 +81,17 @@ namespace WarehouseManagement
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private Staff getInfo()
+        {
+            Staff staff = new Staff();
+            staff.Id = this.StaffID;
+            staff.Name = field_name.Text;
+            staff.Permission = field_permission.Text;
+            staff.Address = field_address.Text;
+            staff.Mail = field_mail.Text;
+            staff.Phone = field_phone.Text;
+            return staff;
         }
     }
 }

@@ -8,6 +8,7 @@ namespace WarehouseEntity
 {
     public class Repository
     {
+        public string[] Volume_set = { "Small", "Medium", "Big" };
         private int _Id;
         private string _Name;
         private string _Desc;
@@ -20,6 +21,7 @@ namespace WarehouseEntity
         public Repository()
         {
             _Sector = new Sector();
+            _Staff = new Staff();
             _lstMaintain = new DataTable();
         }
         public int Id

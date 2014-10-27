@@ -31,8 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.field_name = new System.Windows.Forms.TextBox();
+            this.field_desc = new System.Windows.Forms.RichTextBox();
             this.btn_add = new DevComponents.DotNetBar.ButtonX();
             this.btn_save = new DevComponents.DotNetBar.ButtonX();
             this.dataGridView_Repo = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -63,20 +63,20 @@
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "Description";
             // 
-            // textBox1
+            // field_name
             // 
-            this.textBox1.Location = new System.Drawing.Point(134, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 26);
-            this.textBox1.TabIndex = 2;
+            this.field_name.Location = new System.Drawing.Point(134, 11);
+            this.field_name.Name = "field_name";
+            this.field_name.Size = new System.Drawing.Size(321, 26);
+            this.field_name.TabIndex = 2;
             // 
-            // richTextBox1
+            // field_desc
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(134, 42);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(321, 84);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.field_desc.Location = new System.Drawing.Point(134, 42);
+            this.field_desc.Name = "field_desc";
+            this.field_desc.Size = new System.Drawing.Size(321, 84);
+            this.field_desc.TabIndex = 3;
+            this.field_desc.Text = "";
             // 
             // btn_add
             // 
@@ -113,7 +113,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_Repo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView_Repo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridView_Repo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridView_Repo.Location = new System.Drawing.Point(12, 175);
             this.dataGridView_Repo.Name = "dataGridView_Repo";
             this.dataGridView_Repo.Size = new System.Drawing.Size(443, 150);
@@ -127,8 +127,8 @@
             this.Controls.Add(this.dataGridView_Repo);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.field_desc);
+            this.Controls.Add(this.field_name);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,8 +146,8 @@
 
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox field_name;
+        private System.Windows.Forms.RichTextBox field_desc;
         private DevComponents.DotNetBar.ButtonX btn_add;
         private DevComponents.DotNetBar.ButtonX btn_save;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridView_Repo;
