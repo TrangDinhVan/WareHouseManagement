@@ -9,48 +9,19 @@ namespace WarehouseEntity
 {
     public class Order
     {
-        private int _Id;
-        private DateTime _Date;
-        private double _Paid;
-        private Customer _Customer;
-        private DataTable _lstOrderDetail;
         public Order()
         {
-            _Customer = new Customer();
+            Customer = new Customer();
         }
-        public int Id
-        {
-            get { return _Id; }
-            set { _Id = value; }
-        }
-        public DateTime Date
-        {
-            get { return _Date; }
-            set { _Date = value; }
-        }
-        public double Paid
-        {
-            get { return _Paid; }
-            set { _Paid = value; }
-        }
-        public Customer Customer
-        {
-            get { return _Customer; }
-            set { _Customer = value; }
-        }
-        public DataTable lstOrderDetail
-        {
-            get { return _lstOrderDetail; }
-            set { _lstOrderDetail = value; }
-        }
-        public double calculateTotalValue()
-        {
-            double total = 0;
-            foreach (DataRow r in _lstOrderDetail.Rows)
-            {
-                
-            }
-            return total;
-        }
+
+        public int Id { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public double Paid { get; set; }
+
+        public Customer Customer { get; set; }
+
+        public DataTable LstOrderDetail { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace WarehouseDatabaseHelper
             maintain.Price = double.Parse(r["maintain_price"].ToString());
             maintain.StartDate = Convert.ToDateTime(r["start_date"].ToString());
             maintain.EndDate = Convert.ToDateTime((r["end_date"]).ToString());
-            maintain.Repo = new RepositoryDAL().getOneRepo(int.Parse(r["repo_id"].ToString()));
+            maintain.Repo = new RepositoryDAL().GetOneRepo(int.Parse(r["repo_id"].ToString()));
             return maintain;
         }
         public int deleteMaintain(int ID)
@@ -38,7 +38,7 @@ namespace WarehouseDatabaseHelper
         }
         public int createMaintain(Maintainance maintain)
         {
-            string queryAdd = string.Format("insert into [maintainance] (repo_id, start_date, end_date, maintain_desc, maintain_price) values ({0}, '{1}', '{2}', '{3}', {4})", maintain.Repo.Id, maintain.StartDate, maintain.EndDate, maintain.Desc, maintain.Price);
+            string queryAdd = string.Format("insert into [maintainance] (repo_id, start_date, end_date, maintain_desc, maintain_price) values ({0}, '{1}', '{2}', '{3}', {4})", maintain.Repo.Id, maintain.StartDate.ToString("MMM/dd/yyyy"), maintain.EndDate.ToString("MMM/dd/yyyy"), maintain.Desc, maintain.Price);
             return new Connection().exeNonQuery(queryAdd);
         }
 

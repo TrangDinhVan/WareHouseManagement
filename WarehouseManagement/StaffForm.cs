@@ -20,7 +20,7 @@ namespace WarehouseManagement
         public StaffForm()
         {
             InitializeComponent();
-            field_permission.DataSource = new Staff().Permission_set;
+            field_permission.DataSource = new Staff().PermissionSet;
         }
 
         private void StaffForm_Load(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace WarehouseManagement
             {
                 Staff staff = getInfo();
                 new StaffDAL().addStaff(staff);
-                f.reloadData();
+                f.ReloadData();
                 this.Close();
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@ namespace WarehouseManagement
             {
                 Staff staff = getInfo();
                 new StaffDAL().updateStaff(staff);
-                f.reloadData();
+                f.ReloadData();
                 this.Close();
             }
             catch (Exception ex)

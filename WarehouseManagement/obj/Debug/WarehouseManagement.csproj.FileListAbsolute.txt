@@ -15,3 +15,4 @@ E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseMana
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.SectorForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.RepositoryForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.StaffForm.resources
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.MaintainForm.resources

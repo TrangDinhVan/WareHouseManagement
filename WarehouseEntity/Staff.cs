@@ -8,58 +8,35 @@ namespace WarehouseEntity
 {
     public class Staff
     {
-        public string[] Permission_set = { "Admin Manager", "Transactor - Accountant", "Protector - Technician Admin" };
-        private int _Id;
-        private string _Name;
-        private string _Permission;
-        private string _Address;
-        private string _Phone;
-        private string _Mail;
-        private DataTable _lstUndertakenRepo;
+        public string[] PermissionSet = { "Admin Manager", "Transactor - Accountant", "Protector - Technician Admin" };
+        private string _name;
+
         public Staff()
         {
-            _lstUndertakenRepo = new DataTable();
+            LstUndertakenRepo = new DataTable();
         }
-        public int Id
-        {
-            get { return _Id; }
-            set { _Id = value; }
-        }
+
+        public int Id { get; set; }
+
         public string Name
         {
-            get { return _Name; }
+            get { return _name; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Name must not be empty.");
-                _Name = value;
+                _name = value;
             }
         }
-        public string Permission
-        {
-            get { return _Permission; }
-            set { _Permission = value; }
-        }
-        public string Address
-        {
-            get { return _Address; }
-            set { _Address = value; }
-        }
-        public string Phone
-        {
-            get { return _Phone; }
-            set { _Phone = value; }
-        }
-        public string Mail
-        {
-            get { return _Mail; }
-            set { _Mail = value; }
-        }
-        public DataTable lstUndertakenRepo
-        {
-            get { return _lstUndertakenRepo; }
-            set { _lstUndertakenRepo = value; }
-        }
 
+        public string Permission { get; set; }
+
+        public string Address { get; set; }
+
+        public string Phone { get; set; }
+
+        public string Mail { get; set; }
+
+        public DataTable LstUndertakenRepo { get; set; }
     }
 }

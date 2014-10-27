@@ -27,12 +27,12 @@ namespace WarehouseDatabaseHelper
         {
             string queryOne = string.Format("select * from [sector] where sector_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
-            DataTable lstRepo = new RepositoryDAL().getSomeRepo(string.Format("select * from [repository] where sector_id = {0}",ID));
+            DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where sector_id = {0}",ID));
             Sector sector = new Sector();
             sector.Id = ID;
             sector.Name = r["sector_name"].ToString();
             sector.Desc = r["sector_desc"].ToString();
-            sector.lstRepo = lstRepo;
+            sector.LstRepo = lstRepo;
             return sector;
         }
         public int deleteSector(int ID)

@@ -88,7 +88,7 @@
             this.btn_add.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_add.TabIndex = 4;
             this.btn_add.Text = "Add";
-            this.btn_add.Click += new System.EventHandler(this.button_addSector_Click);
+            this.btn_add.Click += new System.EventHandler(this.add_Sector);
             // 
             // btn_save
             // 
@@ -100,7 +100,7 @@
             this.btn_save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_save.TabIndex = 5;
             this.btn_save.Text = "Save";
-            this.btn_save.Click += new System.EventHandler(this.button_updateSector_Click);
+            this.btn_save.Click += new System.EventHandler(this.update_Sector);
             // 
             // dataGridView_Repo
             // 

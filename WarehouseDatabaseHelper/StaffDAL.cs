@@ -22,7 +22,7 @@ namespace WarehouseDatabaseHelper
         {
             string queryOne = string.Format("select * from [staff] where staff_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
-            DataTable lstRepo = new RepositoryDAL().getSomeRepo(string.Format("select * from [repository] where staff_id = {0}", ID));
+            DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where staff_id = {0}", ID));
             Staff staff = new Staff();
             staff.Id = ID;
             staff.Name = r["staff_name"].ToString();
@@ -30,7 +30,7 @@ namespace WarehouseDatabaseHelper
             staff.Address = r["staff_address"].ToString();
             staff.Phone = r["staff_phone"].ToString();
             staff.Mail = r["staff_mail"].ToString();
-            staff.lstUndertakenRepo = lstRepo;
+            staff.LstUndertakenRepo = lstRepo;
             return staff;            
         }
         public int deleteStaff(int ID)

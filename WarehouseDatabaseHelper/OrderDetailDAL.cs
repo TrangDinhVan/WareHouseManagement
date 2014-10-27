@@ -25,7 +25,7 @@ namespace WarehouseDatabaseHelper
             OrderDetail detail = new OrderDetail();
             detail.Id = ID;
             detail.Order = new OrderDAL().getOneOrder(int.Parse(r["order_id"].ToString()));
-            detail.Repo = new RepositoryDAL().getOneRepo(int.Parse(r["repo_id"].ToString()));
+            detail.Repo = new RepositoryDAL().GetOneRepo(int.Parse(r["repo_id"].ToString()));
             detail.StartDate = Convert.ToDateTime(r["start_date"].ToString());
             detail.EndDate = Convert.ToDateTime(r["end_date"].ToString());
             return detail;

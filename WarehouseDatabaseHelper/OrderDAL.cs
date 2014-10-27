@@ -30,7 +30,7 @@ namespace WarehouseDatabaseHelper
             order.Date = Convert.ToDateTime(r["start_date"].ToString());
             order.Paid = Convert.ToDouble(r["order_paid"].ToString());
             order.Customer = cus;
-            order.lstOrderDetail = lstOrderDetail;
+            order.LstOrderDetail = lstOrderDetail;
             return order;
         }
         public int deleteOrder(int ID)

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 //
 using System.Data;
 
@@ -8,87 +6,49 @@ namespace WarehouseEntity
 {
     public class Repository
     {
-        public string[] Volume_set = { "Small", "Medium", "Big" };
-        private int _Id;
-        private string _Name;
-        private string _Desc;
-        private double _Price;
-        private string _Volume;
-        private Sector _Sector;
-        private Staff _Staff;
-        private DataTable _lstMaintain;
-        private DataTable _lstOrderDetail;
+        public string[] VolumeSet = { "Small", "Medium", "Big" };
+        private string _name;
+
         public Repository()
         {
-            _Sector = new Sector();
-            _Staff = new Staff();
-            _lstMaintain = new DataTable();
+            Sector = new Sector();
+            Staff = new Staff();
+            LstMaintain = new DataTable();
         }
-        public int Id
-        {
-            get { return _Id; }
-            set { _Id = value; }
-        }
+
+        public int Id { get; set; }
+
         public string Name
         {
-            get { return _Name; }
+            get { return _name; }
             set 
             { 
                 if(string.IsNullOrEmpty(value))
                     throw new Exception("Repository's name must not be empty.");
-                _Name = value;
+                _name = value;
             }
         }
-        public string Desc
-        {
-            get { return _Desc; }
-            set { _Desc = value; }
-        }
-        public double Price
-        {
-            get { return _Price; }
-            set { _Price = value; }
-        }
-        public string Volume
-        {
-            get { return _Volume; }
-            set { _Volume = value; }
-        }
-        public Sector Sector
-        {
-            get { return _Sector; }
-            set { _Sector = value; }
-        }
-        public Staff Staff
-        {
-            get { return _Staff; }
-            set { _Staff = value; }
-        }
-        public DataTable lstMaintain
-        {
-            get { return _lstMaintain; }
-            set { _lstMaintain = value; }
-        }
-        public DataTable lstOrderDetail
-        {
-            get { return _lstOrderDetail; }
-            set { _lstOrderDetail = value; }
-        }
-        public double getTotalMaintainValue()
+
+        public string Desc { get; set; }
+
+        public double Price { get; set; }
+
+        public string Volume { get; set; }
+
+        public Sector Sector { get; set; }
+
+        public Staff Staff { get; set; }
+
+        public DataTable LstMaintain { get; set; }
+
+        public DataTable LstOrderDetail { get; set; }
+
+        public double GetTotalMaintainValue()
         {
             double total = 0;
-            foreach (DataRow r in _lstMaintain.Rows)
+            foreach (DataRow r in LstMaintain.Rows)
             {
                 total += double.Parse(r["maintain_price"].ToString());
-            }
-            return total;
-        }
-        public double getTotalOrderValue()
-        {
-            double total = 0;
-            foreach (DataRow r in _lstOrderDetail.Rows)
-            {
-                
             }
             return total;
         }

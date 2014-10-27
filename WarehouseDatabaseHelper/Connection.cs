@@ -64,7 +64,6 @@ namespace WarehouseDatabaseHelper
         public DataTable getListRecord(string query)
         {
             DataTable data = new DataTable();
-            openConnection();
             try
             {
                 cmd = new OleDbCommand(query, this.Cnn);
@@ -75,15 +74,10 @@ namespace WarehouseDatabaseHelper
             {
                 throw new Exception("Error get Sector: " + ex.Message);
             }
-            finally
-            {
-                Cnn.Close();
-            }
             return data;
         }
         public DataRow getOneRecord(string query)
         {
-            openConnection();
             DataTable data = new DataTable();
             try
             {
@@ -96,10 +90,6 @@ namespace WarehouseDatabaseHelper
             catch (Exception ex)
             {
                 throw new Exception("Error get one section: " + ex.Message);
-            }
-            finally
-            {
-                Cnn.Close();
             }
         }
     }

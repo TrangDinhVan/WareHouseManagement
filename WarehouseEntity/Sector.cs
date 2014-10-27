@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 //
 using System.Data;
 
@@ -8,38 +6,27 @@ namespace WarehouseEntity
 {
     public class Sector
     {
-        private int _Id;
-        private string _Name;
-        private string _Desc;
-        private DataTable _lstRepo;
+        private string _name;
         public Sector()
         {
-            _lstRepo = new DataTable();
+            LstRepo = new DataTable();
         }
-        public int Id
-        {
-            get { return _Id; }
-            set { _Id = value; }
-        }
+
+        public int Id { get; set; }
+
         public string Name
         {
-            get { return _Name; }
+            get { return _name; }
             set
             {
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Name must not be empty.");
-                _Name = value;
+                _name = value;
             }
         }
-        public string Desc
-        {
-            get { return _Desc; }
-            set { _Desc = value; }
-        }
-        public DataTable lstRepo
-        {
-            get { return _lstRepo; }
-            set { _lstRepo = value; }
-        }
+
+        public string Desc { get; set; }
+
+        public DataTable LstRepo { get; set; }
     }
 }

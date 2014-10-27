@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="1c407bc2-1075-4d15-b9b3-ab400d257368" name="Protector and Technian Admin" isAbstract="false" isLeaf="false">
@@ -375,6 +375,24 @@
     <useCaseModelRootHasTypes>
       <useCase Id="dc3f3e8c-5e2f-4393-b9ae-39ded9a36cbb" name="manage Maintainance" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a7c1fd5d-b905-4434-894c-a756007365f0" />
+        <targetEnds>
+          <association Id="39fc1374-5760-4b42-90f2-956abacfe346" isDerived="false" sourceEndRoleName="manage Maintainance" targetEndRoleName="add Maintain" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e20fb788-767d-4100-9d8d-f876a718bc6a" LastKnownName="add Maintain" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd91611c-957a-4f5d-a680-dcc9d34681bd" name="manage Maintainance" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c2fa2e3c-45e8-43bc-bf3d-de76d18bc162" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2585caab-6f61-46bb-8ec5-fd206760747b" name="add Maintain" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="da2ce791-d513-40ec-8802-7547a8a55fa0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e24951ee-ccb9-488b-bee6-cded951afe52" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -599,6 +617,22 @@
     <useCaseModelRootHasTypes>
       <useCase Id="5c343a68-f205-48b1-9673-4e4241cd8d41" name="check cancel Condition" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d01201b3-720f-471d-bd5d-21163ab426cf" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e20fb788-767d-4100-9d8d-f876a718bc6a" name="add Maintain" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="663426b0-8ade-400e-a24a-fe7094d2d963" />
+        <additions>
+          <include Id="322f9031-81d4-4379-9408-5b435394ecbe">
+            <useCaseMoniker Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" LastKnownName="filter valid Time" />
+            <elementDefinition Id="e3bdf4f0-a4b1-4aac-abe1-be3ce68c21c8" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" name="filter valid Time" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f03bc27e-43e7-403f-a884-05b008c9a415" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

@@ -32,7 +32,7 @@ namespace WarehouseManagement
                     Sector sector = new SectorDAL().getOneSection(this.SectorID);
                     field_name.Text = sector.Name;
                     field_desc.Text = sector.Desc;
-                    dataGridView_Repo.DataSource = sector.lstRepo;
+                    dataGridView_Repo.DataSource = sector.LstRepo;
                 }
                 else
                 {
@@ -46,13 +46,13 @@ namespace WarehouseManagement
             }
 
         }
-        private void button_addSector_Click(object sender, EventArgs e)
+        private void add_Sector(object sender, EventArgs e)
         {
             try
             {
                 Sector sector = getInfo();
                 new SectorDAL().addSector(sector);
-                f.reloadData();
+                f.ReloadData();
                 this.Close();
             }
             catch(Exception ex)
@@ -60,13 +60,13 @@ namespace WarehouseManagement
                 MessageBox.Show(ex.Message);
             }
         }
-        private void button_updateSector_Click(object sender, EventArgs e)
+        private void update_Sector(object sender, EventArgs e)
         {
             try
             {
                 Sector sector = getInfo();
                 new SectorDAL().updateSector(sector);
-                f.reloadData();
+                f.ReloadData();
                 this.Close();
             }
             catch (Exception ex)

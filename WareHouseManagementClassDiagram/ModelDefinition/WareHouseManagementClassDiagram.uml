@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="0f188200-161f-4185-8b7f-7c917fa53c76"
   name="WareHouseManagementClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -892,7 +892,49 @@
         Id="a7c1fd5d-b905-4434-894c-a756007365f0"
         name="manage Maintainance"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e24951ee-ccb9-488b-bee6-cded951afe52"
+            isDerived="false"
+            sourceEndRoleName="manage Maintainance"
+            targetEndRoleName="add Maintain"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="663426b0-8ade-400e-a24a-fe7094d2d963"
+              LastKnownName="add Maintain"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c2fa2e3c-45e8-43bc-bf3d-de76d18bc162"
+                  name="manage Maintainance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="da2ce791-d513-40ec-8802-7547a8a55fa0"
+                  name="add Maintain"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <useCase
@@ -1524,6 +1566,30 @@
       <useCase
         Id="d01201b3-720f-471d-bd5d-21163ab426cf"
         name="check cancel Condition"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="663426b0-8ade-400e-a24a-fe7094d2d963"
+        name="add Maintain"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="e3bdf4f0-a4b1-4aac-abe1-be3ce68c21c8">
+            <useCaseMoniker
+              Id="f03bc27e-43e7-403f-a884-05b008c9a415"
+              LastKnownName="filter valid Time"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f03bc27e-43e7-403f-a884-05b008c9a415"
+        name="filter valid Time"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

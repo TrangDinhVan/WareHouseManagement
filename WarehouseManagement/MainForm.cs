@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 //
 using WarehouseDatabaseHelper;
@@ -19,16 +14,17 @@ namespace WarehouseManagement
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            reloadData();
+            ReloadData();
         }
 
-        public void reloadData()
+        public void ReloadData()
         {
             dataGridView_Sector.DataSource = new SectorDAL().getAllSector();
-            dataGridView_Repo.DataSource = new RepositoryDAL().getAllRepo();
+            dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
+            dataGridView_Maintain.DataSource = new MaintainanceDAL().getAllMaintain();
         }
-        public void loadSubForm(object sender, EventArgs e)
+        public void LoadSubForm(object sender, EventArgs e)
         {
             string ctrlName = ((Control)sender).Name;
             switch (ctrlName)
@@ -48,12 +44,22 @@ namespace WarehouseManagement
                     RepoForm.f = this;
                     RepoForm.Show();
                     break;
+                case "btn_addMaintain":
+                    MaintainForm MaintainForm = new MaintainForm();
+                    MaintainForm.f = this;
+                    MaintainForm.Show();
+                    break;
+                case "btn_add_maintain":
+                    MaintainForm maintainForm = new MaintainForm();
+                    maintainForm.f = this;
+                    maintainForm.Show();
+                    break;
                 default:
                     break;
             }
                 
         }
-        public void loadSubForm(object sender, DataGridViewCellEventArgs e)
+        public void LoadSubForm(object sender, DataGridViewCellEventArgs e)
         {
             string ctrlName = ((Control)sender).Name;
             switch (ctrlName)
@@ -75,7 +81,7 @@ namespace WarehouseManagement
                         int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
                         RepositoryForm repo = new RepositoryForm();
                         repo.f = this;
-                        repo.RepoID = RepoID;
+                        repo.RepoId = RepoID;
                         repo.Show();
                     }
                     break;
@@ -94,7 +100,7 @@ namespace WarehouseManagement
                     break;
             }
         }
-        public void deleteRecorde(object sender, DataGridViewCellEventArgs e)
+        public void DeleteRecorde(object sender, DataGridViewCellEventArgs e)
         {
             string ctrlName = ((Control)sender).Name;
             switch (ctrlName)
@@ -106,8 +112,8 @@ namespace WarehouseManagement
                         DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Repository " + RepoID, MessageBoxButtons.YesNo);
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
-                            new RepositoryDAL().deleteRepo(RepoID);
-                            this.reloadData();
+                            new RepositoryDAL().DeleteRepo(RepoID);
+                            this.ReloadData();
                         }
                     }
                     break;
@@ -119,7 +125,7 @@ namespace WarehouseManagement
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
                             new StaffDAL().deleteStaff(StaffID);
-                            this.reloadData();
+                            this.ReloadData();
                         }
                     }
                     break;
@@ -131,7 +137,7 @@ namespace WarehouseManagement
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
                             new SectorDAL().deleteSector(SectorID);
-                            this.reloadData();
+                            this.ReloadData();
                         }
                     }
                     break;
