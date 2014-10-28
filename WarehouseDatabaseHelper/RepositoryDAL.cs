@@ -27,14 +27,16 @@ namespace WarehouseDatabaseHelper
         {
             string queryOne = string.Format("select * from [repository] where repo_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
-            Repository repo = new Repository();
-            repo.Id = ID;
-            repo.Name = r["repo_name"].ToString();
-            repo.Desc = r["repo_desc"].ToString();
-            repo.Price = double.Parse( r["repo_price"].ToString() );
-            repo.Volume = r["repo_volume"].ToString();
-            repo.Sector = new SectorDAL().getOneSection(int.Parse(r["sector_id"].ToString()));
-            repo.Staff = new StaffDAL().getOneStaff(int.Parse(r["staff_id"].ToString()));
+            Repository repo = new Repository
+            {
+                Id = ID,
+                Name = r["repo_name"].ToString(),
+                Desc = r["repo_desc"].ToString(),
+                Price = double.Parse(r["repo_price"].ToString()),
+                Volume = r["repo_volume"].ToString(),
+                Sector = new SectorDAL().GetOneSection(int.Parse(r["sector_id"].ToString())),
+                Staff = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString()))
+            };
             return repo;
         }
         public int DeleteRepo(int id)

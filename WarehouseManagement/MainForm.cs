@@ -19,7 +19,7 @@ namespace WarehouseManagement
 
         public void ReloadData()
         {
-            dataGridView_Sector.DataSource = new SectorDAL().getAllSector();
+            dataGridView_Sector.DataSource = new SectorDAL().GetAllSector();
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
             dataGridView_Maintain.DataSource = new MaintainanceDAL().getAllMaintain();
@@ -30,28 +30,23 @@ namespace WarehouseManagement
             switch (ctrlName)
             {
                 case "btn_addStaff":
-                    StaffForm staff_Form = new StaffForm();
-                    staff_Form.f = this;
-                    staff_Form.Show();
+                    StaffForm staffForm = new StaffForm {F = this};
+                    staffForm.Show();
                     break;
                 case "btn_addSector":
-                    SectorForm sectorForm = new SectorForm();
-                    sectorForm.f = this;
+                    SectorForm sectorForm = new SectorForm {f = this};
                     sectorForm.Show();
                     break;
                 case "btn_addRepo":
-                    RepositoryForm RepoForm = new RepositoryForm();
-                    RepoForm.f = this;
+                    RepositoryForm RepoForm = new RepositoryForm {f = this};
                     RepoForm.Show();
                     break;
                 case "btn_addMaintain":
-                    MaintainForm MaintainForm = new MaintainForm();
-                    MaintainForm.f = this;
+                    MaintainForm MaintainForm = new MaintainForm {F = this};
                     MaintainForm.Show();
                     break;
                 case "btn_add_maintain":
-                    MaintainForm maintainForm = new MaintainForm();
-                    maintainForm.f = this;
+                    MaintainForm maintainForm = new MaintainForm {F = this};
                     maintainForm.Show();
                     break;
                 default:
@@ -70,8 +65,8 @@ namespace WarehouseManagement
                         int StaffID = int.Parse(this.dataGridView_Staff.Rows[e.RowIndex].Cells["staff_id"].Value.ToString());
                         RepositoryForm repo = new RepositoryForm();
                         StaffForm StaffForm = new StaffForm();
-                        StaffForm.f = this;
-                        StaffForm.StaffID = StaffID;
+                        StaffForm.F = this;
+                        StaffForm.StaffId = StaffID;
                         StaffForm.Show();
                     }
                     break;
@@ -124,7 +119,7 @@ namespace WarehouseManagement
                         DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Staff " + StaffID, MessageBoxButtons.YesNo);
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
-                            new StaffDAL().deleteStaff(StaffID);
+                            new StaffDAL().DeleteStaff(StaffID);
                             this.ReloadData();
                         }
                     }
@@ -136,7 +131,7 @@ namespace WarehouseManagement
                         DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Sector " + SectorID, MessageBoxButtons.YesNo);
                         if (result == System.Windows.Forms.DialogResult.Yes)
                         {
-                            new SectorDAL().deleteSector(SectorID);
+                            new SectorDAL().DeleteSector(SectorID);
                             this.ReloadData();
                         }
                     }

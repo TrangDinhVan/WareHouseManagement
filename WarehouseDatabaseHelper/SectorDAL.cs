@@ -8,13 +8,10 @@ using WarehouseEntity;
 
 namespace WarehouseDatabaseHelper
 {
-    /// <summary>
-    /// All Operations manipulating sectors data
-    /// </summary>
     public class SectorDAL
     {
     
-        public DataTable getAllSector()
+        public DataTable GetAllSector()
         {
             string queryAll = "select * from [v_sector]";
             return new Connection().getListRecord(queryAll);
@@ -23,31 +20,33 @@ namespace WarehouseDatabaseHelper
         {
             return new Connection().getListRecord(query);
         }
-        public Sector getOneSection(int ID)
+        public Sector GetOneSection(int ID)
         {
             string queryOne = string.Format("select * from [sector] where sector_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
             DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where sector_id = {0}",ID));
-            Sector sector = new Sector();
-            sector.Id = ID;
-            sector.Name = r["sector_name"].ToString();
-            sector.Desc = r["sector_desc"].ToString();
-            sector.LstRepo = lstRepo;
+            Sector sector = new Sector
+            {
+                Id = ID,
+                Name = r["sector_name"].ToString(),
+                Desc = r["sector_desc"].ToString(),
+                LstRepo = lstRepo
+            };
             return sector;
         }
-        public int deleteSector(int ID)
+        public int DeleteSector(int ID)
         {
             string queryDelete = string.Format("delete from [sector] where sector_id = {0}", ID);
             return new Connection().exeNonQuery(queryDelete);
         }
-        public int addSector(Sector sec)
+        public int AddSector(Sector sec)
         {
 
             string queryAdd = string.Format("insert into [sector] (sector_name,sector_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
             return new Connection().exeNonQuery(queryAdd);
         }
         
-        public int updateSector(Sector sec)
+        public int UpdateSector(Sector sec)
         {
             string queryUpdate = string.Format("update [sector] set sector_name = '{0}', sector_desc='{1}' where sector_id={2}", sec.Name, sec.Desc, sec.Id);
             return new Connection().exeNonQuery(queryUpdate);

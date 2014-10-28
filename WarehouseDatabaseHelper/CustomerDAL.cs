@@ -30,7 +30,7 @@ namespace WarehouseDatabaseHelper
             cus.Mail = r["customer_mail"].ToString();
             cus.Phone = r["customer_phone"].ToString();
             cus.Fax = r["customer_fax"].ToString();
-            cus.lstOrder = lstOrder;
+            cus.LstOrder = lstOrder;
             return cus;
         }
         public int deleteCustomer(int ID)

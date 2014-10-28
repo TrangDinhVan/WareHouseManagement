@@ -14,36 +14,38 @@ namespace WarehouseDatabaseHelper
             string queryAll = "select * from [staff]";
             return new Connection().getListRecord(queryAll);
         }
-        public DataTable getSomeStaff(string query)
+        public DataTable GetSomeStaff(string query)
         {
             return new Connection().getListRecord(query);
         }
-        public Staff getOneStaff(int ID)
+        public Staff GetOneStaff(int ID)
         {
             string queryOne = string.Format("select * from [staff] where staff_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
             DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where staff_id = {0}", ID));
-            Staff staff = new Staff();
-            staff.Id = ID;
-            staff.Name = r["staff_name"].ToString();
-            staff.Permission = r["staff_permission"].ToString();
-            staff.Address = r["staff_address"].ToString();
-            staff.Phone = r["staff_phone"].ToString();
-            staff.Mail = r["staff_mail"].ToString();
-            staff.LstUndertakenRepo = lstRepo;
+            Staff staff = new Staff
+            {
+                Id = ID,
+                Name = r["staff_name"].ToString(),
+                Permission = r["staff_permission"].ToString(),
+                Address = r["staff_address"].ToString(),
+                Phone = r["staff_phone"].ToString(),
+                Mail = r["staff_mail"].ToString(),
+                LstUndertakenRepo = lstRepo
+            };
             return staff;            
         }
-        public int deleteStaff(int ID)
+        public int DeleteStaff(int ID)
         {
             string queryDelete = string.Format("delete from [staff] where staff_id = {0}", ID);
             return new Connection().exeNonQuery(queryDelete);
         }
-        public int addStaff(Staff staff)
+        public int AddStaff(Staff staff)
         {
             string queryAdd = string.Format(string.Format("insert into [staff] (staff_name, staff_permission, staff_address, staff_phone, staff_mail) values ('{0}','{1}','{2}','{3}','{4}')", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail));
             return new Connection().exeNonQuery(queryAdd);
         }
-        public int updateStaff(Staff staff)
+        public int UpdateStaff(Staff staff)
         {
             string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}' where staff_id = {5}", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail, staff.Id);
             return new Connection().exeNonQuery(queryUpdate);

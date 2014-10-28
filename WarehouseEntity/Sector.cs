@@ -1,17 +1,11 @@
 ﻿using System;
 //
 using System.Data;
-
 namespace WarehouseEntity
 {
     public class Sector
     {
         private string _name;
-        public Sector()
-        {
-            LstRepo = new DataTable();
-        }
-
         public int Id { get; set; }
 
         public string Name
@@ -24,7 +18,6 @@ namespace WarehouseEntity
                 _name = value;
             }
         }
-
         public string Desc { get; set; }
 
         public DataTable LstRepo { get; set; }

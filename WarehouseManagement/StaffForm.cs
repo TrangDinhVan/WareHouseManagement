@@ -1,11 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using DevComponents.DotNetBar;
 //
 using WarehouseEntity;
 using WarehouseDatabaseHelper;
@@ -14,9 +8,9 @@ namespace WarehouseManagement
 {
     public partial class StaffForm : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public int StaffID;
-        public MainForm f { get; set; }
-        public static string[] permission_set = { "Manager Admin", "Transactor and Accountant", "Protector and Technician Admin" };
+        public int StaffId;
+        public MainForm F { get; set; }
+        public static string[] PermissionSet = { "Manager Admin", "Transactor and Accountant", "Protector and Technician Admin" };
         public StaffForm()
         {
             InitializeComponent();
@@ -30,12 +24,12 @@ namespace WarehouseManagement
             dataGridView_repo.Hide();
             try
             {
-                if (this.StaffID != 0)
+                if (StaffId != 0)
                 {
                     btn_save.Show();
                     dataGridView_repo.Show();
-                    this.Text = "Staff ID: " + StaffID;
-                    Staff staff = new StaffDAL().getOneStaff(this.StaffID);
+                    Text = "Staff ID: " + StaffId;
+                    Staff staff = new StaffDAL().GetOneStaff(StaffId);
                     field_name.Text = staff.Name;
                     field_address.Text = staff.Address;
                     field_mail.Text = staff.Mail;
@@ -45,7 +39,7 @@ namespace WarehouseManagement
                 else
                 {
                     btn_add.Show();
-                    this.Text = "Add new Staff";
+                    Text = "Add new Staff";
                 }
             }
             catch (Exception ex)
@@ -58,10 +52,10 @@ namespace WarehouseManagement
         {
             try
             {
-                Staff staff = getInfo();
-                new StaffDAL().addStaff(staff);
-                f.ReloadData();
-                this.Close();
+                Staff staff = GetInfo();
+                new StaffDAL().AddStaff(staff);
+                F.ReloadData();
+                Close();
             }
             catch (Exception ex)
             {
@@ -72,25 +66,27 @@ namespace WarehouseManagement
         {
             try
             {
-                Staff staff = getInfo();
-                new StaffDAL().updateStaff(staff);
-                f.ReloadData();
-                this.Close();
+                Staff staff = GetInfo();
+                new StaffDAL().UpdateStaff(staff);
+                F.ReloadData();
+                Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        private Staff getInfo()
+        private Staff GetInfo()
         {
-            Staff staff = new Staff();
-            staff.Id = this.StaffID;
-            staff.Name = field_name.Text;
-            staff.Permission = field_permission.Text;
-            staff.Address = field_address.Text;
-            staff.Mail = field_mail.Text;
-            staff.Phone = field_phone.Text;
+            Staff staff = new Staff
+            {
+                Id = StaffId,
+                Name = field_name.Text,
+                Permission = field_permission.Text,
+                Address = field_address.Text,
+                Mail = field_mail.Text,
+                Phone = field_phone.Text
+            };
             return staff;
         }
     }

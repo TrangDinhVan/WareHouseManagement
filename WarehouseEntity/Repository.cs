@@ -9,13 +9,6 @@ namespace WarehouseEntity
         public string[] VolumeSet = { "Small", "Medium", "Big" };
         private string _name;
 
-        public Repository()
-        {
-            Sector = new Sector();
-            Staff = new Staff();
-            LstMaintain = new DataTable();
-        }
-
         public int Id { get; set; }
 
         public string Name

@@ -16,13 +16,9 @@ namespace WarehouseManagement
         {
             InitializeComponent();
             report_choice.DataSource = ReportChoiceSet;
-        }
-
-        private void RepositoryForm_Load(object sender, EventArgs e)
-        {
             btn_add.Hide();
             btn_save.Hide();
-            DataTable dataSector = new SectorDAL().getAllSector();
+            DataTable dataSector = new SectorDAL().GetAllSector();
             field_sector.DataSource = dataSector.DefaultView;
             field_sector.DisplayMember = "Name";
             field_sector.ValueMember = dataSector.Columns["ID"].ToString();
@@ -31,6 +27,10 @@ namespace WarehouseManagement
             field_staff.DisplayMember = "staff_name";
             field_staff.ValueMember = dataStaff.Columns["staff_id"].ToString();
             field_volume.DataSource = new Repository().VolumeSet;
+        }
+
+        private void RepositoryForm_Load(object sender, EventArgs e)
+        {
             try
             {
                 if (RepoId != 0)
@@ -103,8 +103,8 @@ namespace WarehouseManagement
         {
             try
             {
-                DataTable maintain_report = new MaintainanceDAL().getSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}", RepoId));
-                this.dataGridView_Report.DataSource = maintain_report;
+                DataTable maintainReport = new MaintainanceDAL().getSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}", RepoId));
+                dataGridView_Report.DataSource = maintainReport;
             }
             catch (Exception ex)
             {
@@ -118,8 +118,7 @@ namespace WarehouseManagement
             switch (ctrlName)
             {
                 case "btn_add_maintain":
-                    MaintainForm maintainForm = new MaintainForm();
-                    maintainForm.f1 = this;
+                    MaintainForm maintainForm = new MaintainForm {F1 = this};
                     maintainForm.Show();
                     break;
             }

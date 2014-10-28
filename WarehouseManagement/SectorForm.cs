@@ -29,7 +29,7 @@ namespace WarehouseManagement
                 {
                     btn_save.Show();
                     this.Text = "Section ID: " + SectorID;
-                    Sector sector = new SectorDAL().getOneSection(this.SectorID);
+                    Sector sector = new SectorDAL().GetOneSection(this.SectorID);
                     field_name.Text = sector.Name;
                     field_desc.Text = sector.Desc;
                     dataGridView_Repo.DataSource = sector.LstRepo;
@@ -51,7 +51,7 @@ namespace WarehouseManagement
             try
             {
                 Sector sector = getInfo();
-                new SectorDAL().addSector(sector);
+                new SectorDAL().AddSector(sector);
                 f.ReloadData();
                 this.Close();
             }
@@ -65,7 +65,7 @@ namespace WarehouseManagement
             try
             {
                 Sector sector = getInfo();
-                new SectorDAL().updateSector(sector);
+                new SectorDAL().UpdateSector(sector);
                 f.ReloadData();
                 this.Close();
             }
