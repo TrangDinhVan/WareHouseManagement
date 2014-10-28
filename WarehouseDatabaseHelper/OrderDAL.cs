@@ -23,7 +23,7 @@ namespace WarehouseDatabaseHelper
         {
             string queryOne = string.Format("select * from [order] where order_id = {0}", ID);
             DataRow r = new Connection().getOneRecord(queryOne);
-            Customer cus = new CustomerDAL().getOneCustomer(int.Parse(r["customer_id"].ToString()));
+            Customer cus = new CustomerDAL().GetOneCustomer(int.Parse(r["customer_id"].ToString()));
             DataTable lstOrderDetail = new OrderDetailDAL().getSomeOrderDetail(string.Format("select * from [order_detail] where order_id = {0}",ID));
             Order order = new Order();
             order.Id = ID;

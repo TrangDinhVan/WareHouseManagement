@@ -1,25 +1,19 @@
-﻿using System;
-//
+﻿using System.ComponentModel.DataAnnotations;
 using System.Data;
 
 namespace WarehouseEntity
 {
     public class Customer
     {
-        private string _Name;
+        public Customer()
+        {
+            LstOrder=new DataTable();
+        }
 
         public int Id { get; set; }
 
-        public string Name
-        {
-            get { return _Name; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Customer's name must not be empty.");
-                _Name = value;
-            }
-        }
+        [Required(ErrorMessage = "Customer's Name is required!"), MaxLength(32, ErrorMessage = "Customer's Name is too long!")]
+        public string Name { get; set; }
 
         public string Address { get; set; }
 

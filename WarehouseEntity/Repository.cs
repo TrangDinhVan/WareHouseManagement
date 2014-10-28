@@ -1,26 +1,26 @@
-﻿using System;
-//
+﻿//
+
+using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Linq;
 
 namespace WarehouseEntity
 {
     public class Repository
     {
         public string[] VolumeSet = { "Small", "Medium", "Big" };
-        private string _name;
 
+        public Repository()
+        {
+            Sector = new Sector();
+            Staff = new Staff();
+            LstMaintain = new DataTable();
+            LstOrderDetail = new DataTable();
+        }
         public int Id { get; set; }
 
-        public string Name
-        {
-            get { return _name; }
-            set 
-            { 
-                if(string.IsNullOrEmpty(value))
-                    throw new Exception("Repository's name must not be empty.");
-                _name = value;
-            }
-        }
+        [Required(ErrorMessage = "Repository's Name is required!"), MaxLength(32, ErrorMessage = "Repository's Name is too long!")]
+        public string Name { get; set; }
 
         public string Desc { get; set; }
 
@@ -38,12 +38,7 @@ namespace WarehouseEntity
 
         public double GetTotalMaintainValue()
         {
-            double total = 0;
-            foreach (DataRow r in LstMaintain.Rows)
-            {
-                total += double.Parse(r["maintain_price"].ToString());
-            }
-            return total;
+            return LstMaintain.Rows.Cast<DataRow>().Sum(r => double.Parse(r["maintain_price"].ToString()));
         }
     }
 }

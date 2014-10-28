@@ -12,6 +12,7 @@ namespace WarehouseEntity
         public Order()
         {
             Customer = new Customer();
+            LstOrderDetail = new DataTable();
         }
 
         public int Id { get; set; }

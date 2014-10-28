@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 //
 using WarehouseEntity;
@@ -28,7 +23,7 @@ namespace WarehouseManagement
                 if (this.SectorID != 0)
                 {
                     btn_save.Show();
-                    this.Text = "Section ID: " + SectorID;
+                    Text = "Section ID: " + SectorID;
                     Sector sector = new SectorDAL().GetOneSection(this.SectorID);
                     field_name.Text = sector.Name;
                     field_desc.Text = sector.Desc;
@@ -50,10 +45,10 @@ namespace WarehouseManagement
         {
             try
             {
-                Sector sector = getInfo();
+                Sector sector = GetInfo();
                 new SectorDAL().AddSector(sector);
                 f.ReloadData();
-                this.Close();
+                Close();
             }
             catch(Exception ex)
             {
@@ -64,10 +59,10 @@ namespace WarehouseManagement
         {
             try
             {
-                Sector sector = getInfo();
+                Sector sector = GetInfo();
                 new SectorDAL().UpdateSector(sector);
                 f.ReloadData();
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {
@@ -75,12 +70,10 @@ namespace WarehouseManagement
             }
             
         }
-        private Sector getInfo()
+        private Sector GetInfo()
         {
-            Sector sector = new Sector();
-            sector.Id = this.SectorID;
-            sector.Name = field_name.Text;
-            sector.Desc = field_desc.Text;
+            Sector sector = new Sector {Id = SectorID, Name = field_name.Text, Desc = field_desc.Text};
+            new Validator().CheckValid(sector);
             return sector;
         }
     }

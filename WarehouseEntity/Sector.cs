@@ -1,23 +1,22 @@
 ﻿using System;
 //
+using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Linq;
+
 namespace WarehouseEntity
 {
     public class Sector
     {
-        private string _name;
+        public Sector()
+        {
+            LstRepo = new DataTable();
+        }
         public int Id { get; set; }
 
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Name must not be empty.");
-                _name = value;
-            }
-        }
+        [Required(ErrorMessage = "Sector's Name is required!"), MaxLength(32, ErrorMessage = "Sector's Name is too long!")]
+        public string Name { get; set; }
+
         public string Desc { get; set; }
 
         public DataTable LstRepo { get; set; }

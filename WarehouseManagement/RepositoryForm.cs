@@ -66,7 +66,7 @@ namespace WarehouseManagement
                 Repository repo = GetInfo();
                 new RepositoryDAL().AddRepo(repo);
                 f.ReloadData();
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {
@@ -80,23 +80,26 @@ namespace WarehouseManagement
                 Repository repo = GetInfo();
                 new RepositoryDAL().UpdateRepo(repo);
                 f.ReloadData();
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ": " + ex.ToString());
+                MessageBox.Show(ex.Message + ": " + ex);
             }
         }
         public Repository GetInfo()
         {
-            Repository repo = new Repository();
-            repo.Id = RepoId;
-            repo.Name = field_name.Text;
-            repo.Desc = field_desc.Text;
-            repo.Volume = field_volume.Text;
-            repo.Price = double.Parse(field_price.Text.ToString());
-            repo.Sector.Id = int.Parse(field_sector.SelectedValue.ToString());
-            repo.Staff.Id = int.Parse(field_staff.SelectedValue.ToString());
+            Repository repo = new Repository
+            {
+                Id = RepoId,
+                Name = field_name.Text,
+                Desc = field_desc.Text,
+                Volume = field_volume.Text,
+                Price = double.Parse(field_price.Text),
+                Sector = {Id = int.Parse(field_sector.SelectedValue.ToString())},
+                Staff = {Id = int.Parse(field_staff.SelectedValue.ToString())}
+            };
+            new Validator().CheckValid(repo);
             return repo;
         }
         private void ReportMaintaince()
