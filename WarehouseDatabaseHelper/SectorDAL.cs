@@ -14,16 +14,16 @@ namespace WarehouseDatabaseHelper
         public DataTable GetAllSector()
         {
             string queryAll = "select * from [v_sector]";
-            return new Connection().getListRecord(queryAll);
+            return new Connection().GetListRecord(queryAll);
         }
         public DataTable getSomeSector(string query)
         {
-            return new Connection().getListRecord(query);
+            return new Connection().GetListRecord(query);
         }
         public Sector GetOneSection(int ID)
         {
             string queryOne = string.Format("select * from [sector] where sector_id = {0}", ID);
-            DataRow r = new Connection().getOneRecord(queryOne);
+            DataRow r = new Connection().GetOneRecord(queryOne);
             DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where sector_id = {0}",ID));
             Sector sector = new Sector
             {
@@ -34,22 +34,22 @@ namespace WarehouseDatabaseHelper
             };
             return sector;
         }
-        public int DeleteSector(int ID)
+        public int DeleteSector(int id)
         {
-            string queryDelete = string.Format("delete from [sector] where sector_id = {0}", ID);
-            return new Connection().exeNonQuery(queryDelete);
+            string queryDelete = string.Format("delete from [sector] where sector_id = {0}", id);
+            return new Connection().ExeNonQuery(queryDelete);
         }
         public int AddSector(Sector sec)
         {
 
             string queryAdd = string.Format("insert into [sector] (sector_name,sector_desc) Values('{0}','{1}')", sec.Name, sec.Desc);
-            return new Connection().exeNonQuery(queryAdd);
+            return new Connection().ExeNonQuery(queryAdd);
         }
         
         public int UpdateSector(Sector sec)
         {
             string queryUpdate = string.Format("update [sector] set sector_name = '{0}', sector_desc='{1}' where sector_id={2}", sec.Name, sec.Desc, sec.Id);
-            return new Connection().exeNonQuery(queryUpdate);
+            return new Connection().ExeNonQuery(queryUpdate);
         }
         
     }

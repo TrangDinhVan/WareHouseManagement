@@ -12,16 +12,16 @@ namespace WarehouseDatabaseHelper
         public DataTable getAllCustomer()
         {
             string queryAll = "select * from [customer]";
-            return new Connection().getListRecord(queryAll);
+            return new Connection().GetListRecord(queryAll);
         }
         public DataTable getSomeCustomer(string query)
         {
-            return new Connection().getListRecord(query);
+            return new Connection().GetListRecord(query);
         }
         public Customer GetOneCustomer(int ID)
         {
             string queryOne = string.Format("select * from [customer] where customer_id = {0}", ID);
-            DataRow r = new Connection().getOneRecord(queryOne);
+            DataRow r = new Connection().GetOneRecord(queryOne);
             DataTable lstOrder = new OrderDAL().getSomeOrder(string.Format("select * from [order] where customer_id ={0}", ID));
             Customer cus = new Customer
             {
@@ -38,17 +38,17 @@ namespace WarehouseDatabaseHelper
         public int DeleteCustomer(int ID)
         {
             string queryDelete = string.Format("delete from [customer] where customer_id = {0}", ID);
-            return new Connection().exeNonQuery(queryDelete);
+            return new Connection().ExeNonQuery(queryDelete);
         }
         public int AddCustomer(Customer cus)
         {
             string queryAdd = string.Format("insert into [customer] (cutomer_name, customer_address, customer_mail, customer_phone, customer_fax) Values('{0}','{1}','{2}','{3}','{4}')", cus.Name, cus.Address, cus.Mail, cus.Phone, cus.Fax);
-            return new Connection().exeNonQuery(queryAdd);
+            return new Connection().ExeNonQuery(queryAdd);
         }
         public int UpdateCustomer(Customer cus)
         {
             string queryUpdate = string.Format("update [customer] set customer_name = '{0}', customer_address = '{1}', customer_mail = '{2}', customer_phone = '{3}', customer_fax = '{4}' where customer_id = {5} ", cus.Name, cus.Address, cus.Mail, cus.Phone, cus.Fax, cus.Id);
-            return new Connection().exeNonQuery(queryUpdate);
+            return new Connection().ExeNonQuery(queryUpdate);
         }
     }
 }

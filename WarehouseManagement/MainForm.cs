@@ -49,8 +49,6 @@ namespace WarehouseManagement
                     MaintainForm maintainForm = new MaintainForm {F = this};
                     maintainForm.Show();
                     break;
-                default:
-                    break;
             }
                 
         }
@@ -62,36 +60,37 @@ namespace WarehouseManagement
                 case "dataGridView_Staff":
                     if (e.ColumnIndex != 0 && e.RowIndex > -1)
                     {
-                        int StaffID = int.Parse(this.dataGridView_Staff.Rows[e.RowIndex].Cells["staff_id"].Value.ToString());
-                        RepositoryForm repo = new RepositoryForm();
-                        StaffForm StaffForm = new StaffForm();
-                        StaffForm.F = this;
-                        StaffForm.StaffId = StaffID;
-                        StaffForm.Show();
+                        int staffId = int.Parse(dataGridView_Staff.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        StaffForm staffForm = new StaffForm
+                        {
+                            F = this, 
+                            StaffId = staffId
+                        };
+                        staffForm.Show();
                     }
                     break;
                 case "dataGridView_Repo":
                     if (e.ColumnIndex != 0 && e.RowIndex > -1)
                     {
-                        int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
+                        int repoId = int.Parse(dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
                         RepositoryForm repo = new RepositoryForm();
                         repo.f = this;
-                        repo.RepoId = RepoID;
+                        repo.RepoId = repoId;
                         repo.Show();
                     }
                     break;
                 case "dataGridView_Sector":
                     if (e.ColumnIndex != 0 && e.RowIndex > -1)
                     {
-                        int SectorID = int.Parse(this.dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                        SectorForm sectorForm = new SectorForm();
-                        sectorForm.f = this;
-                        sectorForm.SectorID = SectorID;
+                        int sectorId = int.Parse(dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        SectorForm sectorForm = new SectorForm
+                        {
+                            f = this, 
+                            SectorId = sectorId
+                        };
                         sectorForm.Show();
 
                     }
-                    break;
-                default:
                     break;
             }
         }
@@ -103,40 +102,38 @@ namespace WarehouseManagement
                 case "dataGridView_Repo":
                     if (e.ColumnIndex == 0 && e.RowIndex > -1)
                     {
-                        int RepoID = int.Parse(this.dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
+                        int RepoID = int.Parse(dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
                         DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Repository " + RepoID, MessageBoxButtons.YesNo);
-                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        if (result == DialogResult.Yes)
                         {
                             new RepositoryDAL().DeleteRepo(RepoID);
-                            this.ReloadData();
+                            ReloadData();
                         }
                     }
                     break;
                 case "dataGridView_Staff":
                     if (e.ColumnIndex == 0 && e.RowIndex > -1)
                     {
-                        int StaffID = int.Parse(this.dataGridView_Staff.Rows[e.RowIndex].Cells["staff_id"].Value.ToString());
-                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Staff " + StaffID, MessageBoxButtons.YesNo);
-                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        int staffId = int.Parse(dataGridView_Staff.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Staff " + staffId, MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
                         {
-                            new StaffDAL().DeleteStaff(StaffID);
-                            this.ReloadData();
+                            new StaffDAL().DeleteStaff(staffId);
+                            ReloadData();
                         }
                     }
                     break;
                 case "dataGridView_Sector":
                     if (e.ColumnIndex == 0 && e.RowIndex > -1)
                     {
-                        int SectorID = int.Parse(this.dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Sector " + SectorID, MessageBoxButtons.YesNo);
-                        if (result == System.Windows.Forms.DialogResult.Yes)
+                        int sectorId = int.Parse(dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Sector " + sectorId, MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
                         {
-                            new SectorDAL().DeleteSector(SectorID);
-                            this.ReloadData();
+                            new SectorDAL().DeleteSector(sectorId);
+                            ReloadData();
                         }
                     }
-                    break;
-                default:
                     break;
             }
         }

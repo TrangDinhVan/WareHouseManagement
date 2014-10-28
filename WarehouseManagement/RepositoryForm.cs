@@ -24,8 +24,8 @@ namespace WarehouseManagement
             field_sector.ValueMember = dataSector.Columns["ID"].ToString();
             DataTable dataStaff = new StaffDAL().getAllStaff();
             field_staff.DataSource = dataStaff.DefaultView;
-            field_staff.DisplayMember = "staff_name";
-            field_staff.ValueMember = dataStaff.Columns["staff_id"].ToString();
+            field_staff.DisplayMember = "Name";
+            field_staff.ValueMember = dataStaff.Columns["ID"].ToString();
             field_volume.DataSource = new Repository().VolumeSet;
         }
 

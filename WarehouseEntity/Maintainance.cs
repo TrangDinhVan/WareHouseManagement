@@ -23,5 +23,11 @@ namespace WarehouseEntity
         public double Price { get; set; }
 
         public Repository Repo { get; set; }
+
+        public bool CheckValidRange()
+        {
+            Dictionary<DateTime, DateTime> histoyTimes = Repo.GetMaintainRange();
+            return false;
+        }
     }
 }

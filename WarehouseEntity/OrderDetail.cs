@@ -8,6 +8,10 @@ namespace WarehouseEntity
 {
     public class OrderDetail
     {
+        public OrderDetail()
+        {
+            Repo = new Repository();
+        }
         public int Id { get; set; }
 
         public DateTime StartDate { get; set; }
@@ -21,7 +25,7 @@ namespace WarehouseEntity
         public int GetDuration()
         {
             var difference = EndDate - StartDate;
-            int days = difference.Days;
+            var days = difference.Days;
             return days;
             
         }

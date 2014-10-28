@@ -11,17 +11,17 @@ namespace WarehouseDatabaseHelper
     {
         public DataTable getAllStaff()
         {
-            string queryAll = "select * from [staff]";
-            return new Connection().getListRecord(queryAll);
+            string queryAll = "select * from [v_staff]";
+            return new Connection().GetListRecord(queryAll);
         }
         public DataTable GetSomeStaff(string query)
         {
-            return new Connection().getListRecord(query);
+            return new Connection().GetListRecord(query);
         }
         public Staff GetOneStaff(int ID)
         {
             string queryOne = string.Format("select * from [staff] where staff_id = {0}", ID);
-            DataRow r = new Connection().getOneRecord(queryOne);
+            DataRow r = new Connection().GetOneRecord(queryOne);
             DataTable lstRepo = new RepositoryDAL().GetSomeRepo(string.Format("select * from [repository] where staff_id = {0}", ID));
             Staff staff = new Staff
             {
@@ -38,17 +38,17 @@ namespace WarehouseDatabaseHelper
         public int DeleteStaff(int ID)
         {
             string queryDelete = string.Format("delete from [staff] where staff_id = {0}", ID);
-            return new Connection().exeNonQuery(queryDelete);
+            return new Connection().ExeNonQuery(queryDelete);
         }
         public int AddStaff(Staff staff)
         {
             string queryAdd = string.Format(string.Format("insert into [staff] (staff_name, staff_permission, staff_address, staff_phone, staff_mail) values ('{0}','{1}','{2}','{3}','{4}')", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail));
-            return new Connection().exeNonQuery(queryAdd);
+            return new Connection().ExeNonQuery(queryAdd);
         }
         public int UpdateStaff(Staff staff)
         {
             string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}' where staff_id = {5}", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail, staff.Id);
-            return new Connection().exeNonQuery(queryUpdate);
+            return new Connection().ExeNonQuery(queryUpdate);
         }
     }
 }

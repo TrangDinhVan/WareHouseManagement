@@ -13,16 +13,16 @@ namespace WarehouseDatabaseHelper
         public DataTable getAllOrder()
         {
             string queryAll = "select * from [order]";
-            return new Connection().getListRecord(queryAll);
+            return new Connection().GetListRecord(queryAll);
         }
         public DataTable getSomeOrder(string query)
         {
-            return new Connection().getListRecord(query);
+            return new Connection().GetListRecord(query);
         }
         public Order getOneOrder(int ID)
         {
             string queryOne = string.Format("select * from [order] where order_id = {0}", ID);
-            DataRow r = new Connection().getOneRecord(queryOne);
+            DataRow r = new Connection().GetOneRecord(queryOne);
             Customer cus = new CustomerDAL().GetOneCustomer(int.Parse(r["customer_id"].ToString()));
             DataTable lstOrderDetail = new OrderDetailDAL().getSomeOrderDetail(string.Format("select * from [order_detail] where order_id = {0}",ID));
             Order order = new Order();
@@ -36,17 +36,17 @@ namespace WarehouseDatabaseHelper
         public int deleteOrder(int ID)
         {
             string queryDelete = string.Format("delete from [order] where order_id = {0}",ID);
-            return new Connection().exeNonQuery(queryDelete);
+            return new Connection().ExeNonQuery(queryDelete);
         } 
         public int createOrder(Order order)
         {
             string queryAdd = string.Format("insert into [order] (order_date, customer_id, order_paid) values ('{0}',{1}),'{2}'",order.Date,order.Customer.Id,order.Paid);
-            return new Connection().exeNonQuery(queryAdd);
+            return new Connection().ExeNonQuery(queryAdd);
         }
         public int updateOrder(Order order)
         {
             string queryUpdate = string.Format("update [order] set order_date = {0}, customer_id = {1}, order_paid = {2} where order_id = {3}", order.Date, order.Customer.Id, order.Paid, order.Id);
-            return new Connection().exeNonQuery(queryUpdate);
+            return new Connection().ExeNonQuery(queryUpdate);
         }
     }
 }

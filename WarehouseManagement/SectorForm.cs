@@ -8,30 +8,30 @@ namespace WarehouseManagement
 {
     public partial class SectorForm : Form
     {
-        public int SectorID;
+        public int SectorId;
         public MainForm f { get; set; }
         public SectorForm()
         {
             InitializeComponent();
+            btn_add.Hide();
+            btn_save.Hide();
         }
         private void SectorForm_Load(object sender, EventArgs e)
         {
-            btn_add.Hide();
-            btn_save.Hide();
             try
             {
-                if (this.SectorID != 0)
+                if (SectorId != 0)
                 {
                     btn_save.Show();
-                    Text = "Section ID: " + SectorID;
-                    Sector sector = new SectorDAL().GetOneSection(this.SectorID);
+                    Text = "Section ID: " + SectorId;
+                    Sector sector = new SectorDAL().GetOneSection(this.SectorId);
                     field_name.Text = sector.Name;
                     field_desc.Text = sector.Desc;
                     dataGridView_Repo.DataSource = sector.LstRepo;
                 }
                 else
                 {
-                    this.Text = "Add new Sector";
+                    Text = "Add new Sector";
                     btn_add.Show();
                 }
             }
@@ -72,7 +72,7 @@ namespace WarehouseManagement
         }
         private Sector GetInfo()
         {
-            Sector sector = new Sector {Id = SectorID, Name = field_name.Text, Desc = field_desc.Text};
+            Sector sector = new Sector {Id = SectorId, Name = field_name.Text, Desc = field_desc.Text};
             new Validator().CheckValid(sector);
             return sector;
         }

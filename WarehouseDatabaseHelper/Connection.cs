@@ -12,16 +12,16 @@ namespace WarehouseDatabaseHelper
     public class Connection
     {
 
-        public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\ISD_ASS_DB.accdb";
+        //public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\ISD_ASS_DB.accdb";
+        public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\WareHouse.accdb";
         public OleDbConnection Cnn;
-        public OleDbCommand cmd;
+        public OleDbCommand Cmd;
         public Connection()
         {
-            Cnn = new OleDbConnection();
-            Cnn.ConnectionString = StrCnn;
+            Cnn = new OleDbConnection {ConnectionString = StrCnn};
         }
     
-        private void checkConnection()
+        private void CheckConnection()
         {
             try
             {
@@ -39,18 +39,18 @@ namespace WarehouseDatabaseHelper
                 }
             }
         }
-        public void openConnection()
+        public void OpenConnection()
         {
-            checkConnection();
+            CheckConnection();
             Cnn.Open();
         }
-        public int exeNonQuery(string query)
+        public int ExeNonQuery(string query)
         {
-            openConnection();
+            OpenConnection();
             try
             {
-                cmd = new OleDbCommand(query, this.Cnn);
-                return cmd.ExecuteNonQuery();
+                Cmd = new OleDbCommand(query, Cnn);
+                return Cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
@@ -61,13 +61,13 @@ namespace WarehouseDatabaseHelper
                 Cnn.Close();
             }
         }
-        public DataTable getListRecord(string query)
+        public DataTable GetListRecord(string query)
         {
             DataTable data = new DataTable();
             try
             {
-                cmd = new OleDbCommand(query, this.Cnn);
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                Cmd = new OleDbCommand(query, Cnn);
+                OleDbDataAdapter da = new OleDbDataAdapter(Cmd);
                 da.Fill(data);
             }
             catch (Exception ex)
@@ -76,13 +76,13 @@ namespace WarehouseDatabaseHelper
             }
             return data;
         }
-        public DataRow getOneRecord(string query)
+        public DataRow GetOneRecord(string query)
         {
             DataTable data = new DataTable();
             try
             {
-                cmd = new OleDbCommand(query, this.Cnn);
-                OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+                Cmd = new OleDbCommand(query, Cnn);
+                OleDbDataAdapter da = new OleDbDataAdapter(Cmd);
                 da.Fill(data);
                 DataRow r = data.Rows[0];
                 return r;

@@ -1,5 +1,7 @@
 ﻿//
 
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
@@ -39,6 +41,11 @@ namespace WarehouseEntity
         public double GetTotalMaintainValue()
         {
             return LstMaintain.Rows.Cast<DataRow>().Sum(r => double.Parse(r["maintain_price"].ToString()));
+        }
+
+        public Dictionary<DateTime,DateTime> GetMaintainRange()
+        {
+            return LstMaintain.Rows.Cast<DataRow>().ToDictionary(r => Convert.ToDateTime(r["start_date"].ToString()), r => Convert.ToDateTime(r["end_date"].ToString()));
         }
     }
 }
