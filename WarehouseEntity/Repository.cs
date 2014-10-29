@@ -43,9 +43,9 @@ namespace WarehouseEntity
             return LstMaintain.Rows.Cast<DataRow>().Sum(r => double.Parse(r["maintain_price"].ToString()));
         }
 
-        public Dictionary<DateTime,DateTime> GetMaintainRange()
+        public Dictionary<DateTime,DateTime> GetMaintainedRanges()
         {
-            return LstMaintain.Rows.Cast<DataRow>().ToDictionary(r => Convert.ToDateTime(r["start_date"].ToString()), r => Convert.ToDateTime(r["end_date"].ToString()));
+            return LstMaintain.Rows.Cast<DataRow>().ToDictionary(r => Convert.ToDateTime(r["start_date"].ToString()).Date, r => Convert.ToDateTime(r["end_date"].ToString()).Date);
         }
     }
 }

@@ -9,40 +9,42 @@ namespace WarehouseDatabaseHelper
 {
     public class MaintainanceDAL
     {
-        public DataTable getAllMaintain()
+        public DataTable GetAllMaintain()
         {
-            string queryAll = "select * from [maintainance]";
+            string queryAll = "select * from [v_maintainance]";
             return new Connection().GetListRecord(queryAll);
         }
-        public DataTable getSomeMaintain(string query)
+        public DataTable GetSomeMaintain(string query)
         {
             return new Connection().GetListRecord(query);
         }
-        public Maintainance getOneMaintain(int ID)
+        public Maintainance GetOneMaintain(int ID)
         {
             string queryOne = string.Format("select * from [maintainance] where maintain_id = {0}", ID);
             DataRow r = new Connection().GetOneRecord(queryOne);
-            Maintainance maintain = new Maintainance();
-            maintain.Id = ID;
-            maintain.Desc = r["mainatain_desc"].ToString();
-            maintain.Price = double.Parse(r["maintain_price"].ToString());
-            maintain.StartDate = Convert.ToDateTime(r["start_date"].ToString());
-            maintain.EndDate = Convert.ToDateTime((r["end_date"]).ToString());
-            maintain.Repo = new RepositoryDAL().GetOneRepo(int.Parse(r["repo_id"].ToString()));
+            Maintainance maintain = new Maintainance
+            {
+                Id = ID,
+                Desc = r["mainatain_desc"].ToString(),
+                Price = double.Parse(r["maintain_price"].ToString()),
+                StartDate = Convert.ToDateTime(r["start_date"].ToString()).Date,
+                EndDate = Convert.ToDateTime((r["end_date"]).ToString()).Date,
+                Repo = new RepositoryDAL().GetOneRepo(int.Parse(r["repo_id"].ToString()))
+            };
             return maintain;
         }
-        public int deleteMaintain(int ID)
+        public int DeleteMaintain(int ID)
         {
             string queryDelete = string.Format("delete from repository where repo_id = {0}", ID);
             return new Connection().ExeNonQuery(queryDelete);
         }
-        public int createMaintain(Maintainance maintain)
+        public int CreateMaintain(Maintainance maintain)
         {
             string queryAdd = string.Format("insert into [maintainance] (repo_id, start_date, end_date, maintain_desc, maintain_price) values ({0}, '{1}', '{2}', '{3}', {4})", maintain.Repo.Id, maintain.StartDate.ToString("MMM/dd/yyyy"), maintain.EndDate.ToString("MMM/dd/yyyy"), maintain.Desc, maintain.Price);
             return new Connection().ExeNonQuery(queryAdd);
         }
 
-        public int updateMaintain(Maintainance maintain)
+        public int UpdateMaintain(Maintainance maintain)
         {
             string queryUpdate = string.Format("update [maintainance] set repo_id = {0}, start_date = '{1}', end_date = '{2}', maintain_desc = '{3}', maintain_price = {4} where maintain_id = {5}", maintain.Repo.Id, maintain.StartDate, maintain.EndDate, maintain.Desc, maintain.Price, maintain.Id);
             return new Connection().ExeNonQuery(queryUpdate);

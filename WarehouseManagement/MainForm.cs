@@ -22,7 +22,7 @@ namespace WarehouseManagement
             dataGridView_Sector.DataSource = new SectorDAL().GetAllSector();
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
-            dataGridView_Maintain.DataSource = new MaintainanceDAL().getAllMaintain();
+            dataGridView_Maintain.DataSource = new MaintainanceDAL().GetAllMaintain();
         }
         public void LoadSubForm(object sender, EventArgs e)
         {

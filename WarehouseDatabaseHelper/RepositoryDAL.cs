@@ -16,7 +16,7 @@ namespace WarehouseDatabaseHelper
     
         public DataTable GetAllRepo()
         {
-            string queryAll = "select * from [v_repository]";
+            const string queryAll = "select * from [v_repository]";
             return new Connection().GetListRecord(queryAll);
         }
 
@@ -36,7 +36,8 @@ namespace WarehouseDatabaseHelper
                 Price = double.Parse(r["repo_price"].ToString()),
                 Volume = r["repo_volume"].ToString(),
                 Sector = new SectorDAL().GetOneSection(int.Parse(r["sector_id"].ToString())),
-                Staff = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString()))
+                Staff = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString())),
+                LstMaintain = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}",ID))
             };
             return repo;
         }

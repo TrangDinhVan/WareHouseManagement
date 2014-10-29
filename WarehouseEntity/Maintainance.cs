@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 //
 using System.Data;
@@ -26,8 +27,17 @@ namespace WarehouseEntity
 
         public bool CheckValidRange()
         {
-            Dictionary<DateTime, DateTime> histoyTimes = Repo.GetMaintainRange();
-            return false;
+
+            Dictionary<DateTime, DateTime> histoyTimes = Repo.GetMaintainedRanges();
+            foreach (KeyValuePair<DateTime, DateTime> range in histoyTimes.Where(range => 
+                (EndDate.Date == range.Key.Date || EndDate.Date == range.Value.Date)
+                || (StartDate.Date == range.Key.Date || StartDate.Date == range.Value.Date) 
+                || (StartDate.Date > range.Key.Date && StartDate.Date < range.Value.Date) 
+                || (EndDate.Date > range.Key.Date && EndDate.Date < range.Value.Date) ))
+            {
+                throw new Exception(string.Format("This Repository has already had a maintainance from {0} to {1}",range.Key.ToShortDateString(),range.Value.ToShortDateString()));
+            }
+            return true;
         }
     }
 }

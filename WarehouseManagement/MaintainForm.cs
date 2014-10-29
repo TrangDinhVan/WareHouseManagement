@@ -43,13 +43,14 @@ namespace WarehouseManagement
             try
             {
                 Maintainance maintain = GetInfo();
-                new MaintainanceDAL().createMaintain(maintain);
+                maintain.CheckValidRange();
+                new MaintainanceDAL().CreateMaintain(maintain);
                 F.ReloadData();
                 Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ": " + ex.ToString());
+                MessageBox.Show(ex.Message + ex);
             }
         }
         private Maintainance GetInfo()
@@ -58,8 +59,8 @@ namespace WarehouseManagement
             {
                 Id = MaintainId,
                 Repo = new RepositoryDAL().GetOneRepo(int.Parse(field_repo.SelectedValue.ToString())),
-                StartDate = field_start_date.Value,
-                EndDate = field_end_date.Value,
+                StartDate = field_start_date.Value.Date,
+                EndDate = field_end_date.Value.Date,
                 Desc = field_desc.Text,
                 Price = Convert.ToDouble(field_price.Text)
             };

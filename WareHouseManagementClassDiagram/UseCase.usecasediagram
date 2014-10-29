@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="70dde471-b8c0-434a-9506-f6a96785abd5">
+      <profileInstance Id="3c80e236-72fe-4396-b482-a589325fe26d" name="TextTemplateBindings">
+        <elementDefinition Id="b763d64e-159d-4a34-a99c-84a262673191" />
+      </profileInstance>
+      <elementDefinition Id="2c00ec18-a0fa-4fbf-bf04-e5d731a1311f" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="1c407bc2-1075-4d15-b9b3-ab400d257368" name="Protector and Technian Admin" isAbstract="false" isLeaf="false">
@@ -624,14 +632,14 @@
         <elementDefinition Id="663426b0-8ade-400e-a24a-fe7094d2d963" />
         <additions>
           <include Id="322f9031-81d4-4379-9408-5b435394ecbe">
-            <useCaseMoniker Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" LastKnownName="filter valid Time" />
+            <useCaseMoniker Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" LastKnownName="check Valid Range" />
             <elementDefinition Id="e3bdf4f0-a4b1-4aac-abe1-be3ce68c21c8" />
           </include>
         </additions>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" name="filter valid Time" isAbstract="false" isLeaf="false">
+      <useCase Id="4a422dac-2806-402d-9fa1-f3cf275d5bc1" name="check Valid Range" isAbstract="false" isLeaf="false">
         <elementDefinition Id="f03bc27e-43e7-403f-a884-05b008c9a415" />
       </useCase>
     </useCaseModelRootHasTypes>

@@ -22,12 +22,19 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="AssignProtectortoRepo.activitydiagram">
+    <Content Include="Add new Repository.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="AssignProtectortoRepo.activitydiagram.layout">
+    <Content Include="Add new Repository.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>AssignProtectortoRepo.activitydiagram</DependentUpon>
+      <DependentUpon>Add new Repository.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="AddObject.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="AddObject.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>AddObject.activitydiagram</DependentUpon>
     </Content>
     <Content Include="ClassForm.classdiagram">
       <SubType>Content</SubType>

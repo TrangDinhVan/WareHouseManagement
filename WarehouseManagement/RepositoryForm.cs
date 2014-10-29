@@ -106,7 +106,7 @@ namespace WarehouseManagement
         {
             try
             {
-                DataTable maintainReport = new MaintainanceDAL().getSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}", RepoId));
+                DataTable maintainReport = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}", RepoId));
                 dataGridView_Report.DataSource = maintainReport;
             }
             catch (Exception ex)

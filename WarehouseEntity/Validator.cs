@@ -32,7 +32,7 @@ namespace WarehouseEntity
             }
         }
 
-        public void CheckValid(Object o)
+        public bool CheckValid(Object o)
         {
             var results = Validate(o);
             var enumerable = results as string[] ?? results.ToArray();
@@ -40,6 +40,7 @@ namespace WarehouseEntity
             {
                 enumerable.ToList().ForEach(error => { if (error != null) throw new Exception(error); });
             }
+            return true;
         }
     }
 }
