@@ -12,7 +12,7 @@ namespace WarehouseDatabaseHelper
     {
         public DataTable getAllOrder()
         {
-            string queryAll = "select * from [order]";
+            string queryAll = "select * from [v_order]";
             return new Connection().GetListRecord(queryAll);
         }
         public DataTable getSomeOrder(string query)

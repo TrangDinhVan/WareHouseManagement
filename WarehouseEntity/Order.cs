@@ -13,6 +13,7 @@ namespace WarehouseEntity
         {
             Customer = new Customer();
             LstOrderDetail = new DataTable();
+            Staff = new Staff();
         }
 
         public int Id { get; set; }
@@ -22,6 +23,8 @@ namespace WarehouseEntity
         public double Paid { get; set; }
 
         public Customer Customer { get; set; }
+
+        public Staff Staff { get; set; }
 
         public DataTable LstOrderDetail { get; set; }
     }

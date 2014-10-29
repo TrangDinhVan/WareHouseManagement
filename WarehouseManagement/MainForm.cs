@@ -23,6 +23,8 @@ namespace WarehouseManagement
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
             dataGridView_Maintain.DataSource = new MaintainanceDAL().GetAllMaintain();
+            dataGridView_Order.DataSource = new OrderDAL().getAllOrder();
+            dataGridView_Customer.DataSource = new CustomerDAL().getAllCustomer();
         }
         public void LoadSubForm(object sender, EventArgs e)
         {
@@ -48,6 +50,10 @@ namespace WarehouseManagement
                 case "btn_add_maintain":
                     MaintainForm maintainForm = new MaintainForm {F = this};
                     maintainForm.Show();
+                    break;
+                case "btn_addOrder":
+                    OrderForm orderForm = new OrderForm {F = this};
+                    orderForm.Show();
                     break;
             }
                 

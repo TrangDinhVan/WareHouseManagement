@@ -11,7 +11,7 @@ namespace WarehouseDatabaseHelper
     {
         public DataTable getAllCustomer()
         {
-            string queryAll = "select * from [customer]";
+            string queryAll = "select * from [v_customer]";
             return new Connection().GetListRecord(queryAll);
         }
         public DataTable getSomeCustomer(string query)
