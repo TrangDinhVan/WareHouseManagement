@@ -105,8 +105,8 @@
             this.superTabControl_Sector.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl_Sector.ControlBox.MenuBox,
             this.superTabControl_Sector.ControlBox.CloseBox});
-            this.superTabControl_Sector.Controls.Add(this.superTabControlPanel6);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel5);
+            this.superTabControl_Sector.Controls.Add(this.superTabControlPanel6);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel1);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel2);
             this.superTabControl_Sector.Controls.Add(this.superTabControlPanel3);
@@ -448,6 +448,7 @@
             this.dataGridView_Order.Name = "dataGridView_Order";
             this.dataGridView_Order.Size = new System.Drawing.Size(780, 363);
             this.dataGridView_Order.TabIndex = 0;
+            this.dataGridView_Order.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LoadSubForm);
             // 
             // dataGridViewButtonColumn4
             // 

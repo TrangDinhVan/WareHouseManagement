@@ -23,7 +23,7 @@ namespace WarehouseManagement
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
             dataGridView_Maintain.DataSource = new MaintainanceDAL().GetAllMaintain();
-            dataGridView_Order.DataSource = new OrderDAL().getAllOrder();
+            dataGridView_Order.DataSource = new OrderDAL().GetAllOrder();
             dataGridView_Customer.DataSource = new CustomerDAL().getAllCustomer();
         }
         public void LoadSubForm(object sender, EventArgs e)
@@ -79,9 +79,11 @@ namespace WarehouseManagement
                     if (e.ColumnIndex != 0 && e.RowIndex > -1)
                     {
                         int repoId = int.Parse(dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
-                        RepositoryForm repo = new RepositoryForm();
-                        repo.f = this;
-                        repo.RepoId = repoId;
+                        RepositoryForm repo = new RepositoryForm
+                        {
+                            f = this, 
+                            RepoId = repoId
+                        };
                         repo.Show();
                     }
                     break;
@@ -108,6 +110,18 @@ namespace WarehouseManagement
                             CustomerId = cusId
                         };
                         customerForm.Show();
+                    }
+                    break;
+                case "dataGridView_Order":
+                    if (e.ColumnIndex != 0 && e.RowIndex > -1)
+                    {
+                        int orderId = int.Parse(dataGridView_Order.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        OrderForm orderForm = new OrderForm
+                        {
+                            F = this,
+                            OrderId = orderId
+                        };
+                        orderForm.Show();
                     }
                     break;
             }

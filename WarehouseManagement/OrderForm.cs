@@ -20,18 +20,39 @@ namespace WarehouseManagement
         public OrderForm()
         {
             InitializeComponent();
-        }
-
-        private void OrderForm_Load(object sender, EventArgs e)
-        {
             field_staff.DataSource = new StaffDAL().getAllStaff().DefaultView;
             field_staff.ValueMember = "ID";
             field_staff.DisplayMember = "Name";
             field_volume.DataSource = new Repository().VolumeSet;
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
-            field_date.MinDate = DateTime.Today.Date;
             field_start_date.MinDate = DateTime.Today.Date;
             field_end_date.MinDate = DateTime.Today.AddDays(1).Date;
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+            if (OrderId != 0)
+            {
+                try
+                {
+                    Order order = new OrderDAL().GetOneOrder(OrderId);
+                    field_customer_id.SelectedValue = order.Customer.Id;
+                    field_name.SelectedValue = order.Customer.Id;
+                    field_address.Text = order.Customer.Address;
+                    field_mail.Text = order.Customer.Mail;
+                    field_phone.Text = order.Customer.Phone;
+                    field_fax.Text = order.Customer.Fax;
+                    field_date.Value = order.Date;
+                    field_customer_id.Text = order.Customer.Id.ToString();
+                    field_name.Text = order.Customer.Name;
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message+ex);
+                }
+            }
         }
 
         private void CheckExistedCustomer(object sender, EventArgs e)
@@ -40,6 +61,7 @@ namespace WarehouseManagement
             {
                 try
                 {
+                    field_date.MinDate = DateTime.Today.Date;
                     DataTable customerSet = new CustomerDAL().getAllCustomer();
                     field_name.DataSource = customerSet.DefaultView;
                     field_name.DisplayMember = "Name";
