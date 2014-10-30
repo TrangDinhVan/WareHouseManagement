@@ -37,24 +37,30 @@ namespace WarehouseManagement
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.field_name = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.field_mail = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.field_phone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.field_fax = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.richTextBoxEx1 = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.field_address = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.label7 = new System.Windows.Forms.Label();
+            this.field_date = new System.Windows.Forms.DateTimePicker();
             this.line2 = new DevComponents.DotNetBar.Controls.Line();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.field_volume = new System.Windows.Forms.ComboBox();
-            this.field_date = new System.Windows.Forms.DateTimePicker();
             this.field_start_date = new System.Windows.Forms.DateTimePicker();
             this.field_end_date = new System.Windows.Forms.DateTimePicker();
             this.line3 = new DevComponents.DotNetBar.Controls.Line();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView_Repo = new System.Windows.Forms.DataGridView();
+            this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewButtonColumn1 = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
+            this.field_customer_id = new System.Windows.Forms.ComboBox();
+            this.field_name = new System.Windows.Forms.ComboBox();
+            this.btn_check_exist = new System.Windows.Forms.CheckBox();
+            this.field_paid = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label13 = new System.Windows.Forms.Label();
+            this.field_staff = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,21 +144,6 @@ namespace WarehouseManagement
             this.label6.TabIndex = 8;
             this.label6.Text = "Fax";
             // 
-            // field_name
-            // 
-            this.field_name.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.field_name.Border.Class = "TextBoxBorder";
-            this.field_name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.field_name.ForeColor = System.Drawing.Color.Black;
-            this.field_name.Location = new System.Drawing.Point(12, 57);
-            this.field_name.Name = "field_name";
-            this.field_name.PreventEnterBeep = true;
-            this.field_name.Size = new System.Drawing.Size(273, 25);
-            this.field_name.TabIndex = 9;
-            // 
             // field_mail
             // 
             this.field_mail.BackColor = System.Drawing.Color.White;
@@ -180,7 +171,7 @@ namespace WarehouseManagement
             this.field_phone.Location = new System.Drawing.Point(347, 130);
             this.field_phone.Name = "field_phone";
             this.field_phone.PreventEnterBeep = true;
-            this.field_phone.Size = new System.Drawing.Size(273, 25);
+            this.field_phone.Size = new System.Drawing.Size(225, 25);
             this.field_phone.TabIndex = 11;
             // 
             // field_fax
@@ -195,22 +186,22 @@ namespace WarehouseManagement
             this.field_fax.Location = new System.Drawing.Point(347, 188);
             this.field_fax.Name = "field_fax";
             this.field_fax.PreventEnterBeep = true;
-            this.field_fax.Size = new System.Drawing.Size(273, 25);
+            this.field_fax.Size = new System.Drawing.Size(225, 25);
             this.field_fax.TabIndex = 12;
             // 
-            // richTextBoxEx1
+            // field_address
             // 
             // 
             // 
             // 
-            this.richTextBoxEx1.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.richTextBoxEx1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.richTextBoxEx1.Location = new System.Drawing.Point(12, 118);
-            this.richTextBoxEx1.Name = "richTextBoxEx1";
-            this.richTextBoxEx1.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Segoe UI;}}" +
+            this.field_address.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.field_address.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.field_address.Location = new System.Drawing.Point(12, 118);
+            this.field_address.Name = "field_address";
+            this.field_address.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Segoe UI;}}" +
     "\r\n\\viewkind4\\uc1\\pard\\f0\\fs20\\par\r\n}\r\n";
-            this.richTextBoxEx1.Size = new System.Drawing.Size(273, 100);
-            this.richTextBoxEx1.TabIndex = 13;
+            this.field_address.Size = new System.Drawing.Size(273, 100);
+            this.field_address.TabIndex = 13;
             // 
             // label7
             // 
@@ -220,6 +211,13 @@ namespace WarehouseManagement
             this.label7.Size = new System.Drawing.Size(35, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Date";
+            // 
+            // field_date
+            // 
+            this.field_date.Location = new System.Drawing.Point(398, 1);
+            this.field_date.Name = "field_date";
+            this.field_date.Size = new System.Drawing.Size(222, 25);
+            this.field_date.TabIndex = 15;
             // 
             // line2
             // 
@@ -263,13 +261,7 @@ namespace WarehouseManagement
             this.field_volume.Name = "field_volume";
             this.field_volume.Size = new System.Drawing.Size(121, 25);
             this.field_volume.TabIndex = 21;
-            // 
-            // field_date
-            // 
-            this.field_date.Location = new System.Drawing.Point(398, 1);
-            this.field_date.Name = "field_date";
-            this.field_date.Size = new System.Drawing.Size(222, 25);
-            this.field_date.TabIndex = 15;
+            this.field_volume.SelectedIndexChanged += new System.EventHandler(this.FilterAvailableRepo);
             // 
             // field_start_date
             // 
@@ -277,6 +269,7 @@ namespace WarehouseManagement
             this.field_start_date.Name = "field_start_date";
             this.field_start_date.Size = new System.Drawing.Size(222, 25);
             this.field_start_date.TabIndex = 22;
+            this.field_start_date.ValueChanged += new System.EventHandler(this.FilterAvailableRepo);
             // 
             // field_end_date
             // 
@@ -284,6 +277,7 @@ namespace WarehouseManagement
             this.field_end_date.Name = "field_end_date";
             this.field_end_date.Size = new System.Drawing.Size(222, 25);
             this.field_end_date.TabIndex = 23;
+            this.field_end_date.ValueChanged += new System.EventHandler(this.FilterAvailableRepo);
             // 
             // line3
             // 
@@ -298,9 +292,9 @@ namespace WarehouseManagement
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(1, 336);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 17);
+            this.label11.Size = new System.Drawing.Size(127, 17);
             this.label11.TabIndex = 25;
-            this.label11.Text = "Repository";
+            this.label11.Text = "Available Repository";
             // 
             // dataGridView_Repo
             // 
@@ -311,12 +305,19 @@ namespace WarehouseManagement
             this.dataGridView_Repo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_Repo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_Repo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Repo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewButtonColumn1});
             this.dataGridView_Repo.Location = new System.Drawing.Point(4, 367);
             this.dataGridView_Repo.Name = "dataGridView_Repo";
             this.dataGridView_Repo.Size = new System.Drawing.Size(763, 170);
             this.dataGridView_Repo.TabIndex = 26;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(642, 246);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 17);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Paid";
             // 
             // dataGridViewButtonColumn1
             // 
@@ -327,11 +328,78 @@ namespace WarehouseManagement
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
             this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // field_customer_id
+            // 
+            this.field_customer_id.FormattingEnabled = true;
+            this.field_customer_id.Location = new System.Drawing.Point(79, 1);
+            this.field_customer_id.Name = "field_customer_id";
+            this.field_customer_id.Size = new System.Drawing.Size(121, 25);
+            this.field_customer_id.TabIndex = 28;
+            // 
+            // field_name
+            // 
+            this.field_name.FormattingEnabled = true;
+            this.field_name.Location = new System.Drawing.Point(12, 70);
+            this.field_name.Name = "field_name";
+            this.field_name.Size = new System.Drawing.Size(273, 25);
+            this.field_name.TabIndex = 29;
+            this.field_name.SelectedIndexChanged += new System.EventHandler(this.SwitchExisted);
+            // 
+            // btn_check_exist
+            // 
+            this.btn_check_exist.AutoSize = true;
+            this.btn_check_exist.Location = new System.Drawing.Point(645, 3);
+            this.btn_check_exist.Name = "btn_check_exist";
+            this.btn_check_exist.Size = new System.Drawing.Size(128, 21);
+            this.btn_check_exist.TabIndex = 31;
+            this.btn_check_exist.Text = "Existed Customer";
+            this.btn_check_exist.UseVisualStyleBackColor = true;
+            this.btn_check_exist.CheckedChanged += new System.EventHandler(this.CheckExistedCustomer);
+            // 
+            // field_paid
+            // 
+            this.field_paid.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.field_paid.Border.Class = "TextBoxBorder";
+            this.field_paid.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.field_paid.ForeColor = System.Drawing.Color.Black;
+            this.field_paid.Location = new System.Drawing.Point(645, 277);
+            this.field_paid.Name = "field_paid";
+            this.field_paid.PreventEnterBeep = true;
+            this.field_paid.Size = new System.Drawing.Size(122, 25);
+            this.field_paid.TabIndex = 34;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(697, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 17);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Transactor";
+            // 
+            // field_staff
+            // 
+            this.field_staff.FormattingEnabled = true;
+            this.field_staff.Location = new System.Drawing.Point(594, 130);
+            this.field_staff.Name = "field_staff";
+            this.field_staff.Size = new System.Drawing.Size(172, 25);
+            this.field_staff.TabIndex = 36;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 567);
+            this.Controls.Add(this.field_staff);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.field_paid);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btn_check_exist);
+            this.Controls.Add(this.field_name);
+            this.Controls.Add(this.field_customer_id);
             this.Controls.Add(this.dataGridView_Repo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.line3);
@@ -344,11 +412,10 @@ namespace WarehouseManagement
             this.Controls.Add(this.line2);
             this.Controls.Add(this.field_date);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.richTextBoxEx1);
+            this.Controls.Add(this.field_address);
             this.Controls.Add(this.field_fax);
             this.Controls.Add(this.field_phone);
             this.Controls.Add(this.field_mail);
-            this.Controls.Add(this.field_name);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -381,23 +448,30 @@ namespace WarehouseManagement
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private DevComponents.DotNetBar.Controls.TextBoxX field_name;
         private DevComponents.DotNetBar.Controls.TextBoxX field_mail;
         private DevComponents.DotNetBar.Controls.TextBoxX field_phone;
         private DevComponents.DotNetBar.Controls.TextBoxX field_fax;
-        private DevComponents.DotNetBar.Controls.RichTextBoxEx richTextBoxEx1;
+        private DevComponents.DotNetBar.Controls.RichTextBoxEx field_address;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker field_date;
         private DevComponents.DotNetBar.Controls.Line line2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox field_volume;
-        private System.Windows.Forms.DateTimePicker field_date;
         private System.Windows.Forms.DateTimePicker field_start_date;
         private System.Windows.Forms.DateTimePicker field_end_date;
         private DevComponents.DotNetBar.Controls.Line line3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridView_Repo;
+        private System.Windows.Forms.Label label12;
         private DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.ComboBox field_customer_id;
+        private System.Windows.Forms.ComboBox field_name;
+        private System.Windows.Forms.CheckBox btn_check_exist;
+        private DevComponents.DotNetBar.Controls.TextBoxX field_paid;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox field_staff;
+
     }
 }
