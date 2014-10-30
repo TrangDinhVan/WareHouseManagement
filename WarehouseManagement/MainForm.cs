@@ -98,6 +98,18 @@ namespace WarehouseManagement
 
                     }
                     break;
+                case "dataGridView_Customer":
+                    if (e.ColumnIndex != 0 && e.RowIndex > -1)
+                    {
+                        int cusId = int.Parse(dataGridView_Customer.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                        CustomerForm customerForm = new CustomerForm
+                        {
+                            F = this,
+                            CustomerId = cusId
+                        };
+                        customerForm.Show();
+                    }
+                    break;
             }
         }
         public void DeleteRecorde(object sender, DataGridViewCellEventArgs e)

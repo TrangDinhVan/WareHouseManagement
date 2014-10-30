@@ -61,6 +61,7 @@ namespace WarehouseManagement
             this.field_paid = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label13 = new System.Windows.Forms.Label();
             this.field_staff = new System.Windows.Forms.ComboBox();
+            this.Choose = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -305,6 +306,8 @@ namespace WarehouseManagement
             this.dataGridView_Repo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_Repo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_Repo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Repo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Choose});
             this.dataGridView_Repo.Location = new System.Drawing.Point(4, 367);
             this.dataGridView_Repo.Name = "dataGridView_Repo";
             this.dataGridView_Repo.Size = new System.Drawing.Size(763, 170);
@@ -387,6 +390,14 @@ namespace WarehouseManagement
             this.field_staff.Name = "field_staff";
             this.field_staff.Size = new System.Drawing.Size(172, 25);
             this.field_staff.TabIndex = 36;
+            // 
+            // Choose
+            // 
+            this.Choose.Checked = true;
+            this.Choose.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.Choose.CheckValue = null;
+            this.Choose.HeaderText = "Choose";
+            this.Choose.Name = "Choose";
             // 
             // OrderForm
             // 
@@ -472,6 +483,7 @@ namespace WarehouseManagement
         private DevComponents.DotNetBar.Controls.TextBoxX field_paid;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox field_staff;
+        private DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn Choose;
 
     }
 }

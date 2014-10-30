@@ -17,3 +17,4 @@ E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseMana
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\WarehouseDatabaseHelper.pdb
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\WarehouseEntity.pdb
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.OrderForm.resources
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.CustomerForm.resources
