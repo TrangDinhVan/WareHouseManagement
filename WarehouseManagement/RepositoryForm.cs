@@ -9,7 +9,7 @@ namespace WarehouseManagement
 {
     public partial class RepositoryForm : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public MainForm f { get; set; }
+        public MainForm F { get; set; }
         public int RepoId { get; set; }
         public static string[] ReportChoiceSet = { "Maintainance Fact", "Order Fact" }; 
         public RepositoryForm()
@@ -65,7 +65,7 @@ namespace WarehouseManagement
             {
                 Repository repo = GetInfo();
                 new RepositoryDAL().AddRepo(repo);
-                f.ReloadData();
+                F.ReloadData();
                 Close();
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace WarehouseManagement
             {
                 Repository repo = GetInfo();
                 new RepositoryDAL().UpdateRepo(repo);
-                f.ReloadData();
+                F.ReloadData();
                 Close();
             }
             catch (Exception ex)
@@ -114,6 +114,21 @@ namespace WarehouseManagement
                 MessageBox.Show(ex.Message + ": " + ex);
             }
             
+        }
+
+        private void ReportRenting()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void FilterAvailableStaff()
+        {
+            throw new Exception("Not Implement");
+        }
+
+        private void AssignUndertakingStaff()
+        {
+            throw new Exception("Not Implement");
         }
         public void LoadSubForm(object sender, EventArgs e)
         {

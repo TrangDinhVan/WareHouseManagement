@@ -80,6 +80,9 @@
     <Content Include="ModelDefinition\Package1_1058.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1908.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package2_0143.uml">
       <SubType>Content</SubType>
     </Content>
@@ -115,6 +118,12 @@
       <DependentUpon>EntityClassDG.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package_1058.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1907.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1908.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UseCase.usecasediagram">

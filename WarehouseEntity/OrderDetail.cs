@@ -22,6 +22,7 @@ namespace WarehouseEntity
 
         public Repository Repo { get; set; }
 
+        public bool CheckedOut { get; set; }
         public int GetDuration()
         {
             var difference = EndDate - StartDate;
@@ -33,5 +34,6 @@ namespace WarehouseEntity
         {
             return Repo.Price * GetDuration();
         }
+        
     }
 }

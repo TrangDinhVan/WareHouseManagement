@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 //
 using WarehouseDatabaseHelper;
+using WarehouseEntity;
 
 namespace WarehouseManagement
 {
     public partial class MainForm : Form
     {
+        public Staff LogginedStaff { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -40,7 +43,7 @@ namespace WarehouseManagement
                     sectorForm.Show();
                     break;
                 case "btn_addRepo":
-                    RepositoryForm RepoForm = new RepositoryForm {f = this};
+                    RepositoryForm RepoForm = new RepositoryForm {F = this};
                     RepoForm.Show();
                     break;
                 case "btn_addMaintain":
@@ -81,7 +84,7 @@ namespace WarehouseManagement
                         int repoId = int.Parse(dataGridView_Repo.Rows[e.RowIndex].Cells["Repository ID"].Value.ToString());
                         RepositoryForm repo = new RepositoryForm
                         {
-                            f = this, 
+                            F = this, 
                             RepoId = repoId
                         };
                         repo.Show();
@@ -168,6 +171,63 @@ namespace WarehouseManagement
                     }
                     break;
             }
+        }
+
+        private void DeleteBelongedRepo()
+        {
+            throw new Exception("Not Implemented");
+        }
+        private void FilterInUseRepo(object sender, EventArgs e)
+        {
+            if (btn_inuse_repo.Checked)
+            {
+                try
+                {
+                    dataGridView_Repo.DataSource = new RepositoryDAL().GetInUseRepo();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                ReloadData();
+            }
+        }
+
+        private void FilterFreeRepo()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void FilterInMaintainRepo()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void GetNearDuedateOrder()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void GetOverDuedateOrder()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void CancelOrder()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void CheckCancelCondition()
+        {
+            throw new Exception("Not Implemented");
+        }
+        private void Login()
+        {
+            throw new Exception("Not Implemented");
         }
     }
 }

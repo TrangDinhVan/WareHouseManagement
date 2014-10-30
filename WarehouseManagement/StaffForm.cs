@@ -8,7 +8,7 @@ namespace WarehouseManagement
 {
     public partial class StaffForm : DevComponents.DotNetBar.Metro.MetroForm
     {
-        public int StaffId;
+        public int StaffId { get; set; }
         public MainForm F { get; set; }
         public static string[] PermissionSet = { "Manager Admin", "Transactor and Accountant", "Protector and Technician Admin" };
         public StaffForm()

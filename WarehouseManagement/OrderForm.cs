@@ -142,5 +142,15 @@ namespace WarehouseManagement
             }
             
         }
+
+        private void SamaryOrder()
+        {
+            throw new Exception("Not Implemented");
+        }
+
+        private void CalculateBill()
+        {
+            throw new Exception("Not Implemented");
+        }
     }
 }

@@ -28,7 +28,8 @@ namespace WarehouseDatabaseHelper
                 Order = new OrderDAL().GetOneOrder(int.Parse(r["order_id"].ToString())),
                 Repo = new RepositoryDAL().GetOneRepo(int.Parse(r["repo_id"].ToString())),
                 StartDate = Convert.ToDateTime(r["start_date"].ToString()),
-                EndDate = Convert.ToDateTime(r["end_date"].ToString())
+                EndDate = Convert.ToDateTime(r["end_date"].ToString()),
+                CheckedOut = Convert.ToBoolean(r["checked_out"].ToString())
             };
             return detail;
         }

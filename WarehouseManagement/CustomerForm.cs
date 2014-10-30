@@ -1,11 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using DevComponents.DotNetBar;
 //
 using WarehouseDatabaseHelper;
 using WarehouseEntity;
@@ -25,16 +19,14 @@ namespace WarehouseManagement
         {
             try
             {
-                if (CustomerId != 0)
-                {
-                    Text = "Customer ID: " + CustomerId;
-                    Customer customer = new CustomerDAL().GetOneCustomer(CustomerId);
-                    field_name.Text = customer.Name;
-                    field_address.Text = customer.Address;
-                    field_phone.Text = customer.Phone;
-                    field_fax.Text = customer.Fax;
-                    field_mail.Text = customer.Mail;
-                }
+                if (CustomerId == 0) return;
+                Text = "Customer ID: " + CustomerId;
+                Customer customer = new CustomerDAL().GetOneCustomer(CustomerId);
+                field_name.Text = customer.Name;
+                field_address.Text = customer.Address;
+                field_phone.Text = customer.Phone;
+                field_fax.Text = customer.Fax;
+                field_mail.Text = customer.Mail;
             }
             catch (Exception ex)
             {
@@ -74,6 +66,11 @@ namespace WarehouseManagement
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        private void ReportOrders()
+        {
+            throw new Exception("Not Implemented");
         }
     }
 }

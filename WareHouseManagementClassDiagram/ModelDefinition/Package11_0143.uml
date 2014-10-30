@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="4c4004e2-4245-42d8-ae47-71872bfb9e44"
   name="Controls"
@@ -67,6 +67,16 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="03e93010-a03c-45a3-ac00-b942fd4361b1"
+            isSubstitutable="false">
+            <classMoniker
+              Id="65179fcb-fbc7-4305-a6f4-db7fe208f4c8"
+              LastKnownName="ComboBox"
+              LastKnownLocation="Package7_0143.uml" />
+          </generalization>
+        </generalsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -132,6 +142,248 @@
             <classMoniker
               Id="172373fa-1919-4dd4-9bb0-f05e9fbd54e3"
               LastKnownName="TextBox"
+              LastKnownLocation="Package7_0143.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="18ea0f14-f6c9-499f-8776-8c3a20a36da0"
+        name="RichTextBoxEx"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e7fe7272-c985-4909-95bc-34ec031a3424"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DRichTextBoxEx"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d3de85c3-947c-4ba6-a5c6-698eabd946d4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="236d560f-6586-40a5-b939-6ba7b419a0ee">
+                <propertyInstance
+                  Id="5771d165-1794-4b32-b77a-a568bff5b9a7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2f8dfb2-3b3a-4a8a-a362-678d5582ead8">
+                <propertyInstance
+                  Id="9f9313b2-5351-4e10-9701-f88eb186204f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="019e9d41-1c89-44b4-a340-3b2fe9ef4d7e">
+                <propertyInstance
+                  Id="45a22052-f73a-4e23-9911-b51af4a27f91"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6166c81e-e151-458a-9c4e-afadf3d9e26b">
+                <propertyInstance
+                  Id="731b44bf-32f7-4fac-8711-53a443250c7e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="053dd7d4-71b1-4ba6-a3b7-7c3a2634335d">
+                <propertyInstance
+                  Id="e07bb350-ed6a-4e8b-8000-0dd22491ba80"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b79489ab-6249-464f-98e2-ae02db07e731"
+        name="Line"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0564bc19-e409-4e4d-8ba3-b0a84ff25f34"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DLine"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a5c99a87-e20d-4b8d-857d-59a6eeed9df5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22eefa59-a6a2-45d2-8831-7dba2a21e1bf">
+                <propertyInstance
+                  Id="18d9697d-a119-4285-9d38-9ef3ccab9cc9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ee0ca82-5606-4dc2-9797-6e32f658a336">
+                <propertyInstance
+                  Id="2483feaa-bb8d-41e7-9793-14c871331970"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="972267ae-c0d1-4b6a-9625-87f1a2582cc3">
+                <propertyInstance
+                  Id="63393177-c50d-4114-a05c-bcc785c2be87"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0f1e0c39-5c9e-4279-8b46-9ecca1d9e7fc">
+                <propertyInstance
+                  Id="516bf81a-84f0-466f-889c-9b585c58e24b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1fbbb4b2-9cb4-40c7-a537-9fda19b7cd46">
+                <propertyInstance
+                  Id="14833849-11db-481e-8519-a29ffa3b0cae"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7070aeb5-9fed-4a7f-bde3-ca0d319397f8"
+        name="DataGridViewCheckBoxXColumn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="fe934186-23df-4399-811b-236fe552e140"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DDataGridViewCheckBoxXColumn"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5b4a575e-fcec-4eb0-b5eb-25a6b8595f78"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c3b57454-5781-4f70-a236-473b220fd2d3">
+                <propertyInstance
+                  Id="9b21a1d3-f53c-43b5-82b6-e4a80dfc2621"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5255a22-57f2-40e3-bc18-8ba255696ae6">
+                <propertyInstance
+                  Id="2831e162-90e8-4a22-967e-4276b5cb1f0a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d880cc0-b844-4145-b413-d5ffcd0cfff5">
+                <propertyInstance
+                  Id="0bc1731b-5da8-4c0a-aa33-00ffec487ce6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e33dfb32-5e5a-4926-8e81-924afd45cbcf">
+                <propertyInstance
+                  Id="e8000083-0133-46b9-af7b-b6c71327ecbc"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2ee6f2fc-cd56-437a-8dab-e1a5ffcb9009">
+                <propertyInstance
+                  Id="27aa2933-a5c4-44e8-af86-73c1284f5975"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0347e3f2-0c24-4851-82e7-e823b5760ed6"
+        name="DataGridViewX"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="861bfe95-e787-40a9-b9f0-9b0dcf601ced"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FDotNetBar for Windows Forms%2FDevComponents.DotNetBar2.dll&quot; Namespace%3DDevComponents.DotNetBar.Controls Type%3DDataGridViewX"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b8578a63-8178-47fa-9eef-1b1e14405746"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="db1bb1b5-9a04-4137-adf8-8db943c5629b">
+                <propertyInstance
+                  Id="04971ce3-1244-4be0-aeb4-bc38f4494f66"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f06f0ba6-26cd-4885-86fc-b71807dc73d7">
+                <propertyInstance
+                  Id="88d14a14-82f5-4a7d-a168-071e6e33f34a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b98d9a4-1cbf-47af-8d21-a2873c15b3a9">
+                <propertyInstance
+                  Id="d5eb1c8e-9695-4de3-a8b5-028a09e38888"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="752ee8ad-cf80-4fa7-84ac-4d0c895acc26">
+                <propertyInstance
+                  Id="48f94de4-7fe2-482c-8fa7-73a0a1c64756"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="56aa7b55-5f94-4ee8-8718-70094b3094b5">
+                <propertyInstance
+                  Id="7cd544cf-268c-4aea-bfb6-ea9ae8312529"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="141ee022-133c-42d1-b41a-fd066aa06cd5"
+            isSubstitutable="false">
+            <classMoniker
+              Id="50f80bde-a840-4417-8edb-9750f1ab475a"
+              LastKnownName="DataGridView"
               LastKnownLocation="Package7_0143.uml" />
           </generalization>
         </generalsInternal>
