@@ -42,13 +42,20 @@ namespace WarehouseDatabaseHelper
         } 
         public int CreateOrder(Order order)
         {
-            string queryAdd = string.Format("insert into [order] (order_date, customer_id, order_paid) values ('{0}',{1}),'{2}'",order.Date,order.Customer.Id,order.Paid);
+            string queryAdd = string.Format("insert into [order] (order_date, customer_id, order_paid) values ('{0}', {1}, {2})", order.Date.ToShortDateString(), order.Customer.Id, order.Paid);
             return new Connection().ExeNonQuery(queryAdd);
+
         }
         public int UpdateOrder(Order order)
         {
             string queryUpdate = string.Format("update [order] set order_date = {0}, customer_id = {1}, order_paid = {2} where order_id = {3}", order.Date, order.Customer.Id, order.Paid, order.Id);
             return new Connection().ExeNonQuery(queryUpdate);
+        }
+        public int GetScopeIdentity()
+        {
+            string queryScopeIdentiy = string.Format("select max([order_id]) from [order]");
+            DataRow r = new Connection().GetOneRecord(queryScopeIdentiy);
+            return Convert.ToInt32(r[0].ToString());
         }
     }
 }

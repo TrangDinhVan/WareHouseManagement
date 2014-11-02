@@ -62,7 +62,7 @@ namespace WarehouseManagement
                 try
                 {
                     field_date.MinDate = DateTime.Today.Date;
-                    DataTable customerSet = new CustomerDAL().getAllCustomer();
+                    DataTable customerSet = new CustomerDAL().GetAllCustomer();
                     field_name.DataSource = customerSet.DefaultView;
                     field_name.DisplayMember = "Name";
                     field_name.ValueMember = customerSet.Columns["ID"].ToString();
@@ -143,7 +143,74 @@ namespace WarehouseManagement
             
         }
 
-        private void SamaryOrder()
+        private Customer GetInfoCustomer()
+        {
+            try
+            {
+                return new Customer()
+                {
+                    Id = Convert.ToInt32(field_customer_id.Text),
+                    Name = field_name.Text,
+                    Address = field_address.Text,
+                    Phone = field_phone.Text,
+                    Mail = field_mail.Text
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message+ex);
+            }
+        }
+
+        private void CreateOrder(object sender, EventArgs e)
+        {
+            try
+            {
+                new CustomerDAL().AddCustomer(GetInfoCustomer());
+                int cusId = new CustomerDAL().GetScopeIdentity();
+                Order newOrder = new Order()
+                {
+                    Id = OrderId,
+                    Customer = new CustomerDAL().GetOneCustomer(cusId),
+                    Date = field_date.Value.Date,
+                    Paid = Convert.ToDouble(field_paid.Text),
+                    Staff = new StaffDAL().GetOneStaff(Convert.ToInt32(field_staff.SelectedValue.ToString()))
+                };
+                new OrderDAL().CreateOrder(newOrder);
+                CreateDetail();
+                F.ReloadData();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex);
+            }
+        }
+
+        private void CreateDetail()
+        {
+            try
+            {
+                foreach (DataGridViewRow r in dataGridView_Repo.Rows)
+                {
+                    if (Convert.ToBoolean(r.Cells["choose"].Value) != true) continue;
+                    OrderDetail detail = new OrderDetail()
+                    {
+                        StartDate = field_start_date.Value.Date,
+                        EndDate = field_end_date.Value.Date,
+                        Repo = new RepositoryDAL().GetOneRepo(Convert.ToInt32(r.Cells["Repository ID"].Value)),
+                        Order = new OrderDAL().GetOneOrder(new OrderDAL().GetScopeIdentity())
+                    };
+                    new OrderDetailDAL().CreateOrderDetail(detail);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message+ex);
+            }
+        }
+
+        private void SumaryOrder()
         {
             throw new Exception("Not Implemented");
         }

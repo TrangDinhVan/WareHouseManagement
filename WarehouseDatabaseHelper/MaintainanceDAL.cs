@@ -40,13 +40,13 @@ namespace WarehouseDatabaseHelper
         }
         public int CreateMaintain(Maintainance maintain)
         {
-            string queryAdd = string.Format("insert into [maintainance] (repo_id, start_date, end_date, maintain_desc, maintain_price) values ({0}, '{1}', '{2}', '{3}', {4})", maintain.Repo.Id, maintain.StartDate.ToString("MMM/dd/yyyy"), maintain.EndDate.ToString("MMM/dd/yyyy"), maintain.Desc, maintain.Price);
+            string queryAdd = string.Format("insert into [maintainance] (repo_id, start_date, end_date, maintain_desc, maintain_price) values ({0}, '{1}', '{2}', '{3}', {4})", maintain.Repo.Id, maintain.StartDate.ToShortDateString(), maintain.EndDate.ToShortDateString(), maintain.Desc, maintain.Price);
             return new Connection().ExeNonQuery(queryAdd);
         }
 
         public int UpdateMaintain(Maintainance maintain)
         {
-            string queryUpdate = string.Format("update [maintainance] set repo_id = {0}, start_date = '{1}', end_date = '{2}', maintain_desc = '{3}', maintain_price = {4} where maintain_id = {5}", maintain.Repo.Id, maintain.StartDate, maintain.EndDate, maintain.Desc, maintain.Price, maintain.Id);
+            string queryUpdate = string.Format("update [maintainance] set repo_id = {0}, start_date = '{1}', end_date = '{2}', maintain_desc = '{3}', maintain_price = {4} where maintain_id = {5}", maintain.Repo.Id, maintain.StartDate.ToShortDateString(), maintain.EndDate.ToShortDateString(), maintain.Desc, maintain.Price, maintain.Id);
             return new Connection().ExeNonQuery(queryUpdate);
         }
     }

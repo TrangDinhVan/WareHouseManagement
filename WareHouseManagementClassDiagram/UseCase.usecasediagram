@@ -1,13 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="UseCaseDG" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="70dde471-b8c0-434a-9506-f6a96785abd5">
-      <profileInstance Id="3c80e236-72fe-4396-b482-a589325fe26d" name="TextTemplateBindings">
-        <elementDefinition Id="b763d64e-159d-4a34-a99c-84a262673191" />
-      </profileInstance>
-      <elementDefinition Id="2c00ec18-a0fa-4fbf-bf04-e5d731a1311f" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="af26a77e-b7dc-4925-b0d0-b64392d960bb" name="Usecase" linkedPackageId="73e59cea-3183-447b-b2a0-d4f1c718d13c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="1c407bc2-1075-4d15-b9b3-ab400d257368" name="Protector and Technian Admin" isAbstract="false" isLeaf="false">
@@ -372,12 +364,40 @@
     <useCaseModelRootHasTypes>
       <useCase Id="2f713571-7b95-450f-b279-44feece2661c" name="manage Staff" isAbstract="false" isLeaf="false">
         <elementDefinition Id="d2fd85aa-3c8f-478c-9814-4f0a060ec276" />
-        <additions>
-          <include Id="dab46b0e-0520-4071-aacb-54127244c8ca">
-            <useCaseMoniker Id="1bf57296-70ac-4508-9978-d248d01d5972" LastKnownName="grant Permission" />
-            <elementDefinition Id="7aa1b8e6-3b5b-463d-94a2-40e04b5ee528" />
-          </include>
-        </additions>
+        <targetEnds>
+          <association Id="289e0ec0-7093-482c-9482-8af887aef567" isDerived="false" sourceEndRoleName="manage Staff" targetEndRoleName="Add Staff" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6b7fad39-dac1-4f92-ab7d-0a9fa3c49268" LastKnownName="Add Staff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="062ff9ea-c558-4037-a0c9-925e802d06c8" name="manage Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b0a3812-820d-4200-8997-5af6467bbb2a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22ba689e-b9ee-4d26-8d5a-3fb2bdbcf7ff" name="Add Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="430e4771-3f1b-430b-be5b-12da993b5461" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="51af59af-f218-4b86-b6ee-f6045c4a876c" />
+          </association>
+          <association Id="f50f0722-86d3-4a6c-9358-ba53226dd35e" isDerived="false" sourceEndRoleName="manage Staff" targetEndRoleName="Update Staff" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9f06d9d9-ed25-41e2-9a02-449b85e53902" LastKnownName="Update Staff" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e367ce0-3934-4088-a210-26af7998f1a7" name="manage Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="025a4088-b38f-4542-aeb6-91d1a55aac5b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd3dad36-3350-4c22-9bfb-51a9878b25b7" name="Update Staff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="902df225-1b49-470f-916b-53b5e5d104f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1edce541-4432-4339-a7a9-3428a70238dd" />
+          </association>
+        </targetEnds>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -643,6 +663,28 @@
         <elementDefinition Id="f03bc27e-43e7-403f-a884-05b008c9a415" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6b7fad39-dac1-4f92-ab7d-0a9fa3c49268" name="Add Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7573a500-8724-4b1c-ae52-0804447cfcf9" />
+        <additions>
+          <include Id="dab46b0e-0520-4071-aacb-54127244c8ca">
+            <useCaseMoniker Id="1bf57296-70ac-4508-9978-d248d01d5972" LastKnownName="grant Permission" />
+            <elementDefinition Id="7aa1b8e6-3b5b-463d-94a2-40e04b5ee528" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9f06d9d9-ed25-41e2-9a02-449b85e53902" name="Update Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b13042b-bf0c-4f40-88d1-8a8275a386f0" />
+        <additions>
+          <include Id="6deae1a0-2999-4761-8c4d-8398979eadc2">
+            <useCaseMoniker Id="1bf57296-70ac-4508-9978-d248d01d5972" LastKnownName="grant Permission" />
+            <elementDefinition Id="b0c9755e-11e9-4793-85bb-d3800c0336aa" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="73e59cea-3183-447b-b2a0-d4f1c718d13c" name="WareHouseManagementClassDiagram">
     <elementDefinition Id="0f188200-161f-4185-8b7f-7c917fa53c76" />
@@ -664,6 +706,12 @@
           <elementDefinition Id="60728a11-f7c3-44b3-8e7d-948d8bbbb099" />
         </profileInstance>
         <elementDefinition Id="34a538a9-91c7-476b-8516-bb52a6397525" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="70dde471-b8c0-434a-9506-f6a96785abd5">
+        <profileInstance Id="3c80e236-72fe-4396-b482-a589325fe26d" name="TextTemplateBindings">
+          <elementDefinition Id="b763d64e-159d-4a34-a99c-84a262673191" />
+        </profileInstance>
+        <elementDefinition Id="2c00ec18-a0fa-4fbf-bf04-e5d731a1311f" />
       </packageHasProfileInstances>
     </profileInstances>
   </package>

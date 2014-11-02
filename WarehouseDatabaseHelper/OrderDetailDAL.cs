@@ -39,12 +39,12 @@ namespace WarehouseDatabaseHelper
         }
         public int CreateOrderDetail(OrderDetail detail)
         {
-            string queryAdd = string.Format("insert into order_detail (order_id, repo_id, start_date, end_date values ({0},{1},'{2}','{3}'))",detail.Order.Id, detail.Repo.Id,detail.StartDate,detail.EndDate);
+            string queryAdd = string.Format("insert into [order_detail] (order_id, repo_id, start_date, end_date) values ({0},{1},'{2}','{3}')",detail.Order.Id, detail.Repo.Id,detail.StartDate.ToShortDateString(),detail.EndDate.ToShortDateString());
             return new Connection().ExeNonQuery(queryAdd);
         }
         public int UpdateOrderDetail(OrderDetail detail)
         {
-            string queryUpdate = string.Format("update [order_detail] set order_id = {0}, repo_id = {1}, start_date = {2}, end_date = {3} where order_detail_id = {4}",detail.Order.Id, detail.Repo.Id, detail.StartDate, detail.EndDate, detail.Id);
+            string queryUpdate = string.Format("update [order_detail] set order_id = {0}, repo_id = {1}, start_date = {2}, end_date = {3} where order_detail_id = {4}",detail.Order.Id, detail.Repo.Id, detail.StartDate.ToShortDateString(), detail.EndDate.ToShortDateString(), detail.Id);
             return new Connection().ExeNonQuery(queryUpdate);
         }
     }

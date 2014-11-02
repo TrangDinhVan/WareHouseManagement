@@ -53,6 +53,7 @@ namespace WarehouseManagement
             this.line3 = new DevComponents.DotNetBar.Controls.Line();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView_Repo = new System.Windows.Forms.DataGridView();
+            this.Choose = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewButtonColumn1 = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             this.field_customer_id = new System.Windows.Forms.ComboBox();
@@ -61,7 +62,6 @@ namespace WarehouseManagement
             this.field_paid = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label13 = new System.Windows.Forms.Label();
             this.field_staff = new System.Windows.Forms.ComboBox();
-            this.Choose = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +82,7 @@ namespace WarehouseManagement
             this.btn_add.TabIndex = 1;
             this.btn_add.Text = "Add";
             this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.CreateOrder);
             // 
             // line1
             // 
@@ -313,6 +314,14 @@ namespace WarehouseManagement
             this.dataGridView_Repo.Size = new System.Drawing.Size(763, 170);
             this.dataGridView_Repo.TabIndex = 26;
             // 
+            // Choose
+            // 
+            this.Choose.Checked = true;
+            this.Choose.CheckState = System.Windows.Forms.CheckState.Indeterminate;
+            this.Choose.CheckValue = null;
+            this.Choose.HeaderText = "Choose";
+            this.Choose.Name = "Choose";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -338,6 +347,7 @@ namespace WarehouseManagement
             this.field_customer_id.Name = "field_customer_id";
             this.field_customer_id.Size = new System.Drawing.Size(121, 25);
             this.field_customer_id.TabIndex = 28;
+            this.field_customer_id.Text = "0";
             // 
             // field_name
             // 
@@ -373,6 +383,7 @@ namespace WarehouseManagement
             this.field_paid.PreventEnterBeep = true;
             this.field_paid.Size = new System.Drawing.Size(122, 25);
             this.field_paid.TabIndex = 34;
+            this.field_paid.Text = "50";
             // 
             // label13
             // 
@@ -390,14 +401,6 @@ namespace WarehouseManagement
             this.field_staff.Name = "field_staff";
             this.field_staff.Size = new System.Drawing.Size(172, 25);
             this.field_staff.TabIndex = 36;
-            // 
-            // Choose
-            // 
-            this.Choose.Checked = true;
-            this.Choose.CheckState = System.Windows.Forms.CheckState.Indeterminate;
-            this.Choose.CheckValue = null;
-            this.Choose.HeaderText = "Choose";
-            this.Choose.Name = "Choose";
             // 
             // OrderForm
             // 
@@ -440,6 +443,7 @@ namespace WarehouseManagement
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create an new Order";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).EndInit();

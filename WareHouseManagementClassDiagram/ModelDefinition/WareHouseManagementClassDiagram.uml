@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="0f188200-161f-4185-8b7f-7c917fa53c76"
   name="WareHouseManagementClassDiagram" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -881,16 +881,85 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-        </targetEnds>
-        <additions>
-          <include
-            Id="7aa1b8e6-3b5b-463d-94a2-40e04b5ee528">
+          <association
+            Id="51af59af-f218-4b86-b6ee-f6045c4a876c"
+            isDerived="false"
+            sourceEndRoleName="manage Staff"
+            targetEndRoleName="Add Staff"
+            isLeaf="false"
+            isAbstract="false">
             <useCaseMoniker
-              Id="acc3e942-7bdd-472b-a0f1-72fdb7cf537e"
-              LastKnownName="grant Permission"
+              Id="7573a500-8724-4b1c-ae52-0804447cfcf9"
+              LastKnownName="Add Staff"
               LastKnownLocation="WareHouseManagementClassDiagram.uml" />
-          </include>
-        </additions>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b0a3812-820d-4200-8997-5af6467bbb2a"
+                  name="manage Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="430e4771-3f1b-430b-be5b-12da993b5461"
+                  name="Add Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1edce541-4432-4339-a7a9-3428a70238dd"
+            isDerived="false"
+            sourceEndRoleName="manage Staff"
+            targetEndRoleName="Update Staff"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2b13042b-bf0c-4f40-88d1-8a8275a386f0"
+              LastKnownName="Update Staff"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="025a4088-b38f-4542-aeb6-91d1a55aac5b"
+                  name="manage Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="902df225-1b49-470f-916b-53b5e5d104f7"
+                  name="Update Staff"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -3053,6 +3122,752 @@
         Id="97c8dd91-1df1-4fde-b61e-e01e4cb51286"
         LastKnownName="WarehouseEntity"
         LastKnownLocation="Package1_1908.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7573a500-8724-4b1c-ae52-0804447cfcf9"
+        name="Add Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="7aa1b8e6-3b5b-463d-94a2-40e04b5ee528">
+            <useCaseMoniker
+              Id="acc3e942-7bdd-472b-a0f1-72fdb7cf537e"
+              LastKnownName="grant Permission"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b13042b-bf0c-4f40-88d1-8a8275a386f0"
+        name="Update Staff"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="b0c9755e-11e9-4793-85bb-d3800c0336aa">
+            <useCaseMoniker
+              Id="acc3e942-7bdd-472b-a0f1-72fdb7cf537e"
+              LastKnownName="grant Permission"
+              LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="ac483618-24ea-4c47-9261-e24a4c63e3dd"
+        name="Staff_Add"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="0be408ca-4de5-4590-a77e-58ddb3ec33c9"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="a05f1185-ed7b-4ea5-9705-2502999314e3"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="98670aa8-ce32-41c7-aa84-e2544f626899"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3108aa7d-3933-4bf1-8020-4f4479ea755d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="0e1a0301-ebb7-464c-b9b6-5a3350aeee97"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="11326e2c-6959-473e-97d2-76614149ee6e"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f584be6f-efde-4f72-b54f-cd425bf2fc9a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="98670aa8-ce32-41c7-aa84-e2544f626899"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="75b0a68b-6c34-4e23-a3c1-871973b809c1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ac0fb0eb-6a6e-4032-93bc-d4b63ee521f9"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="11316d9f-b5ff-4fb5-9d7f-390bc828e35c"
+                LastKnownName="Manager Admin"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3108aa7d-3933-4bf1-8020-4f4479ea755d"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0e1a0301-ebb7-464c-b9b6-5a3350aeee97"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0a1663a4-eef7-4220-a2a7-907b60efc03a"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f584be6f-efde-4f72-b54f-cd425bf2fc9a"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="11326e2c-6959-473e-97d2-76614149ee6e"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3820256e-4e3f-420d-b06c-7937009d69e3"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="11326e2c-6959-473e-97d2-76614149ee6e"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ba5f0a60-5abf-40b5-9755-aa8fb44955e1"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3820256e-4e3f-420d-b06c-7937009d69e3"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f584be6f-efde-4f72-b54f-cd425bf2fc9a"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="22c75d3b-bcd1-4c58-9e73-2886af9e5896"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="a05f1185-ed7b-4ea5-9705-2502999314e3"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="041cb6ad-0a0b-469b-90be-ad547a3f4ac8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="cb4f54c6-31f8-4705-be5c-d2c4f890cfbf"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c544c5ff-cd6a-48fb-92cd-2346569c69d1"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="2ef29be1-ded4-4704-b42d-20e3dd9f8509"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9eae95ae-712e-4f17-bbec-64494d1609f2"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="4fb36d59-2101-48a4-9d2e-9698f923cc75"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="2ef29be1-ded4-4704-b42d-20e3dd9f8509"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6f83e4a6-ca48-42da-a530-92333c7e132b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8830fdc6-82b3-4fb8-8af6-6d8829742eb4"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="11316d9f-b5ff-4fb5-9d7f-390bc828e35c"
+                LastKnownName="Manager Admin"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9eae95ae-712e-4f17-bbec-64494d1609f2"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="bed3180b-ec74-4dd5-9b35-5565db137d6f"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="39ead84d-7740-4764-9e74-070792edf0ec"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="68fea56e-7e9f-4a3c-9fe0-871c7e4581ad"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="9a761aca-e66f-4c45-9040-a74139d7588d"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f3e1cff1-132a-4a2f-a68e-3791b1277e64"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="84f0ebeb-c9b8-4c8f-98ea-c117da43bdd0"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="4f5375bd-7f1c-4bb7-b80d-9571a1bf29d4"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="68fea56e-7e9f-4a3c-9fe0-871c7e4581ad"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="01a97cef-0069-4f12-b224-924dce9ff5d9"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4fb36d59-2101-48a4-9d2e-9698f923cc75"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9a761aca-e66f-4c45-9040-a74139d7588d"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c544c5ff-cd6a-48fb-92cd-2346569c69d1"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="920a6ba6-be74-4ea7-9a40-c12b1c20dabf"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="7631c163-19c3-40a5-aa56-820298895e01"
+                LastKnownName="Main Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f3e1cff1-132a-4a2f-a68e-3791b1277e64"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="dde2aa25-2a05-4ecd-83e7-6dc713ab00ab"
+            name="BehaviorExecutionSpecification5">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="4f5375bd-7f1c-4bb7-b80d-9571a1bf29d4"
+                LastKnownName="ExecutionOccurrenceSpecification10"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="84f0ebeb-c9b8-4c8f-98ea-c117da43bdd0"
+                LastKnownName="ExecutionOccurrenceSpecification9"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="5a299376-7def-4efe-99d3-3276f6b0e742"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="84f0ebeb-c9b8-4c8f-98ea-c117da43bdd0"
+            name="ExecutionOccurrenceSpecification9">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="20877e93-62ef-4b1f-b1a9-cbd687065eab"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5a299376-7def-4efe-99d3-3276f6b0e742"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="4f5375bd-7f1c-4bb7-b80d-9571a1bf29d4"
+            name="ExecutionOccurrenceSpecification10">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3fe38a4a-53e2-4da7-b20d-60874ab1bb33"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="39ead84d-7740-4764-9e74-070792edf0ec"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c8fac4c9-b281-411d-b872-63ceff5da3ac"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+                LastKnownName="Staff Form"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="11316d9f-b5ff-4fb5-9d7f-390bc828e35c"
+            name="Manager Admin"
+            isActor="true"
+            lifelineDisplayName="Manager Admin">
+            <represents>
+              <propertyMoniker
+                Id="8af8e58c-2117-4da9-bc5a-7017e4a5448f"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac0fb0eb-6a6e-4032-93bc-d4b63ee521f9"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8830fdc6-82b3-4fb8-8af6-6d8829742eb4"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="7631c163-19c3-40a5-aa56-820298895e01"
+            name="Main Form"
+            isActor="false"
+            lifelineDisplayName="Main Form">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="98670aa8-ce32-41c7-aa84-e2544f626899"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a05f1185-ed7b-4ea5-9705-2502999314e3"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2ef29be1-ded4-4704-b42d-20e3dd9f8509"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c544c5ff-cd6a-48fb-92cd-2346569c69d1"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="6338e282-3419-458e-8200-fc6ba1156fe1"
+            name="Staff Form"
+            isActor="false"
+            lifelineDisplayName="Staff Form">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="68fea56e-7e9f-4a3c-9fe0-871c7e4581ad"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="39ead84d-7740-4764-9e74-070792edf0ec"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="b9ee7fdf-2e1c-4211-a9f2-c1eabcd0e5d8"
+            name="Staff Data Table"
+            isActor="false"
+            lifelineDisplayName="Staff Data Table" />
+        </lifelines>
+        <messages>
+          <message
+            Id="1e792d13-f15f-41be-991e-64e661ddb180"
+            name="Request Staff Manager Section"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ac0fb0eb-6a6e-4032-93bc-d4b63ee521f9"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3108aa7d-3933-4bf1-8020-4f4479ea755d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2ef3cd88-159d-4c06-b5c6-3b64aa79c2d7"
+            name="Load()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="0e1a0301-ebb7-464c-b9b6-5a3350aeee97"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3820256e-4e3f-420d-b06c-7937009d69e3"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="499fd100-cda6-43b7-bca3-fd28eb62475f"
+            name="Choose Add new Staff"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8830fdc6-82b3-4fb8-8af6-6d8829742eb4"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9eae95ae-712e-4f17-bbec-64494d1609f2"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="6ef66187-339a-4706-bfe5-eb2ee77061ad"
+            name="new StaffForm()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="4fb36d59-2101-48a4-9d2e-9698f923cc75"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9a761aca-e66f-4c45-9040-a74139d7588d"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0cf0b5d3-028c-4b00-a92d-d9f85753201a"
+            name="Load()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f3e1cff1-132a-4a2f-a68e-3791b1277e64"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5a299376-7def-4efe-99d3-3276f6b0e742"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="8af8e58c-2117-4da9-bc5a-7017e4a5448f"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="3719288e-31db-4c23-879b-48567acd0f99"
+                LastKnownName="Manager Admin"
+                LastKnownLocation="WareHouseManagementClassDiagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="75b0a68b-6c34-4e23-a3c1-871973b809c1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="041cb6ad-0a0b-469b-90be-ad547a3f4ac8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ba5f0a60-5abf-40b5-9755-aa8fb44955e1"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="22c75d3b-bcd1-4c58-9e73-2886af9e5896"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6f83e4a6-ca48-42da-a530-92333c7e132b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="920a6ba6-be74-4ea7-9a40-c12b1c20dabf"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="01a97cef-0069-4f12-b224-924dce9ff5d9"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c8fac4c9-b281-411d-b872-63ceff5da3ac"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="20877e93-62ef-4b1f-b1a9-cbd687065eab"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3fe38a4a-53e2-4da7-b20d-60874ab1bb33"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ae0d2b3e-fcd8-4523-80cd-a536c2024dff"
+        LastKnownName="WarehouseEntity"
+        LastKnownLocation="Package_1016.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3ed6663a-9341-46b4-b282-c01375a1ae57"
+        LastKnownName="WarehouseManagement"
+        LastKnownLocation="Package_1017.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3533885c-a86c-40f7-af41-d20d88ff1983"
+        LastKnownName="WarehouseDatabaseHelper"
+        LastKnownLocation="Package_1018.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

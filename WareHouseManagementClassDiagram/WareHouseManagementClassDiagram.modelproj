@@ -77,6 +77,9 @@
     <Content Include="ModelDefinition\Package1_0143.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1016.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package1_1058.uml">
       <SubType>Content</SubType>
     </Content>
@@ -117,6 +120,15 @@
       <SubType>Content</SubType>
       <DependentUpon>EntityClassDG.classdiagram</DependentUpon>
     </Content>
+    <Content Include="ModelDefinition\Package_1016.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1017.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1018.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1058.uml">
       <SubType>Content</SubType>
     </Content>
@@ -125,6 +137,13 @@
     </Content>
     <Content Include="ModelDefinition\Package_1908.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="Staff_Add.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Staff_Add.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Staff_Add.sequencediagram</DependentUpon>
     </Content>
     <Content Include="UseCase.usecasediagram">
       <SubType>Content</SubType>

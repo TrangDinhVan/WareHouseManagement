@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Text;
 //
 using System.Data;
@@ -9,12 +10,12 @@ namespace WarehouseDatabaseHelper
 {
     public class CustomerDAL
     {
-        public DataTable getAllCustomer()
+        public DataTable GetAllCustomer()
         {
             string queryAll = "select * from [v_customer]";
             return new Connection().GetListRecord(queryAll);
         }
-        public DataTable getSomeCustomer(string query)
+        public DataTable GetSomeCustomer(string query)
         {
             return new Connection().GetListRecord(query);
         }
@@ -42,13 +43,20 @@ namespace WarehouseDatabaseHelper
         }
         public int AddCustomer(Customer cus)
         {
-            string queryAdd = string.Format("insert into [customer] (cutomer_name, customer_address, customer_mail, customer_phone, customer_fax) Values('{0}','{1}','{2}','{3}','{4}')", cus.Name, cus.Address, cus.Mail, cus.Phone, cus.Fax);
+            string queryAdd = string.Format("insert into [customer] (customer_name, customer_address, customer_mail, customer_phone, customer_fax) Values('{0}','{1}','{2}','{3}','{4}')", cus.Name, cus.Address, cus.Mail, cus.Phone, cus.Fax);
             return new Connection().ExeNonQuery(queryAdd);
         }
         public int UpdateCustomer(Customer cus)
         {
             string queryUpdate = string.Format("update [customer] set customer_name = '{0}', customer_address = '{1}', customer_mail = '{2}', customer_phone = '{3}', customer_fax = '{4}' where customer_id = {5} ", cus.Name, cus.Address, cus.Mail, cus.Phone, cus.Fax, cus.Id);
             return new Connection().ExeNonQuery(queryUpdate);
+        }
+
+        public int GetScopeIdentity()
+        {
+            string queryScopeIdentiy = string.Format("select max([customer_id]) from [customer]");
+            DataRow r = new Connection().GetOneRecord(queryScopeIdentiy);
+            return Convert.ToInt32(r[0].ToString());
         }
     }
 }

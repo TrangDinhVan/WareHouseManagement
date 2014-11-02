@@ -27,7 +27,7 @@ namespace WarehouseManagement
             dataGridView_Staff.DataSource = new StaffDAL().getAllStaff();
             dataGridView_Maintain.DataSource = new MaintainanceDAL().GetAllMaintain();
             dataGridView_Order.DataSource = new OrderDAL().GetAllOrder();
-            dataGridView_Customer.DataSource = new CustomerDAL().getAllCustomer();
+            dataGridView_Customer.DataSource = new CustomerDAL().GetAllCustomer();
         }
         public void LoadSubForm(object sender, EventArgs e)
         {
