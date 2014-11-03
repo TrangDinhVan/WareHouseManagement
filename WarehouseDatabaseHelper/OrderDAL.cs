@@ -24,6 +24,7 @@ namespace WarehouseDatabaseHelper
             string queryOne = string.Format("select * from [order] where order_id = {0}", ID);
             DataRow r = new Connection().GetOneRecord(queryOne);
             Customer cus = new CustomerDAL().GetOneCustomer(int.Parse(r["customer_id"].ToString()));
+            Staff staff = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString()));
             DataTable lstOrderDetail = new OrderDetailDAL().GetSomeOrderDetail(string.Format("select * from [order_detail] where order_id = {0}",ID));
             Order order = new Order
             {
@@ -31,6 +32,7 @@ namespace WarehouseDatabaseHelper
                 Date = Convert.ToDateTime(r["order_date"].ToString()),
                 Paid = Convert.ToDouble(r["order_paid"].ToString()),
                 Customer = cus,
+                Staff = staff,
                 LstOrderDetail = lstOrderDetail
             };
             return order;
@@ -42,7 +44,7 @@ namespace WarehouseDatabaseHelper
         } 
         public int CreateOrder(Order order)
         {
-            string queryAdd = string.Format("insert into [order] (order_date, customer_id, order_paid) values ('{0}', {1}, {2})", order.Date.ToShortDateString(), order.Customer.Id, order.Paid);
+            string queryAdd = string.Format("insert into [order] (order_date, customer_id, order_paid, staff_id) values ('{0}', {1}, {2},{3})", order.Date.ToShortDateString(), order.Customer.Id, order.Paid,order.Staff.Id);
             return new Connection().ExeNonQuery(queryAdd);
 
         }

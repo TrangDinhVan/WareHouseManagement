@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
+using System.Linq;
 using System.Windows.Forms;
-using DevComponents.DotNetBar;
 //
 using WarehouseDatabaseHelper;
 using WarehouseEntity;
@@ -20,9 +16,10 @@ namespace WarehouseManagement
         public OrderForm()
         {
             InitializeComponent();
-            field_staff.DataSource = new StaffDAL().getAllStaff().DefaultView;
-            field_staff.ValueMember = "ID";
-            field_staff.DisplayMember = "Name";
+            DataTable dataStaff = new StaffDAL().getAllStaff();
+            field_staff.DataSource = dataStaff.DefaultView;
+            field_staff.ValueMember = dataStaff.Columns["ID"].ToString()
+                ;            field_staff.DisplayMember = "Name";
             field_volume.DataSource = new Repository().VolumeSet;
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             field_start_date.MinDate = DateTime.Today.Date;
@@ -36,6 +33,9 @@ namespace WarehouseManagement
                 try
                 {
                     Order order = new OrderDAL().GetOneOrder(OrderId);
+                    //Customer Info
+                    CheckUpdateCondition();
+
                     field_customer_id.SelectedValue = order.Customer.Id;
                     field_name.SelectedValue = order.Customer.Id;
                     field_address.Text = order.Customer.Address;
@@ -45,6 +45,12 @@ namespace WarehouseManagement
                     field_date.Value = order.Date;
                     field_customer_id.Text = order.Customer.Id.ToString();
                     field_name.Text = order.Customer.Name;
+                    //Order Info
+                    field_date.Value = order.Date;
+                    field_paid.Text = order.Paid.ToString();
+                    field_staff.SelectedValue = order.Staff.Id;
+                    //Order detail
+                    dataGridView_Repo.DataSource = order.LstOrderDetail;
 
                 }
                 catch (Exception ex)
@@ -112,7 +118,7 @@ namespace WarehouseManagement
             try
             {
                 DataTable repoMaintain =
-                    new RepositoryDAL().GetSomeRepo(string.Format("select * from [v_repository] where [Volume] = '{2}' and [Repository ID] not in (select repo_id from [maintainance] where (start_date between #{0}# and #{1}#) or (end_date between #{0}# and #{1}#) and [Repository ID] not in (select repo_id from [order_detail] where (start_date between #{0}# and #{1}#) or (end_date between #{0}# and #{1}#) ) )",field_start_date.Value.ToShortDateString(), field_end_date.Value.ToShortDateString(),field_volume.Text));
+                    new RepositoryDAL().GetSomeRepo(string.Format("select * from [v_repository] where [Volume] = '{2}' and [Repository ID] not in (select repo_id from [maintainance] where (start_date between #{0}# and #{1}#) or (end_date between #{0}# and #{1}#) or (#{0}# between start_date and end_date) or (#{1}# between start_date and end_date) ) and [Repository ID] not in (select repo_id from [order_detail] where (start_date between #{0}# and #{1}#) or (end_date between #{0}# and #{1}#) or (end_date between #{0}# and #{1}#) or (#{0}# between start_date and end_date) or (#{1}# between start_date and end_date) )", field_start_date.Value.ToShortDateString(), field_end_date.Value.ToShortDateString(), field_volume.Text));
                 dataGridView_Repo.DataSource = repoMaintain;
             }
             catch (Exception ex)
@@ -126,15 +132,24 @@ namespace WarehouseManagement
         {
             try
             {
-                return new Order
+                Order order = new Order
                 {
                     Id = OrderId,
                     Date = field_date.Value.Date,
                     Paid = Convert.ToDouble(field_paid.Text),
-                    Staff = new StaffDAL().GetOneStaff(Convert.ToInt32(field_staff.ValueMember)),
-                    Customer = new CustomerDAL().GetOneCustomer(Convert.ToInt32(field_customer_id.ValueMember)),
-                    LstOrderDetail = (DataTable) dataGridView_Repo.DataSource
+                    LstOrderDetail = (DataTable) dataGridView_Repo.DataSource,
+                    Staff = new StaffDAL().GetOneStaff(int.Parse(field_staff.SelectedValue.ToString()))
                 };
+                if (btn_check_exist.Checked)
+                {
+                    order.Customer = new CustomerDAL().GetOneCustomer(Convert.ToInt32(field_customer_id.ValueMember));
+                }
+                else
+                {
+                    var cusId = new CustomerDAL().GetScopeIdentity();
+                    order.Customer = new CustomerDAL().GetOneCustomer(cusId);
+                }
+                return order;
             }
             catch (Exception ex)
             {
@@ -153,7 +168,8 @@ namespace WarehouseManagement
                     Name = field_name.Text,
                     Address = field_address.Text,
                     Phone = field_phone.Text,
-                    Mail = field_mail.Text
+                    Mail = field_mail.Text,
+                    Fax = field_fax.Text
                 };
             }
             catch (Exception ex)
@@ -167,16 +183,7 @@ namespace WarehouseManagement
             try
             {
                 new CustomerDAL().AddCustomer(GetInfoCustomer());
-                int cusId = new CustomerDAL().GetScopeIdentity();
-                Order newOrder = new Order()
-                {
-                    Id = OrderId,
-                    Customer = new CustomerDAL().GetOneCustomer(cusId),
-                    Date = field_date.Value.Date,
-                    Paid = Convert.ToDouble(field_paid.Text),
-                    Staff = new StaffDAL().GetOneStaff(Convert.ToInt32(field_staff.SelectedValue.ToString()))
-                };
-                new OrderDAL().CreateOrder(newOrder);
+                new OrderDAL().CreateOrder(GetInfo());
                 CreateDetail();
                 F.ReloadData();
                 Close();
@@ -218,6 +225,15 @@ namespace WarehouseManagement
         private void CalculateBill()
         {
             throw new Exception("Not Implemented");
+        }
+
+        private void CheckUpdateCondition()
+        {
+            Order order = new OrderDAL().GetOneOrder(OrderId);
+            if ((from DataRow r in order.LstOrderDetail.Rows select Convert.ToDateTime(r["start_date"].ToString()).Date).Any(startDate => startDate < DateTime.Today || startDate.Date == DateTime.Today.Date))
+            {
+                btn_save.Hide();
+            }
         }
     }
 }

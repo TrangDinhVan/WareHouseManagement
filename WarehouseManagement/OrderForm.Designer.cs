@@ -160,6 +160,7 @@ namespace WarehouseManagement
             this.field_mail.PreventEnterBeep = true;
             this.field_mail.Size = new System.Drawing.Size(273, 25);
             this.field_mail.TabIndex = 10;
+            this.field_mail.Text = "customer@info.com";
             // 
             // field_phone
             // 
@@ -175,6 +176,7 @@ namespace WarehouseManagement
             this.field_phone.PreventEnterBeep = true;
             this.field_phone.Size = new System.Drawing.Size(225, 25);
             this.field_phone.TabIndex = 11;
+            this.field_phone.Text = "0123 456 789";
             // 
             // field_fax
             // 
@@ -190,6 +192,7 @@ namespace WarehouseManagement
             this.field_fax.PreventEnterBeep = true;
             this.field_fax.Size = new System.Drawing.Size(225, 25);
             this.field_fax.TabIndex = 12;
+            this.field_fax.Text = "666 666";
             // 
             // field_address
             // 
@@ -200,10 +203,11 @@ namespace WarehouseManagement
             this.field_address.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.field_address.Location = new System.Drawing.Point(12, 118);
             this.field_address.Name = "field_address";
-            this.field_address.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Segoe UI;}}" +
-    "\r\n\\viewkind4\\uc1\\pard\\f0\\fs20\\par\r\n}\r\n";
+            this.field_address.Rtf = "{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Segoe UI;}}\r\n\\viewkind4\\uc1\\pard\\la" +
+    "ng1033\\f0\\fs20 Hanoi, Vietnam\\par\r\n}\r\n";
             this.field_address.Size = new System.Drawing.Size(273, 100);
             this.field_address.TabIndex = 13;
+            this.field_address.Text = "Hanoi, Vietnam";
             // 
             // label7
             // 
@@ -356,6 +360,7 @@ namespace WarehouseManagement
             this.field_name.Name = "field_name";
             this.field_name.Size = new System.Drawing.Size(273, 25);
             this.field_name.TabIndex = 29;
+            this.field_name.Text = "Vina ";
             this.field_name.SelectedIndexChanged += new System.EventHandler(this.SwitchExisted);
             // 
             // btn_check_exist
