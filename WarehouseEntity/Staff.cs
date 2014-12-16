@@ -19,7 +19,7 @@ namespace WarehouseEntity
 
         [Required(ErrorMessage = "Staff's Name is required!"), MaxLength(32, ErrorMessage = "Staff's Name is too long!")]
         public string Name { get; set; }
-
+        public string Pass { get; set; }
         public string Permission { get; set; }
 
         public string Address { get; set; }
@@ -29,6 +29,7 @@ namespace WarehouseEntity
         public string Mail { get; set; }
 
         public DataTable LstUndertakenRepo { get; set; }
+
 
     }
 }

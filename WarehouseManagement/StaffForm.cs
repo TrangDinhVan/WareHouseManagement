@@ -31,6 +31,7 @@ namespace WarehouseManagement
                     Text = "Staff ID: " + StaffId;
                     Staff staff = new StaffDAL().GetOneStaff(StaffId);
                     field_name.Text = staff.Name;
+                    field_pass.Text = staff.Pass;
                     field_address.Text = staff.Address;
                     field_mail.Text = staff.Mail;
                     field_phone.Text = staff.Phone;
@@ -82,6 +83,7 @@ namespace WarehouseManagement
             {
                 Id = StaffId,
                 Name = field_name.Text,
+                Pass = field_pass.Text,
                 Permission = field_permission.Text,
                 Address = field_address.Text,
                 Mail = field_mail.Text,

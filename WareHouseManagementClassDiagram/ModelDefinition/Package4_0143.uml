@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="7246cbbe-69d7-4e93-b56d-9d5fa73a51f6"
   name="WarehouseEntity"
@@ -699,7 +699,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a5905fcd-a85e-44e0-9a8b-efce05ae3010"
+            Id="92368a44-fea2-4309-aa4a-bb31ce99498b"
             name="Customer"
             isLeaf="false"
             isStatic="false"
@@ -708,54 +708,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="4fa8c263-7f91-4cf6-99a8-e005ddd25911"
+                Id="eff30907-a5d4-490d-9047-e805e5a52d93"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DCustomer Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="b36a1ba6-02b2-4509-83be-d4f4d4c19d1f"
+                Id="99e295bc-5eb7-4a1d-ac5c-e6a4bdb59a76"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="186c923f-5b96-4652-857f-c732e47f7cf6">
+                    Id="a117fd56-5b50-481a-a3a8-70391fceefe2">
                     <propertyInstance
-                      Id="6bc66571-62d6-46cb-ac74-edeaf00d04e5"
+                      Id="813fa009-2ba2-4f16-9ce1-6a917f2825d8"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="43f6df0b-4486-4513-9a8a-57e9b1880151">
+                    Id="8a782012-0e6b-412f-8703-0cce5cf39604">
                     <propertyInstance
-                      Id="5563e716-3095-49d6-b1ce-f0270f38e368"
+                      Id="aa5b75fb-cc40-4fd4-9491-1d613454f76a"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="be1a788a-dffb-4a2d-9c99-a84c2a9035b9">
+                    Id="fe51ff1b-45b0-4aa4-9b07-90227bda0622">
                     <propertyInstance
-                      Id="71b065ca-5d43-4e0d-af15-45dc01c6c822"
+                      Id="a4862a33-82a0-463f-bfc5-1d1eb881c09b"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="de432489-4a57-4587-ad11-0f3474f2a310">
+                    Id="30ca2830-7da4-4606-ba98-d6dd35255057">
                     <propertyInstance
-                      Id="ce629d7c-0c0f-4034-913f-fd8c36749df0"
+                      Id="7d80eb46-cb7c-4228-961f-d3fae78cdc3c"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="eb0cde1e-dfd5-4c76-8e10-03211a697138">
+                    Id="86238c71-bc13-43b8-83b1-bf917bc24c51">
                     <propertyInstance
-                      Id="5bd80b8c-52e4-446d-bd78-3918664ab1ca"
+                      Id="95d2a483-4acd-412e-8803-2b0103db8c50"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="428f1ac9-4609-465c-9c49-b2de242672e3">
+                    Id="f4a3e0c2-9be3-4d67-a15e-751ed8b96c9e">
                     <propertyInstance
-                      Id="c92540cd-8471-43e9-b5af-40b0a6792bdf"
+                      Id="1e35ee3d-cc34-4cea-a363-1ea4f7b3dd00"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1084,6 +1084,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9b3d3c8a-4f3c-45e1-b786-0e5db5b088ab"
+            isDerived="false"
+            sourceEndRoleName="Maintainance"
+            targetEndRoleName="Validator"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3939720-b984-4c96-a14c-9bd149f146ff"
+              LastKnownName="Validator"
+              LastKnownLocation="Package4_0143.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae456bbe-3c21-4492-ac60-4a0af21f7f67"
+                  name="Maintainance"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="09a7fcb9-5110-4156-9bce-f90efde95eb6"
+                  name="Validator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1651,7 +1690,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="8e9de2c6-c36b-4af5-b34f-967241a4fb79"
+            Id="51417959-2364-49a4-b7c3-b45232c24183"
             name="Maintainance"
             isLeaf="false"
             isStatic="false"
@@ -1660,54 +1699,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="109e4906-7206-4768-a0c1-4a91cf7f53d9"
+                Id="c29257ba-8bc6-45db-8118-4b2277545c05"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DMaintainance Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="db544b2d-ba9b-4207-821a-1a29a7876e7f"
+                Id="4d5b6c5a-11c2-429f-baea-3b8cc422734d"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d56c24d2-0d39-43a3-bab4-5e20b529693a">
+                    Id="8c78fc4b-5cc9-4adb-add2-3a98d2714ef2">
                     <propertyInstance
-                      Id="afefc9d2-6b33-4a65-8647-5c7ab7487f26"
+                      Id="c6e18da8-e735-438a-9cf9-cab81eb89c94"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9d3ff187-d2a7-4c07-8f8e-5e716d6ea586">
+                    Id="3d589643-c323-480e-b914-5687c7eb5b58">
                     <propertyInstance
-                      Id="37a4e591-08aa-4239-aa5e-a66788478cc8"
+                      Id="68e2e74c-3fb9-4304-b5a4-46201bc4108a"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1fe4d08f-cf93-4464-8ee3-bd985ae4dcbc">
+                    Id="61836c2d-09cb-4acc-a2bd-ff40293a6d53">
                     <propertyInstance
-                      Id="ba71d873-b645-4a2c-9026-2f14c31a5528"
+                      Id="a4730489-0991-42c9-970e-6bed5f04c230"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="64ff4ba5-bc1b-4a05-8875-53a9e7deb4b1">
+                    Id="037d75e8-ecb4-4ef5-8fe5-78287e20bc6f">
                     <propertyInstance
-                      Id="337b78d0-a474-4590-a161-6951f12a9ca8"
+                      Id="6589f5db-fe62-45d2-90f9-85b08fa992f4"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="31b5a9f3-be82-41c3-adb0-cb055e9a7d42">
+                    Id="dbcc013d-9f3b-4d72-a408-35ccaff7b52f">
                     <propertyInstance
-                      Id="d53d1d6a-0ef1-450f-807b-b21946fbe3be"
+                      Id="5ecba363-4ae2-4c16-84d9-5132047568a3"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7330d1f2-60d2-42ee-a94b-e0c7f5ad3864">
+                    Id="a07d75e9-9773-481d-bdfe-0830fa37147d">
                     <propertyInstance
-                      Id="88bdf8dd-a74b-49bc-b054-01a15dec0c21"
+                      Id="0798aebe-1980-41e6-a207-0f446b094f9e"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2102,6 +2141,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f0fcf3f5-62a3-4fe6-8a65-e800aa2aad8c"
+            isDerived="false"
+            sourceEndRoleName="Repository"
+            targetEndRoleName="Validator"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3939720-b984-4c96-a14c-9bd149f146ff"
+              LastKnownName="Validator"
+              LastKnownLocation="Package4_0143.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27bf6f65-ad7f-41b1-b25e-5310474e6f9b"
+                  name="Repository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13badc2d-df20-4f42-8cec-9b874eee1efe"
+                  name="Validator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -3067,7 +3145,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="253702f8-4ce2-47e8-a52d-66dd21486802"
+            Id="27e307d5-f0e0-4990-b690-cd9b7fb365d4"
             name="Repository"
             isLeaf="false"
             isStatic="false"
@@ -3076,54 +3154,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="3b460897-3b1c-48bb-826c-e995391ffab4"
+                Id="a26ed22b-1f14-4160-9676-1018e10aed80"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DRepository Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="aa8a3d4e-63b4-4eae-8105-8baa085f0264"
+                Id="5206583a-4f9b-40fc-bd8a-ac6df777823a"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="19823e55-7397-4e6b-a542-701751b736b1">
+                    Id="a3971b80-1fbf-478b-b516-4fd862215485">
                     <propertyInstance
-                      Id="a4fc735b-9854-4528-aee4-21157178c54c"
+                      Id="8a9cc3d5-e5cd-4c25-9d09-2307a1b60c82"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f79de38c-7bb7-498a-8f92-12f27a1b6a19">
+                    Id="dfc8b061-31f7-429c-80d8-9da67c7b4e0a">
                     <propertyInstance
-                      Id="e44abec3-db9a-4ede-adaa-774609d628f5"
+                      Id="17dbf9a7-51db-48e6-ab18-1ba703a03bad"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="23204ffd-3b5c-4369-9b4a-2f8017ca948d">
+                    Id="58d38bf2-15d3-4355-b2c4-923a4ceaf8e6">
                     <propertyInstance
-                      Id="0316e6c9-e4b2-4306-a460-b0ecf6420ef5"
+                      Id="d16b282e-c05f-40c3-8f83-68f63cc89df8"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="12fae4e0-8ce6-4d8d-a536-d98b0a6d39ea">
+                    Id="8b39c3f4-ad86-4c56-9393-9207721ef715">
                     <propertyInstance
-                      Id="7d5b3b19-9740-4ea5-871d-a4c40ada07f3"
+                      Id="0879485d-4bad-473a-bca5-788b219f9070"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d91a9d57-4cdb-468d-9468-7aa0ac0948c0">
+                    Id="155ccc68-9070-4869-b04a-f796e7672aa8">
                     <propertyInstance
-                      Id="2bf274cf-f30c-4a04-bbdd-b1dc241e71a4"
+                      Id="7be462c2-1e06-4b01-8f58-0027284532c9"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3376142f-f1e0-4be2-bb4e-5fc3893d8bb6">
+                    Id="fc9ba5b7-a458-4375-87fb-b28b5164fbed">
                     <propertyInstance
-                      Id="f0d6aec3-3246-4c06-8a39-48af1569953e"
+                      Id="9695b08b-0561-43d4-88d5-409867d32b2c"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -3518,6 +3596,84 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e577e2b1-4f52-4f6f-97f9-87ec010f7f03"
+            isDerived="false"
+            sourceEndRoleName="Order"
+            targetEndRoleName="OrderDAL"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f2c9d59c-cb93-4f86-9d59-06f3b9000a8e"
+              LastKnownName="OrderDAL"
+              LastKnownLocation="Package_0143.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5059be75-e1c5-4a6f-bc9d-f05ce76b5a32"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="442113fd-02c2-4b45-b955-800572d92001"
+                  name="OrderDAL"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0c686770-2d99-407d-bb1a-9468e970b2cd"
+            isDerived="false"
+            sourceEndRoleName="Order"
+            targetEndRoleName="Validator"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3939720-b984-4c96-a14c-9bd149f146ff"
+              LastKnownName="Validator"
+              LastKnownLocation="Package4_0143.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c34c1fa6-b4ce-4c68-bdfe-ea1c62ca6d6e"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f8cbd2cd-20f6-4f71-8756-a8153e0c5875"
+                  name="Validator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -4006,7 +4162,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="eb025bee-06b3-402e-be74-4086460db085"
+            Id="925b15ce-8448-42e6-952b-19ac125dc5a3"
             name="Order"
             isLeaf="false"
             isStatic="false"
@@ -4015,54 +4171,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="e43bd89d-c8f1-4342-8612-ec742c7ecc28"
+                Id="7edf0378-2d8d-4dd3-8db2-8951baf93e04"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DOrder Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="ffd15df8-47d3-4c5d-a624-49bb81135937"
+                Id="f995f28d-8765-4684-8fc8-db050bdd7cee"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="24e361d6-27c6-4dd6-8dfa-b6176a6f0300">
+                    Id="f4b070d2-80b9-436e-94c2-9c3dcbff0c3e">
                     <propertyInstance
-                      Id="046d9c91-579d-4355-b6d3-21606ad318ad"
+                      Id="32e23a05-8a8b-4ada-afd9-8516f6c441d0"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="acc634ff-3d18-428a-ad0c-fffb32396a60">
+                    Id="63b284c7-3152-4fc0-9a0d-b77d81606b2f">
                     <propertyInstance
-                      Id="c88442ce-8de8-4ed0-8558-718c280d5eb1"
+                      Id="99137a2d-b5ba-4754-a68a-f5a98632514b"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bd8876af-a306-4f0a-9365-082851b39fae">
+                    Id="cee52e7c-e65d-4383-8297-2f040289626d">
                     <propertyInstance
-                      Id="fb687224-3893-40fd-8de3-f1f412557faa"
+                      Id="fb79900e-56c0-498b-8d92-26ec70736d36"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7b80b2ce-a6d2-40a0-9c41-3ea3647db090">
+                    Id="b1df52cd-de1d-4490-87f5-e276524857ed">
                     <propertyInstance
-                      Id="bd4e0463-28bd-47c8-922c-aaa402f0c369"
+                      Id="d5250ff8-2351-4c67-9888-27461bd238e6"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="94490bbe-b780-4a67-b12d-54f2cda8b8f9">
+                    Id="6b00a092-1f88-4c84-afd0-faefc9191366">
                     <propertyInstance
-                      Id="42ddeddc-b72e-4e71-918d-eba63f8931b3"
+                      Id="7f752f61-3398-4f5e-8125-888c54deadef"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="c85de6ac-b651-4051-ac56-5bf5ba926839">
+                    Id="0298ff19-9748-4d6b-bad3-c42628697b12">
                     <propertyInstance
-                      Id="a1b89eaa-4fc6-4983-9fce-3415c5df4095"
+                      Id="90b29906-06c6-411e-8153-dc84d40002f0"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -5037,7 +5193,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="d6ee56fb-a1f5-4468-90ba-3845610b593d"
+            Id="a72d1bec-8e17-408b-bbe3-dd583c7e86ce"
             name="OrderDetail"
             isLeaf="false"
             isStatic="false"
@@ -5046,54 +5202,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="3bd37fe9-6824-46c1-900b-f1dd93a1e48d"
+                Id="cf55aa1e-127b-41ff-b893-88b6daf81180"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DOrderDetail Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="0245bee2-8a4c-4876-96ae-2bfee0b40328"
+                Id="7e11e6be-4fa3-41c5-8cb2-79f918f812e7"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d20a31ed-de29-43d4-b383-cb55e2f8e8c1">
+                    Id="af2fcbcc-5303-4c75-8b8a-88caa93e909b">
                     <propertyInstance
-                      Id="f29a320e-c659-4fc9-97bb-76df3c63ca8d"
+                      Id="9eb6a891-1dde-45d9-9f04-844867a65b9d"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f562b287-bd28-4931-bf79-773889fd61a0">
+                    Id="92d9cc7b-b3fa-4679-9288-d858e26e073e">
                     <propertyInstance
-                      Id="4d8fa1c7-b4f2-47cc-86fb-ddfff1ad8451"
+                      Id="16e99c9a-3d18-4a10-bb4f-e0f3ab91d3f1"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e28adac9-3fff-44c5-8a71-e524289e0089">
+                    Id="83d83bf2-b91d-43ea-bd98-d3e3b6109b91">
                     <propertyInstance
-                      Id="ef96f5a6-8413-4e07-8a84-51f2c04a0afb"
+                      Id="7ace29ba-aed0-44ca-af9a-c868df422e50"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fe6a87e6-f7ab-4c53-9157-74bbcc270e9b">
+                    Id="48c30628-9456-44c1-a97c-d7bedb1baebb">
                     <propertyInstance
-                      Id="08fb6f58-45f2-47df-94f0-5e7d78236f12"
+                      Id="f6bc353d-2dcc-41f3-8327-c5e3f7ac2989"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d9ddc402-1af3-461a-b484-eab928b19dca">
+                    Id="5e43bcb5-79d5-47f9-b283-549062ea1a9b">
                     <propertyInstance
-                      Id="3ad442a0-5508-4509-a4d6-a5749b74a9d7"
+                      Id="3c2a4ee7-8971-4860-856c-e4acbd348bda"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="363b9f1e-982f-4e6f-9dff-f38d79a6fe48">
+                    Id="cd8f0556-e249-4df0-baa8-e5312fb16709">
                     <propertyInstance
-                      Id="dc8379c9-35a7-461f-832a-54c83131c58b"
+                      Id="dd9d5992-8c5a-472c-b450-1c3d1eb32a44"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -5224,6 +5380,45 @@
                       value="1" />
                   </upperValueInternal>
                 </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="164ceb67-2108-400b-b713-64b68bc8042f"
+            isDerived="false"
+            sourceEndRoleName="Sector"
+            targetEndRoleName="Validator"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3939720-b984-4c96-a14c-9bd149f146ff"
+              LastKnownName="Validator"
+              LastKnownLocation="Package4_0143.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71d9e5e6-655d-4159-a611-b9c08338a8d0"
+                  name="Sector"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9fef2c33-9a89-44f8-a8cb-d7f931e7b79c"
+                  name="Validator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -5552,7 +5747,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="62ae162f-7589-4ca0-bfa7-9d76096093d1"
+            Id="17f6b092-fb4f-428e-90b3-eed2f2ce6680"
             name="Sector"
             isLeaf="false"
             isStatic="false"
@@ -5561,54 +5756,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="0f743b39-41e7-4399-a890-4e9a36d08cb9"
+                Id="1a0852dc-7801-4d5a-9fa2-426dad72e703"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DSector Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="805784bb-ab68-492f-b4d7-9fd24aecf4e6"
+                Id="c839c54e-185b-4822-ad93-8516c0bc85a9"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dbfbe85e-dbb6-47d1-aa27-da040ca1051d">
+                    Id="653e2e07-a634-48b7-84e8-abf2b62df32e">
                     <propertyInstance
-                      Id="9995d899-a42d-4f9c-b735-801869b161c6"
+                      Id="93a1e9a8-95b2-4d79-b8d5-ac2c67fb5121"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ea068279-314b-4961-8086-6e13116f866b">
+                    Id="e79d4268-22bb-4575-854a-b5692ef7acc7">
                     <propertyInstance
-                      Id="67d2af78-4215-4bd7-8f0c-fab15cd5541b"
+                      Id="5c92f80d-da60-4264-9511-0a75b3e3e7a0"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ec0a972c-ef34-49e0-abe8-9a9b835b169d">
+                    Id="f0e4e518-991b-4782-9cf8-74dd6102c086">
                     <propertyInstance
-                      Id="fbd399c2-04ef-4279-8816-84525bb50570"
+                      Id="99e380b3-51bd-4a99-ad93-cde241c63aac"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="dd51adfb-9aa5-4f31-994f-26f6f66f738f">
+                    Id="4fe85237-a07d-4d1c-afb5-3e40c9f73918">
                     <propertyInstance
-                      Id="30e232df-ee4a-4c10-bffa-ef3d2e327423"
+                      Id="fee4d362-73cd-42c4-842d-5c439a771b94"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9398880b-9da1-49ff-b892-19c4a11c07f7">
+                    Id="c6faab2b-132f-4aef-9bd9-4c28bec72954">
                     <propertyInstance
-                      Id="b9fca664-d1d5-4c68-b663-308e8d241ff1"
+                      Id="515c1c0f-41ce-4b7f-a6fc-e5f083eaf0d5"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fbe294ad-adce-43c5-a44a-2efd5accfa8e">
+                    Id="c29770f6-2419-472e-a2de-fd1b37b57a0b">
                     <propertyInstance
-                      Id="2fdd7868-38a8-4de0-ae55-23b07698e2b4"
+                      Id="1f635eb7-eaed-44af-af17-094983361a83"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6386,7 +6581,7 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="859e563b-40f8-44c2-bd18-be8122214800"
+            Id="f2b3cc73-d0bf-4f0f-ab63-ff037abcd802"
             name="Staff"
             isLeaf="false"
             isStatic="false"
@@ -6395,54 +6590,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="949e1e99-f8d5-40ba-a747-32a49c0ad247"
+                Id="72e66ed7-1684-4308-88d1-a0263df83a8a"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DStaff Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="b5780d91-16c5-44b9-99e3-d3369df00c46"
+                Id="fee8fa6a-5410-46b3-8bfc-e4555eecc503"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5a617d59-48e9-44bf-9530-14edaed4de5e">
+                    Id="fcc88c43-5c33-4721-a3ea-b98f2e4debfe">
                     <propertyInstance
-                      Id="4e955754-4c25-4a52-aa9b-4a8206f8918a"
+                      Id="9e02dbed-d459-496a-8b92-da5fc794a640"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2cdddd41-29fb-479c-8845-a418727484f7">
+                    Id="74a94bea-2003-4d39-b540-091b64bbcd4d">
                     <propertyInstance
-                      Id="0cd045dc-60ec-4fc4-90d9-9199d71c9239"
+                      Id="88d06573-038c-4116-bad6-04094d880087"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="14292056-d924-456e-9a56-60bdd524af21">
+                    Id="7846474d-6d3a-45b0-ac96-bd61d3b858a5">
                     <propertyInstance
-                      Id="60fc850a-b9a1-4670-bfcf-308a17f4310c"
+                      Id="5c445585-53bf-42b0-a8a3-63abb5c7878f"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6d752418-f915-4b0d-836e-0d8fa708d575">
+                    Id="33baca1b-11ad-4d67-8ba8-d59adef96753">
                     <propertyInstance
-                      Id="a87f6267-973e-43c2-a722-92ec03a3d4de"
+                      Id="edaa01d3-0898-4a22-bc43-12279126e173"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ed2a7d4f-2eea-4a69-89ba-003b3b44aadb">
+                    Id="720c8d03-25f5-481e-b2ef-3031b17384db">
                     <propertyInstance
-                      Id="f361e953-4314-414a-8f36-6aa28324740c"
+                      Id="445766c1-ed2f-4b0a-a5a2-129d6ebcc51c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6212bd69-5b62-4222-b00a-2e0bea674441">
+                    Id="837d3c14-c191-40a3-8e22-e7616f85299b">
                     <propertyInstance
-                      Id="e4b8366d-4055-4b0c-8a81-0d0865c327c5"
+                      Id="6229f815-86e5-42c9-8181-4f6a0650591c"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6707,7 +6902,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="892f2d62-2dd2-4b44-b2c9-e9b2a57a6110"
+            Id="5ea81d05-d52b-4898-9902-2740b5a606e2"
             name="Validator"
             isLeaf="false"
             isStatic="false"
@@ -6716,54 +6911,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="75caca79-c7a9-4dab-8428-30704a537bef"
+                Id="e2ccc054-2b80-4752-ac21-913ddcde9e63"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FOneDriveWindows10%2FIT%2F5th-term-fall-2014%2FISD%2FWareHouseManagement%2FWarehouseManagement%2FWarehouseEntity%2Fbin%2FDebug%2FWarehouseEntity.dll Namespace%3DWarehouseEntity Type%3DValidator Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="8a59a8f2-f668-4059-9682-f6c1fbc56af3"
+                Id="955ebe2c-7cd9-4a9d-8038-2fa1833009c4"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0de023ba-a341-4bd5-92c9-66c8486427ff">
+                    Id="6db09cb3-7265-42c7-834f-bb22721915dc">
                     <propertyInstance
-                      Id="7131d7b8-abd6-46fb-835d-6ba92e28353c"
+                      Id="7f9b1a77-e077-4535-a4de-8f394117a921"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="800b0de3-2612-45d3-80a4-457fdc5b3b4b">
+                    Id="98c9b41c-5783-4e68-9b29-b277ddf68d43">
                     <propertyInstance
-                      Id="90401c20-f581-4d0a-94ba-432d1add5854"
+                      Id="1735d7cb-538b-4fd0-a984-8d3fe2003e95"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4c1282e6-4150-4335-b0ba-e330de6c62b6">
+                    Id="ec016dd3-bd72-4d57-aadf-84b72cc6b6e7">
                     <propertyInstance
-                      Id="b254ebb9-77b1-4a81-90ae-547cabbf401e"
+                      Id="72e2d038-f8e2-43c7-9a6f-d74abafb2d9d"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="76632e65-eed9-4ba5-ab21-89aff952c096">
+                    Id="65a806f7-200f-4723-828c-f56107ba4db7">
                     <propertyInstance
-                      Id="3e3a2af4-7aa7-4909-9442-ae75fe82e2e4"
+                      Id="229425a2-a307-4fd3-9106-3b7b022d79b9"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="378970e0-e7f9-4f44-acf7-48e7e2e1c47f">
+                    Id="d3faf3d7-93ff-4d1e-82fa-465aab8f7c16">
                     <propertyInstance
-                      Id="7c1825f5-d7c8-424f-bdb3-85f3d2577cbe"
+                      Id="e1a33fc0-b752-418d-a65c-d1e8b59f936a"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="80826611-287b-4c3e-a35d-7bde5ccdcdab">
+                    Id="ba2cfd49-1bc2-4f69-8e02-112d92ddd6ac">
                     <propertyInstance
-                      Id="6f4d5da7-cc85-48c5-820b-07cb6b049989"
+                      Id="6439393b-e8c0-488c-973d-9b0c2008b18d"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

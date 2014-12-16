@@ -27,6 +27,7 @@ namespace WarehouseDatabaseHelper
             {
                 Id = ID,
                 Name = r["staff_name"].ToString(),
+                Pass = r["staff_pass"].ToString(),
                 Permission = r["staff_permission"].ToString(),
                 Address = r["staff_address"].ToString(),
                 Phone = r["staff_phone"].ToString(),
@@ -42,12 +43,12 @@ namespace WarehouseDatabaseHelper
         }
         public int AddStaff(Staff staff)
         {
-            string queryAdd = string.Format(string.Format("insert into [staff] (staff_name, staff_permission, staff_address, staff_phone, staff_mail) values ('{0}','{1}','{2}','{3}','{4}')", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail));
+            string queryAdd = string.Format("insert into [staff] (staff_name, staff_pass, staff_permission, staff_address, staff_phone, staff_mail) values ('{0}','{1}','{2}','{3}','{4}','{5}')", staff.Name, staff.Pass, staff.Permission, staff.Address, staff.Phone, staff.Mail);
             return new Connection().ExeNonQuery(queryAdd);
         }
         public int UpdateStaff(Staff staff)
         {
-            string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}' where staff_id = {5}", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail, staff.Id);
+            string queryUpdate = string.Format("update [staff] set staff_name = '{0}', staff_permission = '{1}', staff_address = '{2}', staff_phone = '{3}', staff_mail = '{4}', staff_pass = '{5}' where staff_id = {6}", staff.Name, staff.Permission, staff.Address, staff.Phone, staff.Mail, staff.Pass, staff.Id);
             return new Connection().ExeNonQuery(queryUpdate);
         }
     }

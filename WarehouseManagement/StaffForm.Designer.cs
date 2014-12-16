@@ -42,6 +42,8 @@ namespace WarehouseManagement
             this.field_mail = new System.Windows.Forms.TextBox();
             this.field_address = new System.Windows.Forms.RichTextBox();
             this.field_permission = new System.Windows.Forms.ComboBox();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.field_pass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_repo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,7 +160,7 @@ namespace WarehouseManagement
             this.field_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.field_name.Location = new System.Drawing.Point(105, 12);
             this.field_name.Name = "field_name";
-            this.field_name.Size = new System.Drawing.Size(412, 25);
+            this.field_name.Size = new System.Drawing.Size(191, 25);
             this.field_name.TabIndex = 8;
             // 
             // field_phone
@@ -195,11 +197,34 @@ namespace WarehouseManagement
             this.field_permission.Size = new System.Drawing.Size(412, 25);
             this.field_permission.TabIndex = 14;
             // 
+            // labelX6
+            // 
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX6.Location = new System.Drawing.Point(302, 14);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(75, 23);
+            this.labelX6.TabIndex = 15;
+            this.labelX6.Text = "Password";
+            // 
+            // field_pass
+            // 
+            this.field_pass.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.field_pass.Location = new System.Drawing.Point(364, 12);
+            this.field_pass.Name = "field_pass";
+            this.field_pass.Size = new System.Drawing.Size(153, 25);
+            this.field_pass.TabIndex = 16;
+            // 
             // StaffForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 459);
+            this.Controls.Add(this.field_pass);
+            this.Controls.Add(this.labelX6);
             this.Controls.Add(this.field_permission);
             this.Controls.Add(this.field_address);
             this.Controls.Add(this.field_mail);
@@ -240,5 +265,7 @@ namespace WarehouseManagement
         private System.Windows.Forms.TextBox field_mail;
         private System.Windows.Forms.RichTextBox field_address;
         private System.Windows.Forms.ComboBox field_permission;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private System.Windows.Forms.TextBox field_pass;
     }
 }

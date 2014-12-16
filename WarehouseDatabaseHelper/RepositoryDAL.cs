@@ -82,6 +82,8 @@ namespace WarehouseDatabaseHelper
 
         public DataTable GetNearDuedateRepo()
         {
+            string today = DateTime.Today.ToShortTimeString();
+            string queryGetNearDuedate = string.Format("select * from [v_repository] where [Repository ID] in (select repo_id from [order_detail] where () )");
             throw new Exception("Not Implemented");
         }
 

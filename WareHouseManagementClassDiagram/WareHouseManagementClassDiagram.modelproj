@@ -50,6 +50,41 @@
       <SubType>Content</SubType>
       <DependentUpon>Database Helper Classes.classdiagram</DependentUpon>
     </Content>
+    <Content Include="Login.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Login.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Login.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ManageCustomer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageCustomer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ManageCustomer.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ManageMaintain.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageMaintain.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ManageMaintain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ManageOrder.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageOrder.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ManageOrder.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ManageRepository.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageRepository.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ManageRepository.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package10_0143.uml">
       <SubType>Content</SubType>
     </Content>
@@ -137,6 +172,20 @@
     </Content>
     <Content Include="ModelDefinition\Package_1908.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageSector.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ManageSector.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ManageSector.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="StaffManagement.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="StaffManagement.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>StaffManagement.classdiagram</DependentUpon>
     </Content>
     <Content Include="Staff_Add.sequencediagram">
       <SubType>Content</SubType>

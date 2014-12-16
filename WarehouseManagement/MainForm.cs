@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 //
 using WarehouseDatabaseHelper;
@@ -13,10 +14,15 @@ namespace WarehouseManagement
         public MainForm()
         {
             InitializeComponent();
+            FormClosing += MainForm_FormClosing;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (!Equals("Admin Manager", LogginedStaff.Permission))
+            {
+                superTabItem_Staff.Enabled = false;
+            }
             ReloadData();
         }
 
@@ -177,33 +183,33 @@ namespace WarehouseManagement
         {
             throw new Exception("Not Implemented");
         }
-        private void FilterInUseRepo(object sender, EventArgs e)
+        private void FilterInUseRepo()
         {
-            if (btn_inuse_repo.Checked)
+            try
             {
-                try
-                {
-                    dataGridView_Repo.DataSource = new RepositoryDAL().GetInUseRepo();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                dataGridView_Repo.DataSource = new RepositoryDAL().GetInUseRepo();
             }
-            else
+            catch (Exception ex)
             {
-                ReloadData();
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void FilterFreeRepo()
+        private void FilterFreeRepo(object sender, EventArgs e)
         {
             throw new Exception("Not Implemented");
         }
 
         private void FilterInMaintainRepo()
         {
-            throw new Exception("Not Implemented");
+            try
+            {
+                dataGridView_Repo.DataSource = new RepositoryDAL().GetInMaintainRepo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void GetNearDuedateOrder()
@@ -229,5 +235,23 @@ namespace WarehouseManagement
         {
             throw new Exception("Not Implemented");
         }
+
+        private void filterRepository(object sender, EventArgs e)
+        {
+            dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
+            if (combo_Filter.SelectedIndex == 1)
+            {
+                FilterInUseRepo();
+            }
+            if (combo_Filter.SelectedIndex == 2)
+            {
+                FilterInMaintainRepo();
+            }
+        }
+
+        void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        } 
     }
 }
