@@ -35,6 +35,7 @@ namespace WarehouseManagement
             {
                 if (RepoId != 0)
                 {
+                    ReportMaintaince();
                     btn_save.Show();
                     Text = "Repository ID: " + RepoId;
                     Repository repo = new RepositoryDAL().GetOneRepo(RepoId);
@@ -106,8 +107,7 @@ namespace WarehouseManagement
         {
             try
             {
-                DataTable maintainReport = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}", RepoId));
-                dataGridView_Report.DataSource = maintainReport;
+                dataGridView_Report.DataSource = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [v_maintainance] where [Repo ID] = {0}", RepoId));
             }
             catch (Exception ex)
             {
@@ -118,7 +118,18 @@ namespace WarehouseManagement
 
         private void ReportRenting()
         {
-            throw new Exception("Not Implemented");
+            try
+            {
+                dataGridView_Report.DataSource =
+                    new OrderDAL().GetSomeOrder(
+                        string.Format(
+                            "select * from [v_order] where [ID] in (select order_id from [order_detail] where repo_id = {0})",
+                            RepoId));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ": " + ex);
+            }
         }
 
         private void FilterAvailableStaff()
@@ -139,6 +150,18 @@ namespace WarehouseManagement
                     MaintainForm maintainForm = new MaintainForm {F1 = this};
                     maintainForm.Show();
                     break;
+            }
+        }
+
+        private void ReportRepo(object sender, EventArgs e)
+        {
+            if (report_choice.SelectedIndex == 1)
+            {
+               ReportRenting();
+            }
+            else
+            {
+                ReportMaintaince();
             }
         }
         

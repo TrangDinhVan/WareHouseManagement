@@ -36,7 +36,7 @@ namespace WarehouseManagement
             DataTable staff_set = new StaffDAL().GetSomeStaff("select * from staff");
             foreach (DataRow r in staff_set.Rows)
             {
-                if (Equals(r["staff_name"], s.Name))
+                if (Equals(r["staff_name"], s.Name) && Equals(r["staff_pass"], s.Pass))
                 {
                     success = true;
                     s.Permission = r["staff_permission"].ToString();

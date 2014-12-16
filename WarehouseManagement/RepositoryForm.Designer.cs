@@ -266,6 +266,7 @@ namespace WarehouseManagement
             this.report_choice.Name = "report_choice";
             this.report_choice.Size = new System.Drawing.Size(205, 25);
             this.report_choice.TabIndex = 15;
+            this.report_choice.SelectedIndexChanged += new System.EventHandler(this.ReportRepo);
             // 
             // btn_add_maintain
             // 
