@@ -42,6 +42,11 @@ namespace WarehouseEntity
             return LstMaintain.Rows.Cast<DataRow>().Sum(r => double.Parse(r["maintain_price"].ToString()));
         }
 
+        public double GetTotalRetingValue()
+        {
+            return (from DataRow r in LstOrderDetail.Rows select Convert.ToDateTime(r["end_date"].ToString()) - Convert.ToDateTime(r["start_date"].ToString()) into differ select differ.Days + 1 into days select Price*days).Sum();
+        }
+
         public Dictionary<DateTime,DateTime> GetMaintainedRanges()
         {
             return LstMaintain.Rows.Cast<DataRow>().ToDictionary(r => Convert.ToDateTime(r["start_date"].ToString()).Date, r => Convert.ToDateTime(r["end_date"].ToString()).Date);

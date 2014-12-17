@@ -22,10 +22,7 @@ namespace WarehouseManagement
             field_sector.DataSource = dataSector.DefaultView;
             field_sector.DisplayMember = "Name";
             field_sector.ValueMember = dataSector.Columns["ID"].ToString();
-            DataTable dataStaff = new StaffDAL().getAllStaff();
-            field_staff.DataSource = dataStaff.DefaultView;
-            field_staff.DisplayMember = "Name";
-            field_staff.ValueMember = dataStaff.Columns["ID"].ToString();
+            FilterAvailableStaff();
             field_volume.DataSource = new Repository().VolumeSet;
         }
 
@@ -108,6 +105,8 @@ namespace WarehouseManagement
             try
             {
                 dataGridView_Report.DataSource = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [v_maintainance] where [Repo ID] = {0}", RepoId));
+                if (RepoId != 0)
+                totalCost.Text = new RepositoryDAL().GetOneRepo(RepoId).GetTotalMaintainValue().ToString();
             }
             catch (Exception ex)
             {
@@ -125,6 +124,7 @@ namespace WarehouseManagement
                         string.Format(
                             "select * from [v_order] where [ID] in (select order_id from [order_detail] where repo_id = {0})",
                             RepoId));
+                totalCost.Text = new RepositoryDAL().GetOneRepo(RepoId).GetTotalRetingValue().ToString();
             }
             catch (Exception ex)
             {
@@ -134,7 +134,19 @@ namespace WarehouseManagement
 
         private void FilterAvailableStaff()
         {
-            throw new Exception("Not Implement");
+            try
+            {
+                DataTable dataStaff =
+                    new StaffDAL().GetSomeStaff(string.Format("select * from [v_staff] where [Permission] = '{0}'",
+                        "Protector - Technician Admin"));
+                field_staff.DataSource = dataStaff.DefaultView;
+                field_staff.DisplayMember = "Name";
+                field_staff.ValueMember = dataStaff.Columns["ID"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void AssignUndertakingStaff()

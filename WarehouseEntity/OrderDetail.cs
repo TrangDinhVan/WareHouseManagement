@@ -26,8 +26,7 @@ namespace WarehouseEntity
         public int GetDuration()
         {
             var difference = EndDate - StartDate;
-            var days = difference.Days;
-            return days;
+            return difference.Days;
             
         }
         public double GetPaidMoney()

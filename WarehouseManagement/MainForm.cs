@@ -19,10 +19,7 @@ namespace WarehouseManagement
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (!Equals("Admin Manager", LogginedStaff.Permission))
-            {
-                superTabItem_Staff.Enabled = false;
-            }
+            Login();
             ReloadData();
         }
 
@@ -168,9 +165,10 @@ namespace WarehouseManagement
                     if (e.ColumnIndex == 0 && e.RowIndex > -1)
                     {
                         int sectorId = int.Parse(dataGridView_Sector.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-                        DialogResult result = MessageBox.Show("Are you sure to delete this record?", "Delete Sector " + sectorId, MessageBoxButtons.YesNo);
+                        DialogResult result = MessageBox.Show("Are you sure to delete this sector with its repositories", "Delete Sector " + sectorId, MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
+                            DeleteBelongedRepo(sectorId);
                             new SectorDAL().DeleteSector(sectorId);
                             ReloadData();
                         }
@@ -179,9 +177,13 @@ namespace WarehouseManagement
             }
         }
 
-        private void DeleteBelongedRepo()
+        private void DeleteBelongedRepo(int SectorId)
         {
-            throw new Exception("Not Implemented");
+            Sector s = new SectorDAL().GetOneSection(SectorId);
+            foreach (DataRow r in s.LstRepo.Rows)
+            {
+                new RepositoryDAL().DeleteRepo(int.Parse(r["repo_id"].ToString()));
+            }
         }
         private void FilterInUseRepo()
         {
@@ -195,9 +197,16 @@ namespace WarehouseManagement
             }
         }
 
-        private void FilterFreeRepo(object sender, EventArgs e)
+        private void FilterFreeRepo()
         {
-            throw new Exception("Not Implemented");
+            try
+            {
+                dataGridView_Repo.DataSource = new RepositoryDAL().GetFreeRepo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void FilterInMaintainRepo()
@@ -233,7 +242,18 @@ namespace WarehouseManagement
         }
         private void Login()
         {
-            throw new Exception("Not Implemented");
+            if (!Equals("Admin Manager", LogginedStaff.Permission))
+            {
+                superTabItem_Staff.Enabled = false;
+            }
+            if (Equals("Protector - Technician Admin", LogginedStaff.Permission))
+            {
+                superTabItem_Order.Enabled = false;
+            }
+            if (Equals("Transactor - Accountant", LogginedStaff.Permission))
+            {
+                superTabItem_Maintain.Enabled = false;
+            }
         }
 
         private void filterRepository(object sender, EventArgs e)
@@ -246,6 +266,10 @@ namespace WarehouseManagement
             if (combo_Filter.SelectedIndex == 2)
             {
                 FilterInMaintainRepo();
+            }
+            if (combo_Filter.SelectedIndex == 5)
+            {
+                FilterFreeRepo();
             }
         }
 

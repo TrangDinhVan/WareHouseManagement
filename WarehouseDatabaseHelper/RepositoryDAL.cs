@@ -37,7 +37,8 @@ namespace WarehouseDatabaseHelper
                 Volume = r["repo_volume"].ToString(),
                 Sector = new SectorDAL().GetOneSection(int.Parse(r["sector_id"].ToString())),
                 Staff = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString())),
-                LstMaintain = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}",ID))
+                LstMaintain = new MaintainanceDAL().GetSomeMaintain(string.Format("select * from [maintainance] where repo_id = {0}",ID)),
+                LstOrderDetail = new OrderDetailDAL().GetSomeOrderDetail((string.Format("select * from [order_detail] where repo_id = {0}",ID)))
             };
             return repo;
         }
@@ -77,7 +78,12 @@ namespace WarehouseDatabaseHelper
 
         public DataTable GetFreeRepo()
         {
-            throw new Exception("Not Implemented");
+            string today = DateTime.Today.ToShortDateString();
+            string queryGetFree =
+                string.Format(
+                    "select * from [v_repository] where [Repository ID] not in (select repo_id from [maintainance] where #{0}# not between start_date and end_date) and  [Repository ID] not in (select repo_id from [order_detail] where #{0}# not between start_date and end_date)",
+                    today);
+            return new Connection().GetListRecord(queryGetFree);
         }
 
         public DataTable GetNearDuedateRepo()
