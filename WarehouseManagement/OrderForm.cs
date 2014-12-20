@@ -16,10 +16,6 @@ namespace WarehouseManagement
         public OrderForm()
         {
             InitializeComponent();
-            DataTable dataStaff = new StaffDAL().getAllStaff();
-            field_staff.DataSource = dataStaff.DefaultView;
-            field_staff.ValueMember = dataStaff.Columns["ID"].ToString()
-                ;            field_staff.DisplayMember = "Name";
             field_volume.DataSource = new Repository().VolumeSet;
             dataGridView_Repo.DataSource = new RepositoryDAL().GetAllRepo();
             field_start_date.MinDate = DateTime.Today.Date;
@@ -48,10 +44,9 @@ namespace WarehouseManagement
                     //Order Info
                     field_date.Value = order.Date;
                     field_paid.Text = order.Paid.ToString();
-                    field_staff.SelectedValue = order.Staff.Id;
                     //Order detail
                     dataGridView_Repo.DataSource = order.LstOrderDetail;
-
+                    field_total.Text = CalculateBill(order).ToString();
                 }
                 catch (Exception ex)
                 {
@@ -138,11 +133,11 @@ namespace WarehouseManagement
                     Date = field_date.Value.Date,
                     Paid = Convert.ToDouble(field_paid.Text),
                     LstOrderDetail = (DataTable) dataGridView_Repo.DataSource,
-                    Staff = new StaffDAL().GetOneStaff(int.Parse(field_staff.SelectedValue.ToString()))
+                    Staff = F.LogginedStaff
                 };
                 if (btn_check_exist.Checked)
                 {
-                    order.Customer = new CustomerDAL().GetOneCustomer(Convert.ToInt32(field_customer_id.ValueMember));
+                    order.Customer = new CustomerDAL().GetOneCustomer(Convert.ToInt32(field_customer_id.Text));
                 }
                 else
                 {
@@ -153,7 +148,7 @@ namespace WarehouseManagement
             }
             catch (Exception ex)
             {
-               throw new Exception(ex.Message);
+               throw new Exception(ex.Message+ex);
             }
             
         }
@@ -182,7 +177,10 @@ namespace WarehouseManagement
         {
             try
             {
-                new CustomerDAL().AddCustomer(GetInfoCustomer());
+                if (btn_check_exist.Checked)
+                {
+                    new CustomerDAL().AddCustomer(GetInfoCustomer());
+                }
                 new OrderDAL().CreateOrder(GetInfo());
                 CreateDetail();
                 F.ReloadData();
@@ -222,9 +220,14 @@ namespace WarehouseManagement
             throw new Exception("Not Implemented");
         }
 
-        private void CalculateBill()
+        private double CalculateBill(Order order)
         {
-            throw new Exception("Not Implemented");
+            double sum = 0;
+            foreach (DataRow r in order.LstOrderDetail.Rows)
+            {
+                sum += new OrderDetailDAL().GetOneOrderDetail(int.Parse(r[0].ToString())).GetPaidMoney();
+            }
+            return sum;
         }
 
         private void CheckUpdateCondition()

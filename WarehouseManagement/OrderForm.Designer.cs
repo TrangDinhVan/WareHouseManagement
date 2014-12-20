@@ -60,8 +60,8 @@ namespace WarehouseManagement
             this.field_name = new System.Windows.Forms.ComboBox();
             this.btn_check_exist = new System.Windows.Forms.CheckBox();
             this.field_paid = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.field_total = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.field_staff = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Repo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,7 +158,7 @@ namespace WarehouseManagement
             this.field_mail.Location = new System.Drawing.Point(347, 57);
             this.field_mail.Name = "field_mail";
             this.field_mail.PreventEnterBeep = true;
-            this.field_mail.Size = new System.Drawing.Size(273, 25);
+            this.field_mail.Size = new System.Drawing.Size(225, 25);
             this.field_mail.TabIndex = 10;
             this.field_mail.Text = "customer@info.com";
             // 
@@ -390,30 +390,29 @@ namespace WarehouseManagement
             this.field_paid.TabIndex = 34;
             this.field_paid.Text = "50";
             // 
+            // field_total
+            // 
+            this.field_total.Location = new System.Drawing.Point(645, 188);
+            this.field_total.Name = "field_total";
+            this.field_total.Size = new System.Drawing.Size(122, 25);
+            this.field_total.TabIndex = 38;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(697, 98);
+            this.label13.Location = new System.Drawing.Point(642, 158);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 17);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Transactor";
-            // 
-            // field_staff
-            // 
-            this.field_staff.FormattingEnabled = true;
-            this.field_staff.Location = new System.Drawing.Point(594, 130);
-            this.field_staff.Name = "field_staff";
-            this.field_staff.Size = new System.Drawing.Size(172, 25);
-            this.field_staff.TabIndex = 36;
+            this.label13.Size = new System.Drawing.Size(36, 17);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Total";
             // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(772, 567);
-            this.Controls.Add(this.field_staff);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.field_total);
             this.Controls.Add(this.field_paid);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btn_check_exist);
@@ -490,9 +489,9 @@ namespace WarehouseManagement
         private System.Windows.Forms.ComboBox field_name;
         private System.Windows.Forms.CheckBox btn_check_exist;
         private DevComponents.DotNetBar.Controls.TextBoxX field_paid;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox field_staff;
         private DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn Choose;
+        private System.Windows.Forms.TextBox field_total;
+        private System.Windows.Forms.Label label13;
 
     }
 }

@@ -38,8 +38,8 @@ namespace WarehouseManagement
             {
                 if (Equals(r["staff_name"], s.Name) && Equals(r["staff_pass"], s.Pass))
                 {
+                    s = new StaffDAL().GetOneStaff(int.Parse(r["staff_id"].ToString()));
                     success = true;
-                    s.Permission = r["staff_permission"].ToString();
                     F.LogginedStaff = s;
                     MessageBox.Show("Success!");
                     F.Show();

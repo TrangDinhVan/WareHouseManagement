@@ -184,6 +184,7 @@ namespace WarehouseManagement
             {
                 new RepositoryDAL().DeleteRepo(int.Parse(r["repo_id"].ToString()));
             }
+            ReloadData();
         }
         private void FilterInUseRepo()
         {
