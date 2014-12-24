@@ -308,7 +308,7 @@ namespace WarehouseManagement
             {
                 FilterInMaintainRepo();
             }
-            if (combo_Filter.SelectedIndex == 5)
+            if (combo_Filter.SelectedIndex == 3)
             {
                 FilterFreeRepo();
             }
@@ -317,6 +317,42 @@ namespace WarehouseManagement
         void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(1);
-        } 
+        }
+
+        private void FilterOrder(object sender, EventArgs e)
+        {
+            dataGridView_Order.DataSource = new OrderDAL().GetAllOrder();
+            if (combo_filter_order.SelectedIndex == 1)
+            {
+                GetnearDuedateOrder();
+            }
+            if (combo_filter_order.SelectedIndex == 2)
+            {
+                GetoverDuedateOrder();
+            }
+        }
+
+        private void GetoverDuedateOrder()
+        {
+            try
+            {
+                dataGridView_Order.DataSource = new OrderDAL().GetoverDuedateOrder();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void GetnearDuedateOrder()
+        {
+            try
+            {
+                dataGridView_Order.DataSource = new OrderDAL().GetnearDuedateOrder();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

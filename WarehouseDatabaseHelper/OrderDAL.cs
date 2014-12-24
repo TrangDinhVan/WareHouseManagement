@@ -59,5 +59,26 @@ namespace WarehouseDatabaseHelper
             DataRow r = new Connection().GetOneRecord(queryScopeIdentiy);
             return Convert.ToInt32(r[0].ToString());
         }
+
+        public DataTable GetoverDuedateOrder()
+        {
+            string today = DateTime.Today.ToShortDateString();
+            string queryover =
+                string.Format(
+                    "select * from [v_order] where [ID] in ( select order_id from [order_detail] where checked_out = 0 and end_date < #{0}# )",
+                    today);
+            return new Connection().GetListRecord(queryover);
+        }
+
+        public DataTable GetnearDuedateOrder()
+        {
+            string today = DateTime.Today.ToShortDateString();
+            string near = DateTime.Today.AddDays(3).ToShortDateString();
+            string querynear =
+                string.Format(
+                    "select * from [v_order] where [ID] in ( select order_id from [order_detail] where checked_out = 0 and end_date < #{0}# and end_date > #{1}# )",
+                    near,today);
+            return new Connection().GetListRecord(querynear);
+        }
     }
 }
