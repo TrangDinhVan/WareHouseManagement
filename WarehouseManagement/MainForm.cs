@@ -256,11 +256,15 @@ namespace WarehouseManagement
         {
             if (CheckCancelCondition(order))
             {
-                foreach (DataRow r in order.LstOrderDetail.Rows)
-                {
-                    new OrderDetailDAL().DeleteOrderDetail(Convert.ToInt32(r["order_detail_id"].ToString()));
-                }
+                clearrelatedData(order);
                 new OrderDAL().DeleteOrder(order.Id);
+            }
+        }
+        private void clearrelatedData(Order order)
+        {
+            foreach (DataRow r in order.LstOrderDetail.Rows)
+            {
+                new OrderDetailDAL().DeleteOrderDetail(Convert.ToInt32(r["order_detail_id"].ToString()));
             }
         }
 

@@ -198,6 +198,7 @@ namespace WarehouseManagement
         {
             try
             {
+                double sum = 0;
                 foreach (DataGridViewRow r in dataGridView_Repo.Rows)
                 {
                     if (Convert.ToBoolean(r.Cells["choose"].Value) != true) continue;
@@ -209,7 +210,9 @@ namespace WarehouseManagement
                         Order = new OrderDAL().GetOneOrder(new OrderDAL().GetScopeIdentity())
                     };
                     new OrderDetailDAL().CreateOrderDetail(detail);
+                    sum += detail.GetPaidMoney();
                 }
+                SumaryOrder(sum);
             }
             catch (Exception ex)
             {
@@ -217,9 +220,9 @@ namespace WarehouseManagement
             }
         }
 
-        private void SumaryOrder()
+        private void SumaryOrder(double sum)
         {
-            throw new Exception("Not Implemented");
+            MessageBox.Show("Total Cost:" + sum);
         }
 
         private double CalculateBill(Order order)
@@ -237,7 +240,7 @@ namespace WarehouseManagement
             Order order = new OrderDAL().GetOneOrder(OrderId);
             if ((from DataRow r in order.LstOrderDetail.Rows select Convert.ToDateTime(r["start_date"].ToString()).Date).Any(startDate => startDate < DateTime.Today || startDate.Date == DateTime.Today.Date))
             {
-                btn_save.Hide();
+//                btn_save.Hide();
             }
         }
 
