@@ -174,6 +174,26 @@ namespace WarehouseManagement
                         }
                     }
                     break;
+                case "dataGridView_Order":
+                    if (e.ColumnIndex == 0 && e.RowIndex > -1)
+                    {
+                        try
+                        {
+                            int OrderId = int.Parse(dataGridView_Order.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                            DialogResult result = MessageBox.Show("Are you sure to delete this order?", "Delete Order " + OrderId, MessageBoxButtons.YesNo);
+                            if (result == DialogResult.Yes)
+                            {
+                                CancelOrder(new OrderDAL().GetOneOrder(OrderId));
+                                ReloadData();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message + " " + ex);
+                        }
+                        
+                    }
+                    break;
             }
         }
 
@@ -232,14 +252,30 @@ namespace WarehouseManagement
             throw new Exception("Not Implemented");
         }
 
-        private void CancelOrder()
+        private void CancelOrder(Order order)
         {
-            throw new Exception("Not Implemented");
+            if (CheckCancelCondition(order))
+            {
+                foreach (DataRow r in order.LstOrderDetail.Rows)
+                {
+                    new OrderDetailDAL().DeleteOrderDetail(Convert.ToInt32(r["order_detail_id"].ToString()));
+                }
+                new OrderDAL().DeleteOrder(order.Id);
+            }
         }
 
-        private void CheckCancelCondition()
+        private bool CheckCancelCondition(Order order)
         {
-            throw new Exception("Not Implemented");
+            DataRow r = order.LstOrderDetail.Rows[0];
+            OrderDetail detail = new OrderDetailDAL().GetOneOrderDetail(Convert.ToInt32(r["order_detail_id"].ToString()));
+            DateTime date = detail.StartDate.Date;
+            DateTime now = DateTime.Today.Date;
+            if (date <= now)
+            {
+                MessageBox.Show("Unable to cancel because its start date is over today");
+                return false;
+            }
+            return true;
         }
         private void Login()
         {
