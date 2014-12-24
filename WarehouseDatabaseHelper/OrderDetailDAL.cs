@@ -44,7 +44,7 @@ namespace WarehouseDatabaseHelper
         }
         public int UpdateOrderDetail(OrderDetail detail)
         {
-            string queryUpdate = string.Format("update [order_detail] set order_id = {0}, repo_id = {1}, start_date = {2}, end_date = {3} where order_detail_id = {4}",detail.Order.Id, detail.Repo.Id, detail.StartDate.ToShortDateString(), detail.EndDate.ToShortDateString(), detail.Id);
+            string queryUpdate = string.Format("update [order_detail] set checked_out = {0} where order_detail_id = {1}",detail.CheckedOut,detail.Id);
             return new Connection().ExeNonQuery(queryUpdate);
         }
     }

@@ -50,7 +50,7 @@ namespace WarehouseDatabaseHelper
         }
         public int UpdateOrder(Order order)
         {
-            string queryUpdate = string.Format("update [order] set order_date = {0}, customer_id = {1}, order_paid = {2} where order_id = {3}", order.Date, order.Customer.Id, order.Paid, order.Id);
+            string queryUpdate = string.Format("update [order] set order_paid = {0} where order_id = {1}", order.Paid, order.Id);
             return new Connection().ExeNonQuery(queryUpdate);
         }
         public int GetScopeIdentity()

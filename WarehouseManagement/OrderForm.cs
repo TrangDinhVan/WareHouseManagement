@@ -26,6 +26,8 @@ namespace WarehouseManagement
         {
             if (OrderId != 0)
             {
+                btn_check_exist.Hide();
+                btn_add.Hide();
                 try
                 {
                     Order order = new OrderDAL().GetOneOrder(OrderId);
@@ -177,7 +179,7 @@ namespace WarehouseManagement
         {
             try
             {
-                if (btn_check_exist.Checked)
+                if (!btn_check_exist.Checked)
                 {
                     new CustomerDAL().AddCustomer(GetInfoCustomer());
                 }
@@ -236,6 +238,29 @@ namespace WarehouseManagement
             if ((from DataRow r in order.LstOrderDetail.Rows select Convert.ToDateTime(r["start_date"].ToString()).Date).Any(startDate => startDate < DateTime.Today || startDate.Date == DateTime.Today.Date))
             {
                 btn_save.Hide();
+            }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                new OrderDAL().UpdateOrder(GetInfo());
+                foreach (DataGridViewRow r in dataGridView_Repo.Rows)
+                {
+                    OrderDetail detail = new OrderDetail()
+                    {
+                        Id = Convert.ToInt32(r.Cells["order_detail_id"].Value),
+                        CheckedOut = Convert.ToBoolean(r.Cells["checked_out"].Value)
+                    };
+                    new OrderDetailDAL().UpdateOrderDetail(detail);
+                }
+                F.ReloadData();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + " " + ex);
             }
         }
     }
