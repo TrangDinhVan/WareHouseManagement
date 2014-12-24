@@ -81,7 +81,7 @@ namespace WarehouseDatabaseHelper
             string today = DateTime.Today.ToShortDateString();
             string queryGetFree =
                 string.Format(
-                    "select * from [v_repository] where [Repository ID] not in (select repo_id from [maintainance] where #{0}# not between start_date and end_date) and  [Repository ID] not in (select repo_id from [order_detail] where #{0}# not between start_date and end_date)",
+                    "select * from [v_repository] where ( [Repository ID] not in (select repo_id from [maintainance] where #{0}# between start_date and end_date) ) and  ( [Repository ID] not in (select repo_id from [order_detail] where #{0}# between start_date and end_date) )",
                     today);
             return new Connection().GetListRecord(queryGetFree);
         }
