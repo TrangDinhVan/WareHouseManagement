@@ -20,6 +20,7 @@ namespace WarehouseManagement
             try
             {
                 if (CustomerId == 0) return;
+                ReportOrders();
                 Text = "Customer ID: " + CustomerId;
                 Customer customer = new CustomerDAL().GetOneCustomer(CustomerId);
                 field_name.Text = customer.Name;
@@ -70,7 +71,8 @@ namespace WarehouseManagement
 
         private void ReportOrders()
         {
-            throw new Exception("Not Implemented");
+            dataGridViewX1.DataSource = new CustomerDAL().GetOneCustomer(CustomerId).LstOrder;
         }
+       
     }
 }

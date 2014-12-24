@@ -28,6 +28,7 @@ namespace WarehouseManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbn_save = new System.Windows.Forms.Button();
             this.field_mail = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.field_fax = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -39,11 +40,13 @@ namespace WarehouseManagement
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbn_save
             // 
-            this.tbn_save.Location = new System.Drawing.Point(12, 286);
+            this.tbn_save.Location = new System.Drawing.Point(12, 239);
             this.tbn_save.Name = "tbn_save";
             this.tbn_save.Size = new System.Drawing.Size(75, 23);
             this.tbn_save.TabIndex = 21;
@@ -185,11 +188,29 @@ namespace WarehouseManagement
             this.labelX1.TabIndex = 11;
             this.labelX1.Text = "Address";
             // 
+            // dataGridViewX1
+            // 
+            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dataGridViewX1.Location = new System.Drawing.Point(12, 268);
+            this.dataGridViewX1.Name = "dataGridViewX1";
+            this.dataGridViewX1.Size = new System.Drawing.Size(558, 150);
+            this.dataGridViewX1.TabIndex = 22;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 324);
+            this.ClientSize = new System.Drawing.Size(582, 421);
+            this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.tbn_save);
             this.Controls.Add(this.field_mail);
             this.Controls.Add(this.field_fax);
@@ -208,6 +229,7 @@ namespace WarehouseManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,6 +247,7 @@ namespace WarehouseManagement
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
 
     }
 }
