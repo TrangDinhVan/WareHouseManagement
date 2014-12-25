@@ -251,7 +251,7 @@ namespace WarehouseManagement
                 new OrderDAL().UpdateOrder(GetInfo());
                 foreach (DataGridViewRow r in dataGridView_Repo.Rows)
                 {
-                    OrderDetail detail = new OrderDetail()
+                    OrderDetail detail = new OrderDetail
                     {
                         Id = Convert.ToInt32(r.Cells["order_detail_id"].Value),
                         CheckedOut = Convert.ToBoolean(r.Cells["checked_out"].Value)

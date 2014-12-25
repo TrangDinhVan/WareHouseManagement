@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 //
 using WarehouseDatabaseHelper;
@@ -240,16 +242,6 @@ namespace WarehouseManagement
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void GetNearDuedateOrder()
-        {
-            throw new Exception("Not Implemented");
-        }
-
-        private void GetOverDuedateOrder()
-        {
-            throw new Exception("Not Implemented");
         }
 
         private void CancelOrder(Order order)

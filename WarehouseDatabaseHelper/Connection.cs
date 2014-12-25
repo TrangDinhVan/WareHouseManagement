@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Reflection;
 using System.Text;
 //OleDB library
 using System.Data.OleDb;
@@ -11,9 +13,13 @@ namespace WarehouseDatabaseHelper
 {
     public class Connection
     {
+        public static string executable = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
+        /*public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\WareHouse.accdb";*/
 
-        public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseDatabaseHelper\WareHouse.accdb";
         //public static string StrCnn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\WareHouse.accdb";
+//        public static string StrCnn = string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}\WareHouse.accdb",executable);
+
+        string StrCnn = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         public OleDbConnection Cnn;
         public OleDbCommand Cmd;
         public Connection()
