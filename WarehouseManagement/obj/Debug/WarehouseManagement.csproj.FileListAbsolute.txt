@@ -6,7 +6,6 @@ E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseMana
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\WarehouseManagement.pdb
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.exe
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.pdb
-E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\ISD_ASS_DB.accdb
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.MainForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.SectorForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.RepositoryForm.resources
@@ -19,3 +18,7 @@ E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseMana
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.OrderForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.CustomerForm.resources
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.LoginForm.resources
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\WarehouseManagement.exe.manifest
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\bin\Debug\WarehouseManagement.application
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.exe.manifest
+E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseManagement\obj\Debug\WarehouseManagement.application

@@ -1,5 +1,4 @@
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseEntity\bin\Debug\WarehouseEntity.dll
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseEntity\bin\Debug\WarehouseEntity.pdb
-E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseEntity\obj\Debug\WarehouseEntity.csprojResolveAssemblyReference.cache
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseEntity\obj\Debug\WarehouseEntity.dll
 E:\OneDriveWindows10\IT\5th-term-fall-2014\ISD\WareHouseManagement\WarehouseManagement\WarehouseEntity\obj\Debug\WarehouseEntity.pdb

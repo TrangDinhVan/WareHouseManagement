@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseEntity", "Warehous
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "WareHouseManagementClassDiagram", "WareHouseManagementClassDiagram\WareHouseManagementClassDiagram.modelproj", "{57A46918-9FD4-40C1-A87A-642FEC74AAE4}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WarehouseSetup", "WarehouseSetup\WarehouseSetup.vdproj", "{E68D29C5-D370-47EC-A33A-B20E57C32002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{57A46918-9FD4-40C1-A87A-642FEC74AAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57A46918-9FD4-40C1-A87A-642FEC74AAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57A46918-9FD4-40C1-A87A-642FEC74AAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68D29C5-D370-47EC-A33A-B20E57C32002}.Debug|Any CPU.ActiveCfg = Debug
+		{E68D29C5-D370-47EC-A33A-B20E57C32002}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
