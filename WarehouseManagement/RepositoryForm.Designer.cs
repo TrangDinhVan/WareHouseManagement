@@ -45,7 +45,6 @@ namespace WarehouseManagement
             this.btn_save = new DevComponents.DotNetBar.ButtonX();
             this.btn_add = new DevComponents.DotNetBar.ButtonX();
             this.report_choice = new System.Windows.Forms.ComboBox();
-            this.btn_add_maintain = new DevComponents.DotNetBar.ButtonX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.totalCost = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Report)).BeginInit();
@@ -268,18 +267,6 @@ namespace WarehouseManagement
             this.report_choice.TabIndex = 15;
             this.report_choice.SelectedIndexChanged += new System.EventHandler(this.ReportRepo);
             // 
-            // btn_add_maintain
-            // 
-            this.btn_add_maintain.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btn_add_maintain.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_add_maintain.Location = new System.Drawing.Point(0, 492);
-            this.btn_add_maintain.Name = "btn_add_maintain";
-            this.btn_add_maintain.Size = new System.Drawing.Size(285, 23);
-            this.btn_add_maintain.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btn_add_maintain.TabIndex = 16;
-            this.btn_add_maintain.Text = "Add new Maintainance for this Repository";
-            this.btn_add_maintain.Click += new System.EventHandler(this.LoadSubForm);
-            // 
             // labelX5
             // 
             // 
@@ -314,7 +301,6 @@ namespace WarehouseManagement
             this.ClientSize = new System.Drawing.Size(566, 518);
             this.Controls.Add(this.totalCost);
             this.Controls.Add(this.labelX5);
-            this.Controls.Add(this.btn_add_maintain);
             this.Controls.Add(this.report_choice);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.btn_save);
@@ -361,7 +347,6 @@ namespace WarehouseManagement
         private DevComponents.DotNetBar.ButtonX btn_save;
         private DevComponents.DotNetBar.ButtonX btn_add;
         private System.Windows.Forms.ComboBox report_choice;
-        private DevComponents.DotNetBar.ButtonX btn_add_maintain;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.TextBoxX totalCost;
 

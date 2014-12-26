@@ -36,6 +36,16 @@ namespace WarehouseManagement
                     field_mail.Text = staff.Mail;
                     field_phone.Text = staff.Phone;
                     field_permission.Text = staff.Permission;
+                    if (Equals(staff.Permission, "Protector - Technician Admin"))
+                    {
+                        dataGridView_repo.DataSource = staff.LstUndertakenRepo;
+                    }
+                    if (Equals(staff.Permission, "Transactor - Accountant") || Equals(staff.Permission, "Admin Manager"))
+                    {
+                        dataGridView_repo.DataSource =
+                            new OrderDAL().GetSomeOrder(string.Format("select * from [order] where staff_id = {0}",
+                                StaffId));
+                    }
                 }
                 else
                 {

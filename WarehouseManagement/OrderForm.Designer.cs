@@ -309,7 +309,7 @@ namespace WarehouseManagement
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Repo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_Repo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView_Repo.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView_Repo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_Repo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Repo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -155,14 +155,7 @@ namespace WarehouseManagement
         }
         public void LoadSubForm(object sender, EventArgs e)
         {
-            string ctrlName = ((Control)sender).Name;
-            switch (ctrlName)
-            {
-                case "btn_add_maintain":
-                    MaintainForm maintainForm = new MaintainForm {F1 = this};
-                    maintainForm.Show();
-                    break;
-            }
+
         }
 
         private void ReportRepo(object sender, EventArgs e)
